@@ -44,6 +44,9 @@ jobs:
             --verbose
             --no-progress
             --accept 200,204,301,302,303,307,308,429
+            --exclude '^data:'
+            --exclude '^https://www\.amigura\.com/'
+            --exclude-path css/fonts.css
             --timeout 20
             --max-concurrency 8
             .

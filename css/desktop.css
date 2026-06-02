@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Amigura ù Desktop & large tablet (?769px)
+   Amigura ‚Äî Desktop & large tablet (?769px)
    Loaded after mobile.css. Restores editorial scale, scroll rhythm, and
    centered max-width layout without affecting phone rules.
    ========================================================================== */
@@ -41,7 +41,7 @@
     font-size: 1.35rem;
   }
 
-  /* Hero ù full viewport beat, larger type */
+  /* Hero ‚Äî full viewport beat, larger type */
   .hero {
     min-height: max(36rem, calc(100dvh - var(--nav-height)));
     padding: var(--space-section-y) var(--space-page-x) var(--space-2xl);
@@ -73,7 +73,7 @@
     max-width: none;
   }
 
-  /* Trust bar ù horizontal marquee (same rhythm as mobile) */
+  /* Trust bar ‚Äî horizontal marquee (same rhythm as mobile) */
   .trust-bar {
     padding: var(--space-md) var(--space-page-x);
   }
@@ -107,7 +107,7 @@
   }
 
   .trust-bar__item::after {
-    content: "ù";
+    content: "‚Ä¢";
     margin-left: clamp(2rem, 3.5vw, 3.5rem);
     color: var(--color-border);
     font-size: 0.5rem;
@@ -119,7 +119,7 @@
     margin: 0;
   }
 
-  /* Products ù 3-column showcase on desktop */
+  /* Products ‚Äî 3-column showcase on desktop */
   .products {
     padding: var(--space-section-y) var(--space-page-x);
   }
@@ -144,7 +144,7 @@
     margin-inline: auto;
   }
 
-  /* 4 ùrùn: son sat?rdaki tek kart? ortala */
+  /* 4 √ºr√ºn: son satƒ±rdaki tek kartƒ± ortala */
   .products__item:last-child:nth-child(3n + 1):not(:only-child) {
     grid-column: 2;
   }
@@ -163,7 +163,7 @@
     max-width: calc(100% - 1.5rem);
   }
 
-  /* Atelier strip ù larger tiles, clear horizontal scroll */
+  /* Atelier strip ‚Äî larger tiles, clear horizontal scroll */
   .atelier-strip {
     padding: var(--space-section-y) var(--space-page-x) var(--space-2xl);
   }
@@ -290,7 +290,7 @@
     padding: clamp(2.5rem, 4vw, 4rem);
   }
 
-  /* Mobile drawer/backdrop must never cover desktop (÷zel Sipari? blank screen fix) */
+  /* Mobile drawer/backdrop must never cover desktop (√ñzel Sipari≈ü blank screen fix) */
   .glass-nav__backdrop,
   .glass-nav__panel {
     display: none !important;
@@ -310,7 +310,7 @@
   }
 }
 
-/* Wide screens ù still 2 product columns for a focused catalog */
+/* Wide screens ‚Äî still 2 product columns for a focused catalog */
 @media (min-width: 769px) and (max-width: 1023px) {
   .products__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

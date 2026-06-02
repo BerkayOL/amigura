@@ -18,9 +18,9 @@
   --color-text-inverse: #f8f6f3;
 
   /* Brand accents (from logo palette) */
-  --color-accent: #a8841a;
-  --color-accent-bright: #c9a227;
-  --color-accent-soft: rgba(168, 132, 26, 0.15);
+  --color-accent: var(--color-trendyol);
+  --color-accent-bright: var(--color-trendyol-hover);
+  --color-accent-soft: rgba(242, 122, 26, 0.15);
 
   /* Glass system */
   --glass-blur: 16px;
@@ -154,9 +154,9 @@
   --color-text-muted: #b0b9c9;
   --color-text-inverse: #141820;
 
-  --color-accent: #d4b84a;
-  --color-accent-bright: #e0c868;
-  --color-accent-soft: rgba(212, 184, 74, 0.12);
+  --color-accent: var(--color-trendyol);
+  --color-accent-bright: var(--color-trendyol-hover);
+  --color-accent-soft: rgba(242, 122, 26, 0.18);
   --color-peach: #c99a7a;
   --color-sage: #9fd4a8;
 
@@ -165,7 +165,7 @@
   --status-success-border: #5ecf96;
   --status-info-text: #fff8e6;
   --status-info-bg: #4a3d12;
-  --status-info-border: #e0c868;
+  --status-info-border: var(--color-accent-bright);
   --status-warn-text: #fff3ef;
   --status-warn-bg: #6b2e22;
   --status-warn-border: #f0a090;

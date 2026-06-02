@@ -1,60 +1,60 @@
-/** KVKK ve Gizlilik Politikasi (TR) */
+/** KVKK ve Gizlilik Politikası (TR) */
 export const privacyBodyTr = `
-<p>Bu metin, <strong>Amigura</strong> taraf?ndan i?letilen <strong>amigura.com</strong> vitrin sitesi kapsam?nda, 6698 say?l? Ki?isel Verilerin Korunmas? Kanunu (KVKK) ve ilgili mevzuat uyar?nca ki?isel verilerinizin i?lenmesine ili?kin sizi bilgilendirmek amac?yla haz?rlanm??t?r.</p>
+<p>Bu metin, <strong>Amigura</strong> tarafından işletilen <strong>amigura.com</strong> vitrin sitesi kapsamında, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuat uyarınca kişisel verilerinizin işlenmesine ilişkin sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
 
 <h2>1. Veri Sorumlusu</h2>
-<p>KVKK kapsam?nda veri sorumlusu <strong>Amigura</strong> olup ileti?im bilgilerimiz a?a??dad?r:</p>
+<p>KVKK kapsamında veri sorumlusu <strong>Amigura</strong> olup iletişim bilgilerimiz aşağıdadır:</p>
 <ul>
-<li><strong>E-posta:</strong> <a href="mailto:hello@amigura.com">hello@amigura.com</a></li>
-<li><strong>Web:</strong> <a href="index.html#contact">?leti?im b�l�m�</a></li>
+<li><strong>E-posta:</strong> <a href="#" data-contact-type="email" class="protected-contact">E-posta ile iletişime geç</a></li>
+<li><strong>Web:</strong> <a href="index.html#contact">İletişim bölümü</a></li>
 </ul>
 
-<h2>2. Hizmetin Niteli?i</h2>
-<p>amigura.com bir �r�n vitrini sunar; do?rudan �deme almaz. Koleksiyon �r�nleri i�in sat?n alma, �deme, fatura ve teslimat i?lemleri <strong>Trendyol</strong> platformu �zerinden ger�ekle?tirilir. �zel sipari? talepleri e-posta veya WhatsApp ile al?nabilir.</p>
+<h2>2. Hizmetin Niteliği</h2>
+<p>amigura.com bir ürün vitrini sunar; doğrudan ödeme almaz. Koleksiyon ürünleri için satın alma, ödeme, fatura ve teslimat işlemleri <strong>Trendyol</strong> platformu üzerinden gerçekleştirilir. Özel sipariş talepleri e-posta veya WhatsApp ile alınabilir.</p>
 
-<h2>3. ??lenen Ki?isel Veriler</h2>
+<h2>3. İşlenen Kişisel Veriler</h2>
 <ul>
-<li><strong>Kimlik ve ileti?im:</strong> Ad-soyad, e-posta adresi, telefon (siz ileti?im kurarsan?z).</li>
-<li><strong>Sipari? ve �zel sipari?:</strong> Fig�r tercihleri, renk, �l��, notlar (�zel sipari? formu veya mesajlar?n?zda).</li>
-<li><strong>??lem g�venli?i:</strong> IP adresi, taray?c? ve cihaz bilgisi, eri?im tarihi/saati, log kay?tlar?.</li>
-<li><strong>�erezler:</strong> Zorunlu �erezler; analitik �erezler yaln?zca a�?k r?zan?z ile.</li>
-<li><strong>B�lten:</strong> E-posta adresi (abone olman?z h�linde).</li>
+<li><strong>Kimlik ve iletişim:</strong> Ad-soyad, e-posta adresi, telefon (siz iletişim kurarsanız).</li>
+<li><strong>Sipariş ve özel sipariş:</strong> Figür tercihleri, renk, ölçü, notlar (özel sipariş formu veya mesajlarınızda).</li>
+<li><strong>İşlem güvenliği:</strong> IP adresi, tarayıcı ve cihaz bilgisi, erişim tarihi/saati, log kayıtları.</li>
+<li><strong>Çerezler:</strong> Zorunlu çerezler; analitik çerezler yalnızca açık rızanız ile.</li>
+<li><strong>Bülten:</strong> E-posta adresi (abone olmanız hâlinde).</li>
 </ul>
-<p>Trendyol �zerinden yap?lan al??veri?lerde �deme kart?, teslimat adresi ve sipari? ge�mi?i verileri Trendyol taraf?ndan i?lenir; bu verilere do?rudan eri?imimiz s?n?rl?d?r.</p>
+<p>Trendyol üzerinden yapılan alışverişlerde ödeme kartı, teslimat adresi ve sipariş geçmişi verileri Trendyol tarafından işlenir; bu verilere doğrudan erişimimiz sınırlıdır.</p>
 
-<h2>4. ??leme Ama�lar?</h2>
+<h2>4. İşleme Amaçları</h2>
 <ul>
-<li>Web sitesinin g�venli ve istikrarl? sunulmas?,</li>
-<li>?leti?im ve �zel sipari? taleplerinin de?erlendirilmesi,</li>
-<li>B�lten g�nderimi (onay?n?z dahilinde),</li>
-<li>Yasal y�k�ml�l�klerin yerine getirilmesi,</li>
-<li>Haklar?n tesisi, kullan?lmas? veya korunmas?,</li>
-<li>Hizmet kalitesinin �l��lmesi ve iyile?tirilmesi (anonim/anla?mal? analitik).</li>
+<li>Web sitesinin güvenli ve istikrarlı sunulması,</li>
+<li>İletişim ve özel sipariş taleplerinin değerlendirilmesi,</li>
+<li>Bülten gönderimi (onayınız dahilinde),</li>
+<li>Yasal yükümlülüklerin yerine getirilmesi,</li>
+<li>Hakların tesisi, kullanılması veya korunması,</li>
+<li>Hizmet kalitesinin ölçülmesi ve iyileştirilmesi (anonim/anlaşmalı analitik).</li>
 </ul>
 
 <h2>5. Hukuki Sebepler</h2>
-<p>Ki?isel verileriniz KVKK md. 5 kapsam?nda; bir s�zle?menin kurulmas? veya ifas?, hukuki y�k�ml�l�k, ilgili ki?inin temel hak ve �zg�rl�klerine zarar vermemek kayd?yla veri sorumlusunun me?ru menfaati ve a�?k r?zan?z (�r. analitik �erezler, b�lten) hukuki sebeplerine dayan?larak i?lenebilir.</p>
+<p>Kişisel verileriniz KVKK md. 5 kapsamında; bir sözleşmenin kurulması veya ifası, hukuki yükümlülük, ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaati ve açık rızanız (ör. analitik çerezler, bülten) hukuki sebeplerine dayanılarak işlenebilir.</p>
 
-<h2>6. Aktar?m ve Al?c?lar</h2>
-<p>Verileriniz; bar?nd?rma (hosting), e-posta hizmeti sa?lay?c?lar?, analitik ara� sa?lay?c?lar? (r?za ile), hukuki dan??manlar ve yasal zorunluluk h�linde yetkili kamu kurumlar? ile payla??labilir. Yurt d???na aktar?m s�z konusu olursa KVKK md. 9 h�k�mlerine uyulur.</p>
+<h2>6. Aktarım ve Alıcılar</h2>
+<p>Verileriniz; barındırma (hosting), e-posta hizmeti sağlayıcıları, analitik araç sağlayıcıları (rıza ile), hukuki danışmanlar ve yasal zorunluluk hâlinde yetkili kamu kurumları ile paylaşılabilir. Yurt dışına aktarım söz konusu olursa KVKK md. 9 hükümlerine uyulur.</p>
 
-<h2>7. Saklama S�releri</h2>
-<p>Veriler, i?leme amac? i�in gerekli s�re boyunca ve ilgili mevzuattaki zamana??m? s�releri kadar saklan?r; s�re sonunda silinir, yok edilir veya anonim hale getirilir.</p>
+<h2>7. Saklama Süreleri</h2>
+<p>Veriler, işleme amacı için gerekli süre boyunca ve ilgili mevzuattaki zamanaşımı süreleri kadar saklanır; süre sonunda silinir, yok edilir veya anonim hale getirilir.</p>
 
-<h2>8. KVKK Kapsam?ndaki Haklar?n?z</h2>
-<p>KVKK md. 11 uyar?nca; verilerinizin i?lenip i?lenmedi?ini �?renme, bilgi talep etme, i?lenme amac?n? �?renme, aktar?lan ���nc� ki?ileri bilme, eksik veya yanl?? i?lenmi?se d�zeltilmesini isteme, silinmesini veya yok edilmesini isteme, otomatik sistemlerle analiz sonucuna itiraz etme ve kanuna ayk?r? i?leme nedeniyle zarara u?raman?z h�linde tazminat talep etme haklar?na sahipsiniz.</p>
-<p>Ba?vurular?n?z? <a href="mailto:hello@amigura.com">hello@amigura.com</a> adresine iletebilirsiniz. Ba?vurular �cretsiz olarak en ge� <strong>30 g�n</strong> i�inde sonu�land?r?l?r.</p>
+<h2>8. KVKK Kapsamındaki Haklarınız</h2>
+<p>KVKK md. 11 uyarınca; verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, işlenme amacını öğrenme, aktarılan üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, silinmesini veya yok edilmesini isteme, otomatik sistemlerle analiz sonucuna itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde tazminat talep etme haklarına sahipsiniz.</p>
+<p>Başvurularınızı <a href="#" data-contact-type="email" class="protected-contact">E-posta ile iletişime geç</a> bağlantısı üzerinden iletebilirsiniz. Başvurular ücretsiz olarak en geç <strong>30 gün</strong> içinde sonuçlandırılır.</p>
 
-<h2>9. �erezler</h2>
-<p>Zorunlu �erezler site i?levselli?i i�in gereklidir. Analitik �erezler yaln?zca �erez banner �zerinden onay vermeniz h�linde kullan?l?r. Tercihlerinizi banner veya taray?c? ayarlar?ndan de?i?tirebilirsiniz.</p>
+<h2>9. Çerezler</h2>
+<p>Zorunlu çerezler site işlevselliği için gereklidir. Analitik çerezler yalnızca çerez banner üzerinden onay vermeniz hâlinde kullanılır. Tercihlerinizi banner veya tarayıcı ayarlarından değiştirebilirsiniz.</p>
 
-<h2>10. G�venlik</h2>
-<p>Ki?isel verilerin korunmas? i�in uygun teknik ve idari tedbirler uygulanmaktad?r; ancak internet �zerinden iletimin tamamen g�venli oldu?u garanti edilemez.</p>
+<h2>10. Güvenlik</h2>
+<p>Kişisel verilerin korunması için uygun teknik ve idari tedbirler uygulanmaktadır; ancak internet üzerinden iletimin tamamen güvenli olduğu garanti edilemez.</p>
 
-<h2>11. De?i?iklikler</h2>
-<p>Bu politika g�ncellenebilir. G�ncel s�r�m bu sayfada yay?mlan?r; �nemli de?i?ikliklerde tarih g�ncellenir.</p>
+<h2>11. Değişiklikler</h2>
+<p>Bu politika güncellenebilir. Güncel sürüm bu sayfada yayımlanır; önemli değişikliklerde tarih güncellenir.</p>
 
-<p class="legal-content__notice">Bu metin bilgilendirme ama�l?d?r. �zel durumunuz i�in hukuk dan??man?na ba?vurman?z �nerilir.</p>
+<p class="legal-content__notice">Bu metin bilgilendirme amaçlıdır. Özel durumunuz için hukuk danışmanına başvurmanız önerilir.</p>
 `;
 
-export const privacyContactTr = "KVKK ba?vurular? i�in:";
+export const privacyContactTr = "KVKK başvuruları için:";

@@ -41,7 +41,6 @@
   let posX = 0;
   let posY = 0;
   let isInteractive = false;
-  let cursorActive = false;
   /** @type {number | null} */
   let rafId = null;
   /** @type {ReturnType<typeof setTimeout> | null} */
@@ -315,8 +314,6 @@
     if (!ctx) return;
 
     resizeCanvas();
-    cursorActive = true;
-
     document.addEventListener(
       "mousemove",
       function (e) {
@@ -419,7 +416,6 @@
     }
     canvas = null;
     ctx = null;
-    cursorActive = false;
     trail.length = 0;
   }
 

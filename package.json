@@ -1,0 +1,23 @@
+{
+  "name": "amigura-vitrin",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "fonts:fetch": "node ./scripts/fetch-fonts.mjs",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "lint:js": "eslint \"js/**/*.js\"",
+    "lint:css": "stylelint \"css/fonts.css\" \"css/critical-ozel.css\"",
+    "lint:html": "html-validate \"*.html\"",
+    "lighthouse:ci": "lhci autorun --config=./lighthouserc.json"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0",
+    "html-validate": "^9.7.1",
+    "http-server": "^14.1.1",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
+

@@ -120,7 +120,7 @@
           <nav class="site-footer__nav" data-i18n-aria="footer.socialNav">
             <a href="https://www.instagram.com/amigura" class="site-footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.etsy.com/shop/amigura" class="site-footer__link" target="_blank" rel="noopener noreferrer">Etsy</a>
-            <a href="mailto:hello@amigura.com" class="site-footer__link" data-i18n="footer.email">E-posta</a>
+            <a href="#" class="site-footer__link" data-contact-email data-i18n="footer.email">E-posta</a>
           </nav>
           <nav class="site-footer__legal" data-i18n-aria="footer.legalNav">
             <a href="kvkk-gizlilik.html" class="site-footer__link"${kvkkCurrent} data-i18n="footer.kvkk">KVKK ve Gizlilik</a>

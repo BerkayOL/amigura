@@ -1,45 +1,45 @@
-/** ?ptal ve ?ade Ko?ullar? (TR) */
+/** İptal ve İade Koşulları (TR) */
 export const returnsBodyTr = `
-<p>Bu sayfa, <strong>Amigura</strong> el yap?m? amigurumi �r�nlerine ili?kin iptal, iade ve cayma hakk? s�re�lerini a�?klar. L�tfen hem bu metni hem de <strong>Trendyol</strong> platform ko?ullar?n? okuyunuz.</p>
+<p>Bu sayfa, <strong>Amigura</strong> el yapımı amigurumi ürünlerine ilişkin iptal, iade ve cayma hakkı süreçlerini açıklar. Lütfen hem bu metni hem de <strong>Trendyol</strong> platform koşullarını okuyunuz.</p>
 
 <h2>1. Genel Bilgilendirme</h2>
-<p><strong>amigura.com</strong> �r�n vitrini sunar. Haz?r koleksiyon �r�nlerinin sat???, �demesi ve kargosu <strong>Trendyol</strong> �zerinden yap?l?r. ?ade ve iptal ba?vurular? �ncelikle Trendyol sipari? paneliniz �zerinden y�netilir; at�lyemiz kalite ve paketleme s�recinden sorumludur.</p>
+<p><strong>amigura.com</strong> ürün vitrini sunar. Hazır koleksiyon ürünlerinin satışı, ödemesi ve kargosu <strong>Trendyol</strong> üzerinden yapılır. İade ve iptal başvuruları öncelikle Trendyol sipariş paneliniz üzerinden yönetilir; atölyemiz kalite ve paketleme sürecinden sorumludur.</p>
 
-<h2>2. Haz?r Koleksiyon �r�nleri � 14 G�nl�k Cayma Hakk?</h2>
-<p>Mesafeli s�zle?meler kapsam?nda, t�ketici olarak teslimattan itibaren <strong>14 g�n</strong> i�inde herhangi bir gerek�e g�stermeksizin cayma hakk?na sahipsiniz (ki?iye �zel �retilen �r�nler hari�).</p>
+<h2>2. Hazır Koleksiyon Ürünleri - 14 Günlük Cayma Hakkı</h2>
+<p>Mesafeli sözleşmeler kapsamında, tüketici olarak teslimattan itibaren <strong>14 gün</strong> içinde herhangi bir gerekçe göstermeksizin cayma hakkına sahipsiniz (kişiye özel üretilen ürünler hariç).</p>
 <ul>
-<li>?ade s�recini Trendyol hesab?n?zdan ba?lat?n.</li>
-<li>�r�n kullan?lmam??, hasars?z ve m�mk�nse orijinal ambalaj?nda olmal?d?r.</li>
-<li>?ade kargo s�reci Trendyol kurallar?na tabidir.</li>
-<li>�deme iadesi Trendyol prosed�rleriyle yap?l?r; s�re bankaya g�re de?i?ebilir.</li>
+<li>İade sürecini Trendyol hesabınızdan başlatın.</li>
+<li>Ürün kullanılmamış, hasarsız ve mümkünse orijinal ambalajında olmalıdır.</li>
+<li>İade kargo süreci Trendyol kurallarına tabidir.</li>
+<li>Ödeme iadesi Trendyol prosedürleriyle yapılır; süre bankaya göre değişebilir.</li>
 </ul>
 
-<h2>3. Ki?iselle?tirilmi? ve �zel Sipari? �r�nleri</h2>
-<p>6502 say?l? T�keticinin Korunmas? Hakk?nda Kanun ve Mesafeli S�zle?meler Y�netmeli?i md. 15 uyar?nca, <strong>t�keticinin se�im veya istekleri do?rultusunda ki?iselle?tirilen</strong> mallarda cayma hakk? kullan?lamaz.</p>
+<h2>3. Kişiselleştirilmiş ve Özel Sipariş Ürünleri</h2>
+<p>6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği md. 15 uyarınca, <strong>tüketicinin seçim veya istekleri doğrultusunda kişiselleştirilen</strong> mallarda cayma hakkı kullanılamaz.</p>
 <p>Buna ?unlar dahildir:</p>
 <ul>
-<li>�zel sipari? sihirbaz? ile talep edilen fig�r, renk, �l�� veya isim nak???,</li>
-<li>�retime ba?lanm?? �zel tasar?m sipari?ler,</li>
-<li>Ki?iye �zel hediye notu veya ambalaj talebiyle �retilen par�alar.</li>
+<li>Özel sipariş sihirbazı ile talep edilen figür, renk, ölçü veya isim nakışı,</li>
+<li>Üretime başlanmış özel tasarım siparişler,</li>
+<li>Kişiye özel hediye notu veya ambalaj talebiyle üretilen parçalar.</li>
 </ul>
-<p>�zel sipari? onay?ndan sonra iptal genellikle m�mk�n de?ildir; �retim ba?lamadan �nce yaz?l? olarak sorabilirsiniz.</p>
+<p>Özel sipariş onayından sonra iptal genellikle mümkün değildir; üretim başlamadan önce yazılı olarak sorabilirsiniz.</p>
 
-<h2>4. Hasarl? veya Eksik Teslimat</h2>
-<p>�r�n hasarl? veya eksik geldiyse Trendyol �zerinden bildirim yap?n ve foto?raf ile belgeleyin. Trendyol m�?teri hizmetleri ve sat?c? s�re�leri ge�erlidir. At�lyemizle ileti?ime ge�meniz durumunda destek olmaya �al???r?z: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+<h2>4. Hasarlı veya Eksik Teslimat</h2>
+<p>Ürün hasarlı veya eksik geldiyse Trendyol üzerinden bildirim yapın ve fotoğraf ile belgeleyin. Trendyol müşteri hizmetleri ve satıcı süreçleri geçerlidir. Atölyemizle iletişime geçmeniz durumunda destek olmaya çalışırız: <a href="#" data-contact-type="email" class="protected-contact">E-posta ile iletişime geç</a></p>
 
-<h2>5. Sipari? ?ptali (Kargoya Verilmeden)</h2>
-<p>Trendyol �zerinden verilen ve hen�z kargoya verilmemi? standart sipari?ler, platform kurallar? �er�evesinde iptal edilebilir. ?ade tutar? Trendyol taraf?ndan i?lenir.</p>
+<h2>5. Sipariş İptali (Kargoya Verilmeden)</h2>
+<p>Trendyol üzerinden verilen ve henüz kargoya verilmemiş standart siparişler, platform kuralları çerçevesinde iptal edilebilir. İade tutarı Trendyol tarafından işlenir.</p>
 
-<h2>6. De?i?im</h2>
-<p>Do?rudan de?i?im hizmeti sunulmamaktad?r. Uygun �r�nlerde iade sonras? yeni sipari? verebilirsiniz.</p>
+<h2>6. Değişim</h2>
+<p>Doğrudan değişim hizmeti sunulmamaktadır. Uygun ürünlerde iade sonrası yeni sipariş verebilirsiniz.</p>
 
-<h2>7. �zel Sipari? �demeleri</h2>
-<p>At�lyemizle do?rudan yap?lan �zel sipari?lerde �deme ve iade ko?ullar? sipari? onay?nda yaz?l? olarak payla??l?r; bu ko?ullar Trendyol kurallar?ndan farkl? olabilir.</p>
+<h2>7. Özel Sipariş Ödemeleri</h2>
+<p>Atölyemizle doğrudan yapılan özel siparişlerde ödeme ve iade koşulları sipariş onayında yazılı olarak paylaşılır; bu koşullar Trendyol kurallarından farklı olabilir.</p>
 
-<h2>8. ?leti?im</h2>
-<p>Sorular?n?z i�in: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+<h2>8. İletişim</h2>
+<p>Sorularınız için: <a href="#" data-contact-type="email" class="protected-contact">E-posta ile iletişime geç</a></p>
 
-<p class="legal-content__notice">G�ncel ko?ullar i�in ilgili Trendyol �r�n sayfas? ve platform ?artlar?n? da inceleyiniz.</p>
+<p class="legal-content__notice">Güncel koşullar için ilgili Trendyol ürün sayfası ve platform şartlarını da inceleyiniz.</p>
 `;
 
-export const returnsContactTr = "?ade sorular? i�in:";
+export const returnsContactTr = "İade soruları için:";

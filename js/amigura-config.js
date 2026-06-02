@@ -7,7 +7,7 @@
 
   /** @type {AmiguraConfig} */
   var Config = {
-    brandEmail: "hello@amigura.com",
+    brandEmailParts: ["hello", "amigura", "com"],
     instagramUrl: "https://www.instagram.com/amigura",
     etsyUrl: "https://www.etsy.com/shop/amigura",
     siteOrigin: "https://www.amigura.com",
@@ -21,8 +21,8 @@
       ronald: "https://www.trendyol.com/magaza/amigura-m-12345",
     },
 
-    /** WhatsApp: ùlke kodu + numara, ba??nda 0 yok (ùr. 905551234567) */
-    whatsappE164: "905551234567",
+    /** WhatsApp number parts (prevents naive scraping). Example: ["90","555","123","4567"] */
+    whatsappParts: ["90", "555", "123", "4567"],
 
     orderRefPrefix: "AMG",
 

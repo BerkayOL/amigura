@@ -1,0 +1,29 @@
+/* Critical: wizard visible even if external CSS is delayed */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body[data-page="ozel"] {
+  font-family: var(--font-family, system-ui, -apple-system, "Segoe UI", sans-serif);
+  background: #f8f6f3;
+  color: #1c1f26;
+}
+
+body[data-page="ozel"] #main {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding: 6rem 1rem 3rem;
+}
+
+body[data-page="ozel"] .wizard__panel.is-active {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+#irem-modal-root[hidden] {
+  display: none !important;
+}
+

@@ -10,7 +10,7 @@ const privacyTr = `<p>Bu metin, <strong>Amigura</strong> taraf\u0131ndan i\u015f
 <h2>1. Veri Sorumlusu</h2>
 <p>KVKK kapsam\u0131nda veri sorumlusu <strong>Amigura</strong> olup ileti\u015fim bilgilerimiz a\u015fa\u011f\u0131dad\u0131r:</p>
 <ul>
-<li><strong>E-posta:</strong> <a href="mailto:hello@amigura.com">hello@amigura.com</a></li>
+<li><strong>E-posta:</strong> <a href="#" data-contact-type="email" class="protected-contact">E-posta ile iletişime geç</a></li>
 <li><strong>Web:</strong> <a href="index.html#contact">\u0130leti\u015fim b\u00f6l\u00fcm\u00fc</a></li>
 </ul>
 
@@ -48,7 +48,7 @@ const privacyTr = `<p>Bu metin, <strong>Amigura</strong> taraf\u0131ndan i\u015f
 
 <h2>8. KVKK Kapsam\u0131ndaki Haklar\u0131n\u0131z</h2>
 <p>KVKK md. 11 uyar\u0131nca; verilerinizin i\u015flenip i\u015flenmedi\u011fini \u00f6\u011frenme, bilgi talep etme, i\u015flenme amac\u0131n\u0131 \u00f6\u011frenme, aktar\u0131lan \u00fc\u00e7\u00fcnc\u00fc ki\u015fileri bilme, eksik veya yanl\u0131\u015f i\u015flenmi\u015fse d\u00fczeltilmesini isteme, silinmesini veya yok edilmesini isteme, otomatik sistemlerle analiz sonucuna itiraz etme ve kanuna ayk\u0131r\u0131 i\u015fleme nedeniyle zarara u\u011framan\u0131z h\u00e2linde tazminat talep etme haklar\u0131na sahipsiniz.</p>
-<p>Ba\u015fvurular\u0131n\u0131z\u0131 <a href="mailto:hello@amigura.com">hello@amigura.com</a> adresine iletebilirsiniz. Ba\u015fvurular \u00fccretsiz olarak en ge\u00e7 <strong>30 g\u00fcn</strong> i\u00e7inde sonu\u00e7land\u0131r\u0131l\u0131r.</p>
+<p>Ba\u015fvurular\u0131n\u0131z\u0131 <a href="#" data-contact-type="email" class="protected-contact">E-posta ile ileti\u015fime ge\u00e7</a> ba\u011flant\u0131s\u0131 \u00fczerinden iletebilirsiniz. Ba\u015fvurular \u00fccretsiz olarak en ge\u00e7 <strong>30 g\u00fcn</strong> i\u00e7inde sonu\u00e7land\u0131r\u0131l\u0131r.</p>
 
 <h2>9. \u00c7erezler</h2>
 <p>Zorunlu \u00e7erezler site i\u015flevselli\u011fi i\u00e7in gereklidir. Analitik \u00e7erezler yaln\u0131zca \u00e7erez banner \u00fczerinden onay vermeniz h\u00e2linde kullan\u0131l\u0131r. Tercihlerinizi banner veya taray\u0131c\u0131 ayarlar\u0131ndan de\u011fi\u015ftirebilirsiniz.</p>
@@ -86,7 +86,7 @@ const returnsTr = `<p>Bu sayfa, <strong>Amigura</strong> el yap\u0131m\u0131 ami
 <p>\u00d6zel sipari\u015f onay\u0131ndan sonra iptal genellikle m\u00fcmk\u00fcn de\u011fildir; \u00fcretim ba\u015flamadan \u00f6nce yaz\u0131l\u0131 olarak sorabilirsiniz.</p>
 
 <h2>4. Hasarl\u0131 veya Eksik Teslimat</h2>
-<p>\u00dcr\u00fcn hasarl\u0131 veya eksik geldiyse Trendyol \u00fczerinden bildirim yap\u0131n ve foto\u011fraf ile belgeleyin. Trendyol m\u00fc\u015fteri hizmetleri ve sat\u0131c\u0131 s\u00fcre\u00e7leri ge\u00e7erlidir. At\u00f6lyemizle ileti\u015fime ge\u00e7meniz durumunda destek olmaya \u00e7al\u0131\u015f\u0131r\u0131z: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+<p>\u00dcr\u00fcn hasarl\u0131 veya eksik geldiyse Trendyol \u00fczerinden bildirim yap\u0131n ve foto\u011fraf ile belgeleyin. Trendyol m\u00fc\u015fteri hizmetleri ve sat\u0131c\u0131 s\u00fcre\u00e7leri ge\u00e7erlidir. At\u00f6lyemizle ileti\u015fime ge\u00e7meniz durumunda destek olmaya \u00e7al\u0131\u015f\u0131r\u0131z: <a href="#" data-contact-type="email" class="protected-contact">E-posta ile ileti\u015fime ge\u00e7</a></p>
 
 <h2>5. Sipari\u015f \u0130ptali (Kargoya Verilmeden)</h2>
 <p>Trendyol \u00fczerinden verilen ve hen\u00fcz kargoya verilmemi\u015f standart sipari\u015fler, platform kurallar\u0131 \u00e7er\u00e7evesinde iptal edilebilir. \u0130ade tutar\u0131 Trendyol taraf\u0131ndan i\u015flenir.</p>
@@ -98,7 +98,7 @@ const returnsTr = `<p>Bu sayfa, <strong>Amigura</strong> el yap\u0131m\u0131 ami
 <p>At\u00f6lyemizle do\u011frudan yap\u0131lan \u00f6zel sipari\u015flerde \u00f6deme ve iade ko\u015fullar\u0131 sipari\u015f onay\u0131nda yaz\u0131l\u0131 olarak payla\u015f\u0131l\u0131r; bu ko\u015fullar Trendyol kurallar\u0131ndan farkl\u0131 olabilir.</p>
 
 <h2>8. \u0130leti\u015fim</h2>
-<p>Sorular\u0131n\u0131z i\u00e7in: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+<p>Sorular\u0131n\u0131z i\u00e7in: <a href="#" data-contact-type="email" class="protected-contact">E-posta ile ileti\u015fime ge\u00e7</a></p>
 
 <p class="legal-content__notice">G\u00fcncel ko\u015fullar i\u00e7in ilgili Trendyol \u00fcr\u00fcn sayfas\u0131 ve platform \u015fartlar\u0131n\u0131 da inceleyiniz.</p>`;
 
@@ -106,7 +106,7 @@ const privacyEn = `<p>This Privacy Policy explains how <strong>Amigura</strong> 
 
 <h2>1. Who We Are</h2>
 <p><strong>Data controller:</strong> Amigura<br>
-<strong>Email:</strong> <a href="mailto:hello@amigura.com">hello@amigura.com</a><br>
+<strong>Email:</strong> <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a><br>
 <strong>Contact:</strong> <a href="index.html#contact">Contact section</a></p>
 
 <h2>2. What This Website Does</h2>
@@ -137,7 +137,7 @@ const privacyEn = `<p>This Privacy Policy explains how <strong>Amigura</strong> 
 
 <h2>8. Your Rights</h2>
 <p>Depending on applicable law, you may have the right to access, rectify, erase, restrict, object, data portability, and withdraw consent. You may lodge a complaint with a supervisory authority in your country.</p>
-<p>To exercise rights, email <a href="mailto:hello@amigura.com">hello@amigura.com</a>. We respond within <strong>30 days</strong> where possible.</p>
+<p>To exercise rights, email <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a>. We respond within <strong>30 days</strong> where possible.</p>
 
 <h2>9. Cookies</h2>
 <p>Essential cookies are required for the site to work. Analytics cookies are optional and controlled via our cookie banner. You can also manage cookies in your browser settings.</p>
@@ -179,7 +179,7 @@ const returnsEn = `<p>This Returns and Cancellation Policy explains how returns,
 <p>Once a custom order is confirmed and production has started, cancellation is usually not possible. Contact us before production begins if your plans change.</p>
 
 <h2>4. Damaged or Incorrect Delivery</h2>
-<p>If your item arrives damaged or incomplete, report it promptly through Trendyol and keep photos of the parcel and product. Trendyol's dispute and refund procedures apply. You may also email us at <a href="mailto:hello@amigura.com">hello@amigura.com</a> and we will assist where we can.</p>
+<p>If your item arrives damaged or incomplete, report it promptly through Trendyol and keep photos of the parcel and product. Trendyol's dispute and refund procedures apply. You may also email us at <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a> and we will assist where we can.</p>
 
 <h2>5. Cancellation Before Shipment</h2>
 <p>Orders on Trendyol that have not yet been shipped may be cancellable under platform rules. Refunds are handled by Trendyol.</p>
@@ -191,7 +191,7 @@ const returnsEn = `<p>This Returns and Cancellation Policy explains how returns,
 <p>For bespoke orders agreed directly with Amigura (email/WhatsApp), payment, deposit, cancellation, and refund terms are confirmed in writing before production. These may differ from Trendyol marketplace rules.</p>
 
 <h2>8. Contact</h2>
-<p>Questions: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+<p>Questions: <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a></p>
 
 <p class="legal-content__notice">Always refer to the Trendyol product listing and platform terms for the binding conditions of your specific purchase.</p>`;
 

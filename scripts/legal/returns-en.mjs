@@ -26,7 +26,7 @@ export const returnsBodyEn = `
 <p>Once a custom order is confirmed and production has started, cancellation is usually not possible. Contact us before production begins if your plans change.</p>
 
 <h2>4. Damaged or Incorrect Delivery</h2>
-<p>If your item arrives damaged or incomplete, report it promptly through Trendyol and keep photos of the parcel and product. Trendyol's dispute and refund procedures apply. You may also email us at <a href="mailto:hello@amigura.com">hello@amigura.com</a> and we will assist where we can.</p>
+<p>If your item arrives damaged or incomplete, report it promptly through Trendyol and keep photos of the parcel and product. Trendyol's dispute and refund procedures apply. You may also email us at <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a> and we will assist where we can.</p>
 
 <h2>5. Cancellation Before Shipment</h2>
 <p>Orders on Trendyol that have not yet been shipped may be cancellable under platform rules. Refunds are handled by Trendyol.</p>
@@ -38,7 +38,7 @@ export const returnsBodyEn = `
 <p>For bespoke orders agreed directly with Amigura (email/WhatsApp), payment, deposit, cancellation, and refund terms are confirmed in writing before production. These may differ from Trendyol marketplace rules.</p>
 
 <h2>8. Contact</h2>
-<p>Questions: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+<p>Questions: <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a></p>
 
 <p class="legal-content__notice">Always refer to the Trendyol product listing and platform terms for the binding conditions of your specific purchase.</p>
 `;

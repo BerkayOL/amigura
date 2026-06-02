@@ -4,7 +4,7 @@ export const privacyBodyEn = `
 
 <h2>1. Who We Are</h2>
 <p><strong>Data controller:</strong> Amigura<br>
-<strong>Email:</strong> <a href="mailto:hello@amigura.com">hello@amigura.com</a><br>
+<strong>Email:</strong> <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a><br>
 <strong>Contact:</strong> <a href="index.html#contact">Contact section</a></p>
 
 <h2>2. What This Website Does</h2>
@@ -35,7 +35,7 @@ export const privacyBodyEn = `
 
 <h2>8. Your Rights</h2>
 <p>Depending on applicable law, you may have the right to access, rectify, erase, restrict, object, data portability, and withdraw consent. You may lodge a complaint with a supervisory authority in your country.</p>
-<p>To exercise rights, email <a href="mailto:hello@amigura.com">hello@amigura.com</a>. We respond within <strong>30 days</strong> where possible.</p>
+<p>To exercise rights, email <a href="#" data-contact-type="email" class="protected-contact">Contact us by email</a>. We respond within <strong>30 days</strong> where possible.</p>
 
 <h2>9. Cookies</h2>
 <p>Essential cookies are required for the site to work. Analytics cookies are optional and controlled via our cookie banner. You can also manage cookies in your browser settings.</p>

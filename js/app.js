@@ -376,7 +376,7 @@
     const email = emailInput.value.trim();
     const cfg = getConfig();
     const newsletterCfg = (cfg && cfg.newsletter) || { mode: "mailto" };
-    const brandEmail = (cfg && cfg.brandEmail) || "hello@amigura.com";
+    const brandEmail = getBrandEmailAddress();
 
     if (newsletterCfg.mode === "api" && typeof fetch === "function") {
       const endpoint = newsletterCfg.endpoint || "/api/newsletter";
@@ -406,9 +406,43 @@
   }
 
   function openNewsletterMailto(brandEmail, email) {
+    if (!brandEmail) return;
     const subject = encodeURIComponent(t("newsletter.mailtoSubject"));
     const body = encodeURIComponent(t("newsletter.mailtoBody", { email: email }));
     window.location.href = "mailto:" + brandEmail + "?subject=" + subject + "&body=" + body;
+  }
+
+  function getBrandEmailAddress() {
+    const cfg = getConfig();
+    const parts = cfg && cfg.brandEmailParts ? cfg.brandEmailParts : null;
+    if (parts && parts.length >= 3) return parts[0] + "@" + parts[1] + "." + parts[2];
+    return "";
+  }
+
+  function buildWhatsappLink() {
+    const cfg = getConfig();
+    const parts = cfg && cfg.whatsappParts ? cfg.whatsappParts : null;
+    const number = parts && parts.length ? parts.join("") : "";
+    const digits = number.replace(/[^\d]/g, "");
+    if (!digits) return "https://wa.me/";
+    return "https://wa.me/" + digits;
+  }
+
+  function bindContactLinkAssembly() {
+    document.addEventListener(
+      "click",
+      function (e) {
+        const target = /** @type {HTMLElement} */ (e.target);
+        const emailLink = target.closest('[data-contact-email], [data-contact-type="email"].protected-contact');
+        if (emailLink instanceof HTMLAnchorElement) {
+          e.preventDefault();
+          const address = getBrandEmailAddress();
+          if (!address) return;
+          window.location.href = "mailto:" + address;
+        }
+      },
+      true
+    );
   }
 
   function initProcessTimeline() {
@@ -476,6 +510,53 @@
   function initHomeSections() {
     initReviewsCarousel();
     initProcessTimeline();
+  }
+
+  function ensureStickyConversionBar() {
+    if (document.body.dataset.page !== "home") return;
+    if (document.querySelector(".sticky-convert")) return;
+
+    const bar = document.createElement("div");
+    bar.className = "sticky-convert";
+    bar.innerHTML =
+      '<div class="sticky-convert__inner glass-surface">' +
+      '<a class="sticky-convert__cta btn-primary" href="ozel-siparis.html">' +
+      '<span data-i18n="sticky_order">Özel Sipariş</span>' +
+      "</a>" +
+      '<a class="sticky-convert__support" href="' +
+      buildWhatsappLink() +
+      '" target="_blank" rel="noopener noreferrer" data-i18n-aria="sticky_whatsapp" data-i18n-title="sticky_whatsapp" aria-label="WhatsApp Destek" title="WhatsApp Destek">' +
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">' +
+      '<path d="M21 11.5a8.5 8.5 0 1 1-4.1-7.3"/>' +
+      '<path d="M22 4 12 14l-3-3"/>' +
+      '</svg><span class="visually-hidden" data-i18n="sticky_whatsapp">WhatsApp Destek</span></a>' +
+      "</div>";
+    document.body.appendChild(bar);
+    if (window.Irem && window.Irem.I18n) window.Irem.I18n.apply(bar);
+
+    const hero = document.getElementById("hero");
+    if (!hero) return;
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        function (entries) {
+          const entry = entries[0];
+          const show = !!entry && entry.isIntersecting === false;
+          document.body.classList.toggle("is-sticky-convert-visible", show);
+        },
+        { root: null, threshold: 0, rootMargin: "-12% 0px 0px 0px" }
+      );
+      io.observe(hero);
+      return;
+    }
+
+    function onScroll() {
+      const rect = hero.getBoundingClientRect();
+      const show = rect.bottom < (window.innerHeight || document.documentElement.clientHeight) * 0.88;
+      document.body.classList.toggle("is-sticky-convert-visible", show);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 
   function ensureMainVisible() {
@@ -576,6 +657,21 @@
       const href = buyLink.getAttribute("href");
       if (href) window.Irem.Modal.openHandoff(href, buyLink);
     }
+
+    const card = target.closest(".product-card");
+    if (card instanceof HTMLElement && window.Irem && window.Irem.Products && window.Irem.Modal) {
+      if (
+        target.closest(
+          ".product-card__buy, .product-card__care, .product-card__intent-btn, a, button, input, textarea, select"
+        )
+      ) {
+        return;
+      }
+      const id = card.getAttribute("data-product-id");
+      const product = window.Irem.Products.getById(Number(id));
+      if (product) window.Irem.Modal.openQuickView(product, card);
+      return;
+    }
   }
 
   function onDocumentKeydown(e) {
@@ -613,6 +709,53 @@
     document.addEventListener("click", onDocumentClick);
     document.addEventListener("keydown", onDocumentKeydown);
     document.addEventListener("submit", onDocumentSubmit);
+
+    // Outbound performance hint: warm up the handoff origin on intent.
+    const warmed = new Set();
+    function warmOriginFromLink(el) {
+      if (!(el instanceof HTMLAnchorElement)) return;
+      const href = el.getAttribute("href");
+      if (!href) return;
+      try {
+        const u = new URL(href, window.location.href);
+        if (u.protocol !== "https:") return;
+        const origin = u.origin;
+        if (warmed.has(origin)) return;
+        warmed.add(origin);
+
+        const preconnect = document.createElement("link");
+        preconnect.rel = "preconnect";
+        preconnect.href = origin;
+        preconnect.crossOrigin = "";
+
+        const dns = document.createElement("link");
+        dns.rel = "dns-prefetch";
+        dns.href = origin;
+
+        document.head && document.head.appendChild(dns);
+        document.head && document.head.appendChild(preconnect);
+      } catch {
+        return;
+      }
+    }
+
+    document.addEventListener(
+      "mouseover",
+      function (e) {
+        const a = e.target && e.target.closest ? e.target.closest(".product-card__buy") : null;
+        if (a instanceof HTMLAnchorElement) warmOriginFromLink(a);
+      },
+      { passive: true, capture: true }
+    );
+    document.addEventListener(
+      "focusin",
+      function (e) {
+        const a = e.target && e.target.closest ? e.target.closest(".product-card__buy") : null;
+        if (a instanceof HTMLAnchorElement) warmOriginFromLink(a);
+      },
+      true
+    );
+
     mqDark = window.matchMedia("(prefers-color-scheme: dark)");
     mqDark.addEventListener("change", onSystemThemeChange);
     mqDesktop = window.matchMedia("(min-width: 769px)");
@@ -630,6 +773,7 @@
     ensureMainVisible();
     refreshElements();
     bindGlobalHandlers();
+    bindContactLinkAssembly();
     if (window.Irem.I18n) window.Irem.I18n.apply(document);
     applyTheme(getPreferredTheme());
     if (window.Irem.Cookie) window.Irem.Cookie.ensureCookieBanner();
@@ -639,6 +783,7 @@
     if (els.productContainer) {
       initProductScrollReveal();
       initHomeSections();
+      ensureStickyConversionBar();
     }
   }
 

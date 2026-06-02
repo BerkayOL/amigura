@@ -1,0 +1,62 @@
+[
+  {
+    "name": "minScore",
+    "expected": 0.75,
+    "actual": 0.69,
+    "values": [
+      0.69,
+      0.48
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.75,
+    "actual": 0.71,
+    "values": [
+      0.71,
+      0.71
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/ozel-siparis.html"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.75,
+    "actual": 0.48,
+    "values": [
+      0.48,
+      0.48
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/kvkk-gizlilik.html"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.75,
+    "actual": 0.48,
+    "values": [
+      0.48,
+      0.48
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/iade-sartlari.html"
+  }
+]

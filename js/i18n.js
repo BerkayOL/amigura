@@ -98,6 +98,47 @@
     }
   }
 
+  /**
+   * Lightweight HTML sanitizer for i18n strings.
+   * Allows only: b, strong, i, em, br. Strips all attributes.
+   * @param {string} html
+   */
+  function sanitizeI18nHtml(html) {
+    const allowed = { b: true, strong: true, i: true, em: true, br: true };
+    const tpl = document.createElement("template");
+    tpl.innerHTML = String(html || "");
+
+    /** @param {Node} node */
+    function walk(node) {
+      const children = Array.from(node.childNodes);
+      for (let i = 0; i < children.length; i++) {
+        const child = children[i];
+        if (child.nodeType === Node.ELEMENT_NODE) {
+          const el = /** @type {HTMLElement} */ (child);
+          const tag = el.tagName.toLowerCase();
+          if (!allowed[tag]) {
+            // Replace element with its text content (drops nested markup).
+            const text = document.createTextNode(el.textContent || "");
+            el.replaceWith(text);
+            continue;
+          }
+          // Strip attributes
+          Array.from(el.attributes).forEach(function (attr) {
+            el.removeAttribute(attr.name);
+          });
+          walk(el);
+        } else if (child.nodeType === Node.COMMENT_NODE) {
+          child.parentNode && child.parentNode.removeChild(child);
+        } else {
+          // Text nodes are fine.
+        }
+      }
+    }
+
+    walk(tpl.content);
+    return tpl.innerHTML;
+  }
+
   function apply(root) {
     const scope = root || document;
     scope.querySelectorAll("[data-i18n]").forEach(function (el) {
@@ -106,7 +147,7 @@
     });
     scope.querySelectorAll("[data-i18n-html]").forEach(function (el) {
       const key = el.getAttribute("data-i18n-html");
-      if (key) el.innerHTML = t(key);
+      if (key) el.innerHTML = sanitizeI18nHtml(t(key));
     });
     scope.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       const key = el.getAttribute("data-i18n-placeholder");

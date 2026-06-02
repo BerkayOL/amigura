@@ -10,23 +10,28 @@
 
   function getOrderEmail() {
     var cfg = getConfig();
-    return (cfg && cfg.brandEmail) || "hello@amigura.com";
+    var parts = cfg && cfg.brandEmailParts ? cfg.brandEmailParts : null;
+    if (parts && parts.length >= 3) return parts[0] + "@" + parts[1] + "." + parts[2];
+    return "";
   }
 
   function getWhatsAppE164() {
     var cfg = getConfig();
-    return (cfg && cfg.whatsappE164) || "905551234567";
+    var parts = cfg && cfg.whatsappParts ? cfg.whatsappParts : null;
+    if (parts && parts.length) return parts.join("").replace(/[^\d]/g, "");
+    return "";
   }
 
+  // Note: CSP-hardening removed inline styles. Swatch colors are defined via CSS classes.
   const PALETTE = [
-    { hex: "#E8B89A", nameKey: "palette.peach" },
-    { hex: "#9BB89A", nameKey: "palette.sage" },
-    { hex: "#C9A227", nameKey: "palette.gold" },
-    { hex: "#F5E6D3", nameKey: "palette.cream" },
-    { hex: "#8B9DC3", nameKey: "palette.blue" },
-    { hex: "#D4A5A5", nameKey: "palette.rose" },
-    { hex: "#3D4450", nameKey: "palette.charcoal" },
-    { hex: "#FFFFFF", nameKey: "palette.white" },
+    { hex: "#E8B89A", nameKey: "palette.peach", className: "wizard__swatch--peach" },
+    { hex: "#9BB89A", nameKey: "palette.sage", className: "wizard__swatch--sage" },
+    { hex: "#C9A227", nameKey: "palette.gold", className: "wizard__swatch--gold" },
+    { hex: "#F5E6D3", nameKey: "palette.cream", className: "wizard__swatch--cream" },
+    { hex: "#8B9DC3", nameKey: "palette.blue", className: "wizard__swatch--blue" },
+    { hex: "#D4A5A5", nameKey: "palette.rose", className: "wizard__swatch--rose" },
+    { hex: "#3D4450", nameKey: "palette.charcoal", className: "wizard__swatch--charcoal" },
+    { hex: "#FFFFFF", nameKey: "palette.white", className: "wizard__swatch--white" },
   ];
 
   const MAX_COLORS = 3;
@@ -110,13 +115,10 @@
         figure: getFigureLabel(state.figureKey),
       })
     );
-    mailto.href =
-      "mailto:" +
-      getOrderEmail() +
-      "?subject=" +
-      subject +
-      "&body=" +
-      encodeURIComponent(buildOrderMessage());
+    const emailAddr = getOrderEmail();
+    mailto.href = emailAddr
+      ? "mailto:" + emailAddr + "?subject=" + subject + "&body=" + encodeURIComponent(buildOrderMessage())
+      : "#";
     whatsapp.href =
       "https://wa.me/" + getWhatsAppE164() + "?text=" + encodeURIComponent(buildOrderMessage());
     actions.hidden = false;
@@ -169,11 +171,10 @@
       const selected = state.colors.includes(hex);
       const name = t(swatch.nameKey);
       return (
-        '<button type="button" class="wizard__swatch' +
+        '<button type="button" class="wizard__swatch ' +
+        swatch.className +
         (selected ? " is-selected" : "") +
         '" data-color="' +
-        hex +
-        '" style="--swatch-color: ' +
         hex +
         '" aria-pressed="' +
         selected +

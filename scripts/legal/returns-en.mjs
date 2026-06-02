@@ -1,0 +1,46 @@
+/** Returns and Cancellation Policy (EN) */
+export const returnsBodyEn = `
+<p>This Returns and Cancellation Policy explains how returns, refunds, and cancellations work for <strong>Amigura</strong> handmade amigurumi products. Please read this page together with <strong>Trendyol</strong> terms, as most collection purchases are completed there.</p>
+
+<h2>1. Overview</h2>
+<p><strong>amigura.com</strong> is a product showcase. We do not take payments on this website. Ready-made collection items are sold, paid for, and shipped through <strong>Trendyol</strong>, an established Turkish marketplace with buyer protection. Custom orders arranged directly with our studio may have separate terms confirmed in writing.</p>
+
+<h2>2. Ready-Made Collection Items - Right of Withdrawal</h2>
+<p>For standard ready-made items sold via Trendyol, consumers generally have a <strong>14-day right of withdrawal</strong> from delivery under Turkish consumer law (excluding personalised goods).</p>
+<ul>
+<li>Start the return from your Trendyol order account.</li>
+<li>Items should be unused, undamaged, and preferably in original packaging.</li>
+<li>Return shipping rules and costs follow Trendyol's current policy.</li>
+<li>Refunds are processed by Trendyol to your original payment method; timing depends on your bank or card issuer.</li>
+</ul>
+<p>International buyers should check Trendyol's cross-border and seller policies applicable to their order.</p>
+
+<h2>3. Personalised and Custom-Made Items - No Withdrawal</h2>
+<p>Under Turkish distance sales rules (and similar EU/UK principles), the right of withdrawal does <strong>not</strong> apply to goods made to the consumer's specifications or clearly personalised.</p>
+<p>This includes:</p>
+<ul>
+<li>Custom orders placed via our wizard (figure, colours, size, embroidery, name, etc.),</li>
+<li>Orders already in production at the atelier,</li>
+<li>Bespoke gift packaging or notes requested as part of production.</li>
+</ul>
+<p>Once a custom order is confirmed and production has started, cancellation is usually not possible. Contact us before production begins if your plans change.</p>
+
+<h2>4. Damaged or Incorrect Delivery</h2>
+<p>If your item arrives damaged or incomplete, report it promptly through Trendyol and keep photos of the parcel and product. Trendyol's dispute and refund procedures apply. You may also email us at <a href="mailto:hello@amigura.com">hello@amigura.com</a> and we will assist where we can.</p>
+
+<h2>5. Cancellation Before Shipment</h2>
+<p>Orders on Trendyol that have not yet been shipped may be cancellable under platform rules. Refunds are handled by Trendyol.</p>
+
+<h2>6. Exchanges</h2>
+<p>We do not offer direct exchanges. For eligible items, you may return via Trendyol and place a new order.</p>
+
+<h2>7. Direct Custom Orders</h2>
+<p>For bespoke orders agreed directly with Amigura (email/WhatsApp), payment, deposit, cancellation, and refund terms are confirmed in writing before production. These may differ from Trendyol marketplace rules.</p>
+
+<h2>8. Contact</h2>
+<p>Questions: <a href="mailto:hello@amigura.com">hello@amigura.com</a></p>
+
+<p class="legal-content__notice">Always refer to the Trendyol product listing and platform terms for the binding conditions of your specific purchase.</p>
+`;
+
+export const returnsContactEn = "Returns enquiries:";

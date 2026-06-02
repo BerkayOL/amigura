@@ -1,0 +1,390 @@
+/* ==========================================================================
+   Amigura ù Mobile viewport system (phones & small tablets)
+   Loaded after style.css. Targets 320pxù768px and notched devices.
+   ========================================================================== */
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+}
+
+/* --- Tablet / phone (?768px) --- */
+@media (max-width: 768px) {
+  #main,
+  main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
+
+  section,
+  .products__inner,
+  .atelier-strip__inner,
+  .reviews__inner,
+  .process-timeline__inner,
+  .about__inner,
+  .newsletter__inner,
+  .contact__inner,
+  .wizard-page__inner,
+  .thankyou-page__inner,
+  .glass-nav__inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  :root {
+    --nav-height: 4.5rem;
+    --space-page-x: clamp(1rem, 4.2vw, 1.5rem);
+    --space-section-y: clamp(2.25rem, 7vw, 3.5rem);
+  }
+
+  .glass-nav__bar {
+    padding-top: max(0.5rem, var(--safe-top));
+    padding-right: max(var(--space-page-x), var(--safe-right));
+    padding-bottom: 0.5rem;
+    padding-left: max(var(--space-page-x), var(--safe-left));
+  }
+
+  .glass-nav__inner {
+    min-height: 3.25rem;
+    gap: 0.5rem;
+  }
+
+  .site-brand {
+    max-width: min(100%, 17rem);
+  }
+
+  .glass-nav__controls {
+    gap: 0.35rem;
+  }
+
+  .lang-switch__btn,
+  .nav-toggle,
+  .theme-toggle {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+
+  body.is-nav-open {
+    overflow: hidden;
+  }
+
+  body.is-nav-open .glass-nav__bar {
+    z-index: calc(var(--z-nav-drawer) + 1);
+    position: relative;
+  }
+
+  .hero {
+    min-height: max(22rem, calc(100svh - var(--nav-height) - var(--safe-top)));
+    min-height: max(22rem, calc(100dvh - var(--nav-height) - var(--safe-top)));
+    padding: var(--space-section-y) var(--space-page-x) var(--space-lg);
+  }
+
+  .hero__inner,
+  .hero__content {
+    max-width: 100%;
+    padding-inline: 0;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 9.5vw, 2.85rem);
+    line-height: 1.08;
+  }
+
+  .hero__eyebrow {
+    letter-spacing: 0.14em;
+    font-size: clamp(0.6rem, 2.8vw, 0.72rem);
+  }
+
+  .hero__subtitle {
+    font-size: clamp(0.95rem, 3.8vw, 1.1rem);
+    line-height: 1.65;
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .hero__cta {
+    width: 100%;
+    max-width: none;
+    min-height: 3rem;
+  }
+
+  .trust-bar {
+    padding-inline: var(--space-page-x);
+  }
+
+  .products {
+    padding: var(--space-section-y) var(--space-page-x);
+  }
+
+  .products__header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .products__title {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+  }
+
+  .products__grid {
+    gap: 1.25rem;
+  }
+
+  .product-card__intent-btn,
+  .product-card__care {
+    min-height: 2.75rem;
+  }
+
+  .product-card__buy {
+    min-height: 3rem;
+    font-size: var(--text-sm);
+  }
+
+  .product-card__badge {
+    max-width: calc(100% - 1rem);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+  }
+
+  .atelier-strip {
+    padding: var(--space-section-y) var(--space-page-x) var(--space-xl);
+  }
+
+  .atelier-strip__scroll {
+    margin-inline: calc(-1 * var(--space-page-x));
+    padding-inline: var(--space-page-x);
+    scroll-padding-inline: var(--space-page-x);
+  }
+
+  .atelier-strip__item {
+    width: min(68vw, 10.5rem);
+  }
+
+  .atelier-strip__cta {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: center;
+    min-height: 3rem;
+  }
+
+  .reviews {
+    padding: var(--space-section-y) var(--space-page-x);
+  }
+
+  .review-card {
+    padding: var(--space-sm);
+  }
+
+  .review-card__inner {
+    padding: var(--space-md);
+    min-height: auto;
+  }
+
+  .review-card__quote {
+    font-size: 0.95rem;
+  }
+
+  .reviews-carousel__dot {
+    width: 0.5625rem;
+    height: 0.5625rem;
+    margin: 0.75rem;
+    box-sizing: content-box;
+  }
+
+  .process-timeline {
+    padding: var(--space-section-y) var(--space-page-x);
+  }
+
+  .process-timeline__header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .about {
+    padding: var(--space-section-y) var(--space-page-x);
+  }
+
+  .newsletter {
+    padding: var(--space-section-y) var(--space-page-x);
+  }
+
+  .newsletter__form {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .newsletter__input,
+  .newsletter__submit {
+    width: 100%;
+    flex: none;
+    min-height: 3rem;
+  }
+
+  .contact {
+    padding: var(--space-section-y) var(--space-page-x);
+  }
+
+  .contact--compact {
+    padding: var(--space-lg) var(--space-page-x);
+  }
+
+  .contact__email {
+    display: inline-block;
+    max-width: 100%;
+    font-size: clamp(1rem, 4.2vw, 1.2rem);
+    word-break: break-word;
+  }
+
+  .site-footer {
+    padding: var(--space-lg) max(var(--space-page-x), var(--safe-left))
+      max(var(--space-lg), var(--safe-bottom)) max(var(--space-page-x), var(--safe-right));
+  }
+
+  .site-footer__inner {
+    gap: var(--space-md);
+  }
+
+  .sound-toggle {
+    width: 100%;
+    max-width: 14rem;
+    justify-content: center;
+    min-height: 2.75rem;
+  }
+
+  .modal-root {
+    padding: max(var(--space-sm), var(--safe-top)) max(var(--space-page-x), var(--safe-right))
+      max(var(--safe-bottom), var(--space-sm)) max(var(--space-page-x), var(--safe-left));
+    align-items: flex-end;
+  }
+
+  .modal-panel {
+    width: 100%;
+    max-height: min(88dvh, calc(100dvh - var(--nav-height) - 2rem));
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cookie-root {
+    padding: var(--space-sm) max(var(--space-page-x), var(--safe-right))
+      max(var(--safe-bottom), var(--space-sm)) max(var(--space-page-x), var(--safe-left));
+  }
+
+  body.has-cookie-banner {
+    padding-bottom: calc(5.75rem + var(--safe-bottom));
+  }
+
+  .cookie-banner__btn {
+    min-height: 2.75rem;
+  }
+
+  .wizard-page {
+    padding: calc(var(--nav-height) + var(--safe-top) + var(--space-md)) var(--space-page-x)
+      max(var(--space-2xl), var(--safe-bottom));
+  }
+
+  .wizard {
+    padding: var(--space-md);
+  }
+
+  .wizard__btn {
+    min-height: 2.75rem;
+  }
+
+  .thankyou-page {
+    padding: calc(var(--nav-height) + var(--safe-top) + var(--space-md)) var(--space-page-x)
+      max(var(--space-xl), var(--safe-bottom));
+  }
+
+  .thankyou-card__home {
+    width: 100%;
+    max-width: 20rem;
+    min-height: 3rem;
+  }
+
+  .legal-content {
+    font-size: 0.9rem;
+  }
+
+  .legal-content h2 {
+    font-size: 1.05rem;
+  }
+
+  .glass-container {
+    padding: var(--space-lg) var(--space-page-x);
+  }
+}
+
+/* --- Compact phones (?430px, iPhone SE / mini class) --- */
+@media (max-width: 430px) {
+  :root {
+    --nav-height: 4.25rem;
+    --space-page-x: clamp(0.875rem, 4vw, 1.125rem);
+  }
+
+  .site-brand {
+    max-width: min(100%, 10.75rem);
+  }
+
+  .glass-nav__controls {
+    gap: 0.25rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.85rem, 8.8vw, 2.35rem);
+  }
+
+  .products__lead,
+  .atelier-strip__title,
+  .reviews__title {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Very small (?360px) --- */
+@media (max-width: 360px) {
+  .lang-switch__btn {
+    min-width: 2.5rem;
+    padding-inline: 0.4rem;
+    font-size: 0.65rem;
+  }
+
+  .site-brand__name {
+    font-size: 1rem;
+  }
+}
+
+/* --- Landscape phones --- */
+@media (max-width: 896px) and (max-height: 430px) {
+  .hero {
+    min-height: auto;
+    padding-block: var(--space-lg);
+  }
+
+  .hero__orb {
+    opacity: 0.45;
+    filter: blur(36px);
+  }
+}
+
+/* --- Coarse pointer (touch) --- */
+@media (hover: none) and (pointer: coarse) {
+  .glass-nav__link,
+  .site-footer__link,
+  .atelier-strip__link,
+  .thankyou-card__social-link {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .product-card:hover .product-card__image {
+    transform: none;
+  }
+
+  .products__item:has(.product-card.fade-in-up):hover {
+    transform: none;
+  }
+}

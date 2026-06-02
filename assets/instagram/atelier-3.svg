@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Atölye  t1 ve iplik">
+  <rect width="400" height="400" fill="#f5f0ea"/>
+  <rect x="80" y="120" width="240" height="160" rx="12" fill="#fff" opacity="0.7"/>
+  <line x1="200" y1="100" x2="200" y2="300" stroke="#c9a227" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="200" cy="100" r="14" fill="#a8841a"/>
+</svg>

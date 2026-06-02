@@ -1,0 +1,657 @@
+/**
+ * Amigura — Theme, home sections, products orchestration
+ */
+(function () {
+  "use strict";
+
+  const STORAGE_KEY = "amigura-theme";
+  const THEME_LIGHT = "light";
+  const THEME_DARK = "dark";
+
+  const root = document.documentElement;
+  const body = document.body;
+
+  const Utils = function () {
+    return window.Irem && window.Irem.Utils;
+  };
+
+  function t(key, vars) {
+    const u = Utils();
+    return u ? u.t(key, vars) : key;
+  }
+
+  function escapeHtml(str) {
+    const u = Utils();
+    return u ? u.escapeHtml(str) : String(str);
+  }
+
+  const REVIEW_COUNT = 5;
+  const REVIEW_INTERVAL_MS = 5500;
+
+  function getConfig() {
+    return window.Amigura && window.Amigura.Config;
+  }
+
+  function getReviews() {
+    const items = [];
+    for (let i = 1; i <= REVIEW_COUNT; i++) {
+      const base = "reviews.r" + i;
+      items.push({
+        quote: t(base + ".quote"),
+        name: t(base + ".name"),
+        city: t(base + ".city"),
+        product: t(base + ".product"),
+      });
+    }
+    return items;
+  }
+
+  /** @type {ReturnType<typeof cacheElements>} */
+  let els = null;
+
+  let initialized = false;
+  let productsRendered = false;
+  let globalHandlersBound = false;
+  let reviewsCarouselBound = false;
+  /** @type {ReturnType<typeof setInterval> | null} */
+  let reviewAutoTimer = null;
+  const reviewState = { index: 0, paused: false, reducedMotion: false };
+  /** @type {MediaQueryList | null} */
+  let mqDark = null;
+  /** @type {MediaQueryList | null} */
+  let mqDesktop = null;
+
+  function cacheElements() {
+    return {
+      toggle: document.getElementById("themeToggle"),
+      toggleLabel: document.querySelector("#themeToggle .theme-toggle__label"),
+      productContainer: document.getElementById("product-container"),
+      siteHeader: document.getElementById("siteHeader"),
+      navToggle: document.getElementById("navToggle"),
+      navClose: document.getElementById("navClose"),
+      siteNav: document.getElementById("siteNav"),
+      navBackdrop: document.getElementById("navBackdrop"),
+      main: document.getElementById("main"),
+      modalRoot: document.getElementById("irem-modal-root"),
+      cookieRoot: document.getElementById("irem-cookie-root"),
+      reviewsTrack: document.getElementById("reviews-track"),
+      reviewsDots: document.getElementById("reviews-dots"),
+      reviewsCarousel: document.getElementById("reviews-carousel"),
+      newsletterForm: document.getElementById("newsletter-form"),
+      newsletterSuccess: document.getElementById("newsletter-success"),
+      newsletterSection: document.getElementById("newsletter"),
+    };
+  }
+
+  function refreshElements() {
+    els = cacheElements();
+  }
+
+  function getEls() {
+    if (!els) refreshElements();
+    return els;
+  }
+
+  function initModules() {
+    const deps = {
+      refreshElements: refreshElements,
+      getEls: getEls,
+      t: t,
+      escapeHtml: escapeHtml,
+    };
+    if (window.Irem.Nav) window.Irem.Nav.init(deps);
+    if (window.Irem.Modal) window.Irem.Modal.init(deps);
+    if (window.Irem.Cookie) window.Irem.Cookie.init(deps);
+  }
+
+  function updateThemeColorMeta(theme) {
+    const color = theme === THEME_DARK ? "#141820" : "#f8f6f3";
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+      meta.setAttribute("content", color);
+    });
+  }
+
+  function applyTheme(theme) {
+    const isDark = theme === THEME_DARK;
+    root.setAttribute("data-theme", theme);
+    updateThemeColorMeta(theme);
+    refreshElements();
+
+    if (els.toggle) {
+      els.toggle.setAttribute("aria-pressed", String(isDark));
+      els.toggle.setAttribute("aria-label", isDark ? t("theme.toLight") : t("theme.toDark"));
+    }
+    if (els.toggleLabel) {
+      els.toggleLabel.textContent = isDark ? t("theme.dark") : t("theme.light");
+    }
+  }
+
+  function getPreferredTheme() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === THEME_LIGHT || stored === THEME_DARK) return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? THEME_DARK : THEME_LIGHT;
+  }
+
+  function onThemeToggleClick() {
+    const current = root.getAttribute("data-theme") || THEME_LIGHT;
+    const next = current === THEME_DARK ? THEME_LIGHT : THEME_DARK;
+    localStorage.setItem(STORAGE_KEY, next);
+    applyTheme(next);
+  }
+
+  function onSystemThemeChange(e) {
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      applyTheme(e.matches ? THEME_DARK : THEME_LIGHT);
+    }
+  }
+
+  function onDesktopBreakpoint(e) {
+    if (e.matches && window.Irem.Nav) window.Irem.Nav.setNavOpen(false);
+  }
+
+  function renderProducts() {
+    refreshElements();
+    if (!els.productContainer || !window.Irem.ProductCard) return;
+    window.Irem.ProductCard.renderInto(els.productContainer);
+    productsRendered = true;
+  }
+
+  function onLangChange() {
+    refreshElements();
+    if (window.Irem.I18n) window.Irem.I18n.apply(document);
+    applyTheme(root.getAttribute("data-theme") === THEME_DARK ? THEME_DARK : THEME_LIGHT);
+
+    const soundToggle = document.getElementById("soundToggle");
+    if (soundToggle) {
+      const on = soundToggle.classList.contains("is-sound-on");
+      soundToggle.setAttribute("aria-label", t(on ? "sound.on" : "sound.off"));
+      soundToggle.setAttribute("title", t(on ? "sound.on" : "sound.off"));
+    }
+
+    if (els.productContainer && window.Irem.ProductCard) {
+      if (productsRendered) {
+        window.Irem.ProductCard.updateTextsInPlace(els.productContainer);
+      } else {
+        renderProducts();
+        initProductScrollReveal();
+      }
+    }
+    if (els.reviewsTrack) renderReviews();
+    const closeBtn = document.querySelector(".modal-panel__close");
+    if (closeBtn) closeBtn.setAttribute("aria-label", t("modal.close"));
+    if (window.Irem.Cookie) window.Irem.Cookie.ensureCookieBanner();
+  }
+
+  function revealCardsAlreadyVisible(cards) {
+    const viewportH = window.innerHeight || document.documentElement.clientHeight;
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      if (card.classList.contains("fade-in-up")) continue;
+      const rect = card.getBoundingClientRect();
+      if (rect.top < viewportH * 0.92 && rect.bottom > 0) {
+        card.classList.add("fade-in-up");
+      }
+    }
+  }
+
+  function observeProductCards(cards) {
+    if (!cards.length) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      cards.forEach(function (c) {
+        c.classList.add("fade-in-up");
+      });
+      return;
+    }
+    if (!("IntersectionObserver" in window)) {
+      cards.forEach(function (c) {
+        c.classList.add("fade-in-up");
+      });
+      return;
+    }
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("fade-in-up");
+          observer.unobserve(entry.target);
+        });
+      },
+      { root: null, rootMargin: "0px 0px -4% 0px", threshold: 0.01 }
+    );
+    cards.forEach(function (c) {
+      observer.observe(c);
+    });
+    requestAnimationFrame(function () {
+      revealCardsAlreadyVisible(cards);
+    });
+  }
+
+  function initProductScrollReveal() {
+    refreshElements();
+    if (!els.productContainer) return;
+    const cards = Array.from(els.productContainer.querySelectorAll(".product-card"));
+    observeProductCards(cards);
+  }
+
+  function goToReview(index) {
+    refreshElements();
+    const reviews = getReviews();
+    if (!els.reviewsTrack || !reviews.length) return;
+    const total = reviews.length;
+    reviewState.index = ((index % total) + total) % total;
+    els.reviewsTrack.style.transform = "translate3d(-" + reviewState.index * 100 + "%, 0, 0)";
+    if (els.reviewsDots) {
+      els.reviewsDots.querySelectorAll(".reviews-carousel__dot").forEach(function (dot, i) {
+        const active = i === reviewState.index;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", String(active));
+        dot.setAttribute("tabindex", active ? "0" : "-1");
+      });
+    }
+    if (els.reviewsTrack) {
+      els.reviewsTrack.querySelectorAll(".review-card").forEach(function (panel, i) {
+        if (!(panel instanceof HTMLElement)) return;
+        const active = i === reviewState.index;
+        panel.setAttribute("aria-hidden", String(!active));
+      });
+    }
+  }
+
+  function startReviewAutoplay() {
+    if (reviewState.reducedMotion || reviewState.paused) return;
+    stopReviewAutoplay();
+    reviewAutoTimer = setInterval(function () {
+      if (!reviewState.paused) goToReview(reviewState.index + 1);
+    }, REVIEW_INTERVAL_MS);
+  }
+
+  function stopReviewAutoplay() {
+    if (reviewAutoTimer !== null) {
+      clearInterval(reviewAutoTimer);
+      reviewAutoTimer = null;
+    }
+  }
+
+  function renderReviews() {
+    refreshElements();
+    if (!els.reviewsTrack || !els.reviewsDots) return;
+    const reviewItems = getReviews();
+    els.reviewsTrack.innerHTML = reviewItems
+      .map(function (review, i) {
+        return (
+          '<article class="review-card" id="reviews-panel-' +
+          i +
+          '" role="tabpanel" data-slide="' +
+          i +
+          '" aria-labelledby="reviews-tab-' +
+          i +
+          '"' +
+          (i === 0 ? ' aria-hidden="false"' : ' aria-hidden="true"') +
+          '><div class="review-card__inner glass-surface"><span class="review-card__badge">' +
+          escapeHtml(t("reviews.verified")) +
+          '</span><blockquote class="review-card__quote">"' +
+          escapeHtml(review.quote) +
+          '"</blockquote><footer class="review-card__meta">' +
+          escapeHtml(review.name) +
+          " · " +
+          escapeHtml(review.city) +
+          '<span class="review-card__product">' +
+          escapeHtml(review.product) +
+          "</span></footer></div></article>"
+        );
+      })
+      .join("");
+    els.reviewsDots.innerHTML = reviewItems
+      .map(function (_, i) {
+        return (
+          '<button type="button" class="reviews-carousel__dot' +
+          (i === 0 ? " is-active" : "") +
+          '" id="reviews-tab-' +
+          i +
+          '" data-slide="' +
+          i +
+          '" role="tab" aria-controls="reviews-panel-' +
+          i +
+          '" aria-selected="' +
+          (i === 0 ? "true" : "false") +
+          '" tabindex="' +
+          (i === 0 ? "0" : "-1") +
+          '" aria-label="' +
+          escapeHtml(t("reviews.dotAria", { n: String(i + 1) })) +
+          '"></button>'
+        );
+      })
+      .join("");
+    goToReview(0);
+  }
+
+  function initReviewsCarousel() {
+    if (reviewsCarouselBound) return;
+    refreshElements();
+    if (!els.reviewsCarousel || !els.reviewsTrack) return;
+    reviewsCarouselBound = true;
+    reviewState.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    renderReviews();
+    const carousel = els.reviewsCarousel;
+    carousel.addEventListener("mouseenter", function () {
+      reviewState.paused = true;
+      carousel.classList.add("is-paused");
+      stopReviewAutoplay();
+    });
+    carousel.addEventListener("mouseleave", function () {
+      reviewState.paused = false;
+      carousel.classList.remove("is-paused");
+      startReviewAutoplay();
+    });
+    carousel.addEventListener("focusin", function () {
+      reviewState.paused = true;
+      carousel.classList.add("is-paused");
+      stopReviewAutoplay();
+    });
+    carousel.addEventListener("focusout", function (e) {
+      if (carousel.contains(e.relatedTarget)) return;
+      reviewState.paused = false;
+      carousel.classList.remove("is-paused");
+      startReviewAutoplay();
+    });
+    if (!reviewState.reducedMotion) startReviewAutoplay();
+  }
+
+  /**
+   * @param {SubmitEvent} e
+   */
+  function onDocumentSubmit(e) {
+    const form = e.target;
+    if (!(form instanceof HTMLFormElement) || form.id !== "newsletter-form") return;
+    e.preventDefault();
+    refreshElements();
+
+    const emailInput = form.querySelector("#newsletter-email");
+    if (!(emailInput instanceof HTMLInputElement)) return;
+    if (!emailInput.checkValidity()) {
+      emailInput.reportValidity();
+      return;
+    }
+
+    const email = emailInput.value.trim();
+    const cfg = getConfig();
+    const newsletterCfg = (cfg && cfg.newsletter) || { mode: "mailto" };
+    const brandEmail = (cfg && cfg.brandEmail) || "hello@amigura.com";
+
+    if (newsletterCfg.mode === "api" && typeof fetch === "function") {
+      const endpoint = newsletterCfg.endpoint || "/api/newsletter";
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, source: "amigura-vitrin" }),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Newsletter API " + res.status);
+          showNewsletterSuccess();
+        })
+        .catch(function () {
+          openNewsletterMailto(brandEmail, email);
+          showNewsletterSuccess();
+        });
+      return;
+    }
+
+    openNewsletterMailto(brandEmail, email);
+    showNewsletterSuccess();
+  }
+
+  function showNewsletterSuccess() {
+    if (els.newsletterSection) els.newsletterSection.classList.add("is-submitted");
+    if (els.newsletterSuccess) els.newsletterSuccess.hidden = false;
+  }
+
+  function openNewsletterMailto(brandEmail, email) {
+    const subject = encodeURIComponent(t("newsletter.mailtoSubject"));
+    const body = encodeURIComponent(t("newsletter.mailtoBody", { email: email }));
+    window.location.href = "mailto:" + brandEmail + "?subject=" + subject + "&body=" + body;
+  }
+
+  function initProcessTimeline() {
+    const track = document.getElementById("process-timeline");
+    if (!track) return;
+    const steps = track.querySelectorAll("[data-process-step]");
+    const lineFill = document.getElementById("process-line-fill");
+    const stepCount = steps.length;
+    if (!stepCount) return;
+
+    function setLineProgress() {
+      let visible = 0;
+      for (let i = 0; i < steps.length; i++) {
+        if (steps[i].classList.contains("is-visible")) visible++;
+      }
+      const pct = Math.round((visible / stepCount) * 100);
+      if (lineFill instanceof HTMLElement) {
+        lineFill.style.setProperty("--line-progress", pct + "%");
+      }
+      if (visible >= stepCount) track.classList.add("is-complete");
+    }
+
+    function revealAll() {
+      track.classList.add("is-complete");
+      for (let i = 0; i < steps.length; i++) steps[i].classList.add("is-visible");
+      if (lineFill instanceof HTMLElement) lineFill.style.setProperty("--line-progress", "100%");
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      revealAll();
+      return;
+    }
+    if (!("IntersectionObserver" in window)) {
+      revealAll();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+        setLineProgress();
+      },
+      { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.25 }
+    );
+
+    for (let j = 0; j < steps.length; j++) observer.observe(steps[j]);
+
+    requestAnimationFrame(function () {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      for (let k = 0; k < steps.length; k++) {
+        const rect = steps[k].getBoundingClientRect();
+        if (rect.top < vh * 0.88 && rect.bottom > 0) {
+          steps[k].classList.add("is-visible");
+          observer.unobserve(steps[k]);
+        }
+      }
+      setLineProgress();
+    });
+  }
+
+  function initHomeSections() {
+    initReviewsCarousel();
+    initProcessTimeline();
+  }
+
+  function ensureMainVisible() {
+    if (window.Irem.Nav && window.Irem.Nav.resetNav) {
+      window.Irem.Nav.resetNav();
+    } else {
+      const main = document.getElementById("main");
+      if (main) main.removeAttribute("inert");
+      body.classList.remove("is-modal-open", "is-nav-open");
+      const header = document.getElementById("siteHeader");
+      if (header) header.classList.remove("is-nav-open");
+      const backdrop = document.getElementById("navBackdrop");
+      if (backdrop) backdrop.hidden = true;
+    }
+    if (!window.Irem.Nav && window.Irem.Modal && window.Irem.Modal.forceReset) {
+      window.Irem.Modal.forceReset();
+    } else if (window.Irem.Modal && window.Irem.Modal.isActive && window.Irem.Modal.isActive()) {
+      window.Irem.Modal.close();
+    }
+  }
+
+  function onDocumentClick(e) {
+    const target = /** @type {HTMLElement} */ (e.target);
+
+    const langBtn = target.closest(".lang-switch__btn");
+    if (langBtn instanceof HTMLButtonElement) {
+      const lang = langBtn.getAttribute("data-lang");
+      if ((lang === "tr" || lang === "en") && window.Irem.I18n) {
+        window.Irem.I18n.setLang(lang);
+      }
+      return;
+    }
+
+    if (target.closest("#themeToggle")) {
+      onThemeToggleClick();
+      return;
+    }
+
+    if (target.closest("#navToggle")) {
+      refreshElements();
+      const isOpen = els.siteHeader?.classList.contains("is-nav-open");
+      if (window.Irem.Nav) window.Irem.Nav.setNavOpen(!isOpen);
+      return;
+    }
+
+    if (target.closest("#navClose")) {
+      if (window.Irem.Nav) window.Irem.Nav.setNavOpen(false);
+      els.navToggle?.focus();
+      return;
+    }
+
+    if (target.closest("#navBackdrop")) {
+      if (window.Irem.Nav) window.Irem.Nav.setNavOpen(false);
+      return;
+    }
+
+    const navPageLink = target.closest(".glass-nav a[href]");
+    if (navPageLink instanceof HTMLAnchorElement) {
+      if (window.Irem.Nav) window.Irem.Nav.resetNav();
+    }
+
+    if (window.Irem.Cookie && window.Irem.Cookie.handleConsentClick(target)) return;
+    if (window.Irem.Modal && window.Irem.Modal.handleClick(target)) {
+      e.preventDefault();
+      return;
+    }
+
+    const careBtn = target.closest(".product-card__care");
+    if (careBtn instanceof HTMLElement && window.Irem.Products && window.Irem.Modal) {
+      e.preventDefault();
+      const card = careBtn.closest(".product-card");
+      const id = card?.getAttribute("data-product-id");
+      const product = window.Irem.Products.getById(Number(id));
+      if (product) window.Irem.Modal.openCare(product, careBtn);
+      return;
+    }
+
+    const intentBtn = target.closest(".product-card__intent-btn");
+    if (intentBtn instanceof HTMLButtonElement && window.Irem.ProductCard) {
+      const card = intentBtn.closest(".product-card");
+      const intent = intentBtn.getAttribute("data-intent");
+      if (card instanceof HTMLElement && (intent === "self" || intent === "gift")) {
+        window.Irem.ProductCard.setIntent(card, intent);
+      }
+      return;
+    }
+
+    const reviewDot = target.closest(".reviews-carousel__dot");
+    if (reviewDot instanceof HTMLButtonElement) {
+      const idx = Number(reviewDot.getAttribute("data-slide"));
+      if (!Number.isNaN(idx)) goToReview(idx);
+      return;
+    }
+
+    const buyLink = target.closest(".product-card__buy");
+    if (buyLink instanceof HTMLAnchorElement && window.Irem.Modal) {
+      e.preventDefault();
+      const href = buyLink.getAttribute("href");
+      if (href) window.Irem.Modal.openHandoff(href, buyLink);
+    }
+  }
+
+  function onDocumentKeydown(e) {
+    refreshElements();
+    if (
+      els.reviewsCarousel &&
+      els.reviewsCarousel.contains(document.activeElement) &&
+      (e.key === "ArrowLeft" || e.key === "ArrowRight")
+    ) {
+      e.preventDefault();
+      goToReview(reviewState.index + (e.key === "ArrowRight" ? 1 : -1));
+      return;
+    }
+    if (e.key === "Escape") {
+      if (window.Irem.Modal && window.Irem.Modal.isActive()) {
+        window.Irem.Modal.close();
+        return;
+      }
+      if (els.siteHeader?.classList.contains("is-nav-open")) {
+        if (window.Irem.Nav) window.Irem.Nav.setNavOpen(false);
+        els.navToggle?.focus();
+      }
+      return;
+    }
+    if (window.Irem.Modal && window.Irem.Modal.isActive()) {
+      window.Irem.Modal.trapFocus(e);
+      return;
+    }
+    if (window.Irem.Nav) window.Irem.Nav.trapNavFocus(e);
+  }
+
+  function bindGlobalHandlers() {
+    if (globalHandlersBound) return;
+    globalHandlersBound = true;
+    document.addEventListener("click", onDocumentClick);
+    document.addEventListener("keydown", onDocumentKeydown);
+    document.addEventListener("submit", onDocumentSubmit);
+    mqDark = window.matchMedia("(prefers-color-scheme: dark)");
+    mqDark.addEventListener("change", onSystemThemeChange);
+    mqDesktop = window.matchMedia("(min-width: 769px)");
+    mqDesktop.addEventListener("change", onDesktopBreakpoint);
+    window.addEventListener("pageshow", function () {
+      ensureMainVisible();
+      if (window.Irem.Modal && window.Irem.Modal.isActive()) window.Irem.Modal.close();
+    });
+  }
+
+  function init() {
+    if (initialized) return;
+    initialized = true;
+    initModules();
+    ensureMainVisible();
+    refreshElements();
+    bindGlobalHandlers();
+    if (window.Irem.I18n) window.Irem.I18n.apply(document);
+    applyTheme(getPreferredTheme());
+    if (window.Irem.Cookie) window.Irem.Cookie.ensureCookieBanner();
+    document.addEventListener("amigura:langchange", onLangChange);
+
+    if (els.productContainer && !productsRendered) renderProducts();
+    if (els.productContainer) {
+      initProductScrollReveal();
+      initHomeSections();
+    }
+  }
+
+  function boot() {
+    document.addEventListener("amigura:ready", init, { once: true });
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+        if (!initialized) init();
+      },
+      { once: true }
+    );
+  }
+
+  boot();
+})();

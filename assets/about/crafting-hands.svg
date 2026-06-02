@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="900" viewBox="0 0 800 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5ebe0"/>
+      <stop offset="50%" stop-color="#e8d4c4"/>
+      <stop offset="100%" stop-color="#d4c4b0"/>
+    </linearGradient>
+    <linearGradient id="yarn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8b89a"/>
+      <stop offset="100%" stop-color="#c99a7a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#bg)"/>
+  <ellipse cx="400" cy="520" rx="220" ry="180" fill="#f8f0e8" opacity="0.85"/>
+  <ellipse cx="320" cy="480" rx="90" ry="110" fill="#f5e6d8" opacity="0.95"/>
+  <ellipse cx="480" cy="500" rx="85" ry="105" fill="#f0ddd0" opacity="0.95"/>
+  <path d="M280 420 Q340 380 400 400 Q460 420 520 380" stroke="#9bb89a" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="400" cy="620" r="70" fill="url(#yarn)"/>
+  <path d="M400 550 L420 480 L440 520 L400 550 Z" fill="#c9a227" opacity="0.85"/>
+  <path d="M350 350 Q400 300 450 350" stroke="#c9a227" stroke-width="4" fill="none" opacity="0.5"/>
+</svg>

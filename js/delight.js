@@ -465,7 +465,9 @@
   }
 
   function shouldUseYarnCursor() {
-    return document.body.dataset.page === "home";
+    // Cursor effect is part of the site's global "feel" (not just the homepage).
+    // Keep it gated behind hover+fine pointer + reduced-motion checks via canUseYarnCursor().
+    return true;
   }
 
   function initDelight() {

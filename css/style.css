@@ -1002,13 +1002,7 @@ button:focus-visible {
   font-weight: 600;
   letter-spacing: 0.04em;
   color: #ffffff;
-  background: linear-gradient(
-    145deg,
-    var(--color-accent) 0%,
-    #e0c04a 50%,
-    var(--color-accent) 100%
-  );
-  background-size: 200% 200%;
+  background: var(--color-btn-primary);
   border: none;
   border-radius: var(--radius-full);
   box-shadow: 0 4px 20px rgba(201, 162, 39, 0.25);
@@ -1016,7 +1010,7 @@ button:focus-visible {
   transition:
     transform 0.35s var(--ease-premium),
     box-shadow 0.35s var(--ease-premium),
-    background-position 0.5s ease;
+    background var(--transition-fast);
 }
 
 [data-theme="dark"] .hero__cta {
@@ -1027,7 +1021,7 @@ button:focus-visible {
 .hero__cta:hover {
   transform: scale(1.05);
   box-shadow: var(--hero-cta-glow);
-  background-position: 100% 50%;
+  background: var(--color-btn-primary-hover);
 }
 
 .hero__cta:active {

@@ -102,6 +102,7 @@
     state.active = false;
     els.modalRoot.hidden = true;
     body.classList.remove("is-modal-open");
+    body.classList.remove("is-quickview-open");
 
     if (els.main && !els.siteHeader?.classList.contains("is-nav-open")) {
       els.main.removeAttribute("inert");
@@ -130,6 +131,7 @@
     if (modalRoot) modalRoot.hidden = true;
 
     body.classList.remove("is-modal-open");
+    body.classList.remove("is-quickview-open");
 
     const main = document.getElementById("main");
     if (main) main.removeAttribute("inert");
@@ -404,6 +406,7 @@
 
     const panel = document.getElementById("irem-modal-panel");
     if (panel) panel.classList.add("modal-panel--quickview");
+    body.classList.add("is-quickview-open");
 
     openModal();
   }

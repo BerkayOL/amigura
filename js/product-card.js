@@ -1,5 +1,5 @@
 /**
- * Amigura ù Product card UI
+ * Amigura ? Product card UI
  */
 (function (global) {
   "use strict";
@@ -91,11 +91,21 @@
     const buyLabel = escapeHtml(t("product.buyAria", { name: product.name }));
     const careLabel = escapeHtml(t("product.careAria", { name: product.name }));
 
+    const pdpHref =
+      "urun.html?id=" +
+      encodeURIComponent(String(product.id)) +
+      "&intent=self";
+
     return (
       '<li class="products__item">' +
       '<article class="product-card glass-surface" data-product-id="' +
       product.id +
       '" data-intent="self">' +
+      '<a class="product-card__open" href="' +
+      pdpHref +
+      '" aria-label="' +
+      escapeHtml(t("product.viewAria", { name: product.name })) +
+      '"></a>' +
       '<div class="product-card__media">' +
       '<span class="product-card__badge product-card__badge--' +
       statusClass +
@@ -170,11 +180,19 @@
     }
 
     const buyLink = card.querySelector(".product-card__buy");
+    const openLink = card.querySelector(".product-card__open");
     const productId = card.getAttribute("data-product-id");
     const product =
       global.Irem && global.Irem.Products
         ? global.Irem.Products.getById(Number(productId))
         : null;
+    if (openLink instanceof HTMLAnchorElement && product) {
+      openLink.href =
+        "urun.html?id=" +
+        encodeURIComponent(String(product.id)) +
+        "&intent=" +
+        encodeURIComponent(isGift ? "gift" : "self");
+    }
     if (buyLink instanceof HTMLAnchorElement && product) {
       buyLink.setAttribute(
         "aria-label",

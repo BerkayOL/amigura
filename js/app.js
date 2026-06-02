@@ -656,20 +656,12 @@
       e.preventDefault();
       const href = buyLink.getAttribute("href");
       if (href) window.Irem.Modal.openHandoff(href, buyLink);
+      return;
     }
 
-    const card = target.closest(".product-card");
-    if (card instanceof HTMLElement && window.Irem && window.Irem.Products && window.Irem.Modal) {
-      if (
-        target.closest(
-          ".product-card__buy, .product-card__care, .product-card__intent-btn, a, button, input, textarea, select"
-        )
-      ) {
-        return;
-      }
-      const id = card.getAttribute("data-product-id");
-      const product = window.Irem.Products.getById(Number(id));
-      if (product) window.Irem.Modal.openQuickView(product, card);
+    if (
+      target.closest(".product-card__open, .pdp-similar-card, a[href*='urun.html']")
+    ) {
       return;
     }
   }

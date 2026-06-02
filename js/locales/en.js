@@ -13,7 +13,9 @@
     "kvkkTitle": "Privacy Policy | Amigura",
     "iadeTitle": "Returns & Cancellation | Amigura",
     "kvkkDesc": "Amigura Privacy Policy - How we collect and use personal data on our showcase website.",
-    "iadeDesc": "Amigura Returns and Cancellation Policy - Trendyol orders and custom-made exceptions."
+    "iadeDesc": "Amigura Returns and Cancellation Policy - Trendyol orders and custom-made exceptions.",
+    "productTitle": "Product | Amigura",
+    "productDesc": "Handmade amigurumi product details — order securely on Trendyol."
   },
   "nav": {
     "collection": "Collection",
@@ -94,22 +96,43 @@
     }
   },
   "product": {
-    "buy": "Buy on Trendyol",
-    "buyGift": "Send as Gift",
-    "care": "Care & Size",
-    "intentLabel": "Purchase intent",
-    "intentSelf": "For Myself",
-    "intentGift": "Gift",
-    "giftTip": "Gift wrapping available",
+    "buy": "Shop on Trendyol",
+    "buyGift": "Send as a gift",
+    "care": "Care & sizing",
+    "intentLabel": "How are you ordering?",
+    "intentSelf": "For myself",
+    "intentGift": "As a gift",
+    "giftTip": "Complimentary gift wrapping available",
     "buyAria": "Buy {name} on Trendyol",
     "buyGiftAria": "Send {name} as gift on Trendyol",
     "careAria": "{name} care and size guide",
-    "alt": "{name} - handmade Amigura amigurumi"
+    "alt": "{name} - handmade Amigura amigurumi",
+    "viewAria": "View {name} product details"
+  },
+  "pdp": {
+    "breadcrumb": "Collection",
+    "notFoundTitle": "Product not found",
+    "notFoundLead": "Please return to the collection and try again.",
+    "notFoundCta": "Back to collection",
+    "galleryLabel": "Product images",
+    "highlights": "Highlights",
+    "careTab": "Care",
+    "returnsTab": "Returns and process",
+    "similarTitle": "You may also like",
+    "similarLead": "More hand-finished pieces from the same studio.",
+    "stickyBuy": "Buy on Trendyol",
+    "trustHeading": "Shop with confidence",
+    "trustSub": "Every piece ships from our studio with care and buyer protection.",
+    "checkoutHeading": "Checkout",
+    "checkoutSub": "Secure payment through Trendyol",
+    "verifiedNote": "Secure checkout with Trendyol Buyer Protection",
+    "deliveryNote": "Careful packaging for handmade pieces",
+    "handmadeNote": "Finished by hand, one stitch at a time"
   },
   "status": {
-    "inStock": "In Stock",
-    "custom7": "Custom - 7 Days",
-    "limited": "Limited - 2 Left"
+    "inStock": "In stock",
+    "custom7": "Made to order — 7 days",
+    "limited": "Limited edition — 2 left"
   },
   "atelier": {
     "eyebrow": "From the Studio",

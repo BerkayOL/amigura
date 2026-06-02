@@ -13,6 +13,7 @@
     tesekkur: { title: "meta.thanksTitle", desc: "meta.thanksDesc" },
     kvkk: { title: "meta.kvkkTitle", desc: "meta.kvkkDesc" },
     iade: { title: "meta.iadeTitle", desc: "meta.iadeDesc" },
+    product: { title: "meta.productTitle", desc: "meta.productDesc" },
   };
 
   let currentLang = DEFAULT_LANG;

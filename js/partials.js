@@ -5,11 +5,17 @@
   "use strict";
 
   /**
-   * @returns {"home" | "kvkk" | "iade" | "tesekkur" | "ozel"}
+   * @returns {"home" | "kvkk" | "iade" | "tesekkur" | "ozel" | "product"}
    */
   function getPageType() {
     const page = document.body.dataset.page;
-    if (page === "kvkk" || page === "iade" || page === "tesekkur" || page === "ozel") {
+    if (
+      page === "kvkk" ||
+      page === "iade" ||
+      page === "tesekkur" ||
+      page === "ozel" ||
+      page === "product"
+    ) {
       return page;
     }
     return "home";

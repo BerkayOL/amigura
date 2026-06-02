@@ -13,7 +13,9 @@
     "kvkkTitle": "KVKK ve Gizlilik Politikası | Amigura",
     "iadeTitle": "İptal ve İade Koşulları | Amigura",
     "kvkkDesc": "Amigura KVKK ve Gizlilik Politikası - Kişisel verilerin korunması hakkında bilgilendirme.",
-    "iadeDesc": "Amigura İptal ve İade Koşulları - Trendyol satışları ve kişiye özel ürün istisnaları."
+    "iadeDesc": "Amigura İptal ve İade Koşulları - Trendyol satışları ve kişiye özel ürün istisnaları.",
+    "productTitle": "Ürün | Amigura",
+    "productDesc": "El yapımı amigurumi ürün detayı — Trendyol üzerinden güvenle sipariş verin."
   },
   "nav": {
     "collection": "Koleksiyon",
@@ -104,7 +106,28 @@
     "buyAria": "Trendyol'da {name} satın al",
     "buyGiftAria": "{name} — Trendyol'da hediye olarak gönder",
     "careAria": "{name} bakım ve boyut rehberi",
-    "alt": "{name} — el yapımı Amigura amigurumi"
+    "alt": "{name} — el yapımı Amigura amigurumi",
+    "viewAria": "{name} ürün detayını görüntüle"
+  },
+  "pdp": {
+    "breadcrumb": "Koleksiyon",
+    "notFoundTitle": "Ürün bulunamadı",
+    "notFoundLead": "Lütfen koleksiyona dönüp tekrar deneyin.",
+    "notFoundCta": "Koleksiyona dön",
+    "galleryLabel": "Ürün görselleri",
+    "highlights": "Öne çıkanlar",
+    "careTab": "Bakım",
+    "returnsTab": "İade ve süreç",
+    "similarTitle": "Bunları da beğenebilirsiniz",
+    "similarLead": "Aynı atölyeden, aynı özenle örülen parçalar.",
+    "stickyBuy": "Trendyol'da satın al",
+    "trustHeading": "Güvenle alışveriş",
+    "trustSub": "Atölyeden çıkan her parça güvenceyle yola çıkar.",
+    "checkoutHeading": "Satın alma",
+    "checkoutSub": "Trendyol üzerinden güvenli ödeme",
+    "verifiedNote": "Trendyol alıcı koruması ile güvenli ödeme",
+    "deliveryNote": "El yapımı ürünlerde özenli paketleme",
+    "handmadeNote": "Her parça tek tek, el emeği ile tamamlanır"
   },
   "status": {
     "inStock": "Stokta",

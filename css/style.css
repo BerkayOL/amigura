@@ -2814,7 +2814,7 @@ html.is-page-ready body[data-page="ozel"] .wizard__panel.is-active {
 
 .wizard__btn--next {
   margin-left: auto;
-  color: #1a1608;
+  color: #ffffff;
   background: linear-gradient(
     145deg,
     var(--color-accent) 0%,
@@ -2823,7 +2823,7 @@ html.is-page-ready body[data-page="ozel"] .wizard__panel.is-active {
 }
 
 [data-theme="dark"] .wizard__btn--next {
-  color: #141820;
+  color: #ffffff;
 }
 
 .wizard__btn:hover {
@@ -3147,7 +3147,7 @@ body.has-cookie-banner {
 }
 
 .cookie-banner__btn--accept {
-  color: #1a1608;
+  color: #ffffff;
   background: linear-gradient(
     145deg,
     var(--color-accent) 0%,
@@ -3157,7 +3157,7 @@ body.has-cookie-banner {
 }
 
 [data-theme="dark"] .cookie-banner__btn--accept {
-  color: #141820;
+  color: #ffffff;
 }
 
 .cookie-banner__btn--accept:hover {

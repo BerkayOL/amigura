@@ -1001,7 +1001,7 @@ button:focus-visible {
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: #1a1608;
+  color: #ffffff;
   background: linear-gradient(
     145deg,
     var(--color-accent) 0%,
@@ -1020,7 +1020,7 @@ button:focus-visible {
 }
 
 [data-theme="dark"] .hero__cta {
-  color: #141820;
+  color: #ffffff;
   box-shadow: 0 4px 24px rgba(212, 184, 74, 0.2);
 }
 
@@ -1978,7 +1978,7 @@ button:focus-visible {
   font-family: inherit;
   font-size: 0.88rem;
   font-weight: 600;
-  color: #1a1608;
+  color: #ffffff;
   background: linear-gradient(
     145deg,
     var(--color-accent) 0%,
@@ -1991,7 +1991,7 @@ button:focus-visible {
 }
 
 [data-theme="dark"] .newsletter__submit {
-  color: #141820;
+  color: #ffffff;
 }
 
 .newsletter__submit:hover {

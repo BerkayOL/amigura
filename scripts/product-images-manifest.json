@@ -1,0 +1,102 @@
+{
+  "barbie": [
+    "assets/images/products/barbie/01.jpg",
+    "assets/images/products/barbie/02.jpg",
+    "assets/images/products/barbie/03.jpg"
+  ],
+  "elsa": [
+    "assets/images/products/elsa/01.jpg",
+    "assets/images/products/elsa/02.jpg",
+    "assets/images/products/elsa/03.jpg"
+  ],
+  "lavenderClutch": [
+    "assets/images/products/lavender-clutch/01.jpg",
+    "assets/images/products/lavender-clutch/02.jpg",
+    "assets/images/products/lavender-clutch/03.jpg"
+  ],
+  "enidSinclair": [
+    "assets/images/products/enid-sinclair/01.jpg",
+    "assets/images/products/enid-sinclair/02.jpg"
+  ],
+  "kuromi": [
+    "assets/images/products/kuromi/01.jpg",
+    "assets/images/products/kuromi/02.jpg",
+    "assets/images/products/kuromi/03.jpg"
+  ],
+  "lolSurpriseDoll": [
+    "assets/images/products/lol-surprise-doll/01.jpg",
+    "assets/images/products/lol-surprise-doll/02.jpg",
+    "assets/images/products/lol-surprise-doll/03.jpg"
+  ],
+  "maui": [
+    "assets/images/products/maui/01.jpg",
+    "assets/images/products/maui/02.jpg",
+    "assets/images/products/maui/03.jpg",
+    "assets/images/products/maui/04.jpg",
+    "assets/images/products/maui/05.jpg"
+  ],
+  "moana": [
+    "assets/images/products/moana/01.jpg"
+  ],
+  "sonicBlue": [
+    "assets/images/products/sonic-blue/01.jpg",
+    "assets/images/products/sonic-blue/02.jpg",
+    "assets/images/products/sonic-blue/03.jpg"
+  ],
+  "fruitSet": [
+    "assets/images/products/fruit-set/01.jpg",
+    "assets/images/products/fruit-set/02.jpg"
+  ],
+  "tails": [
+    "assets/images/products/tails/01.jpg",
+    "assets/images/products/tails/02.jpg",
+    "assets/images/products/tails/03.jpg",
+    "assets/images/products/tails/04.jpg"
+  ],
+  "myMelody": [
+    "assets/images/products/my-melody/01.jpg",
+    "assets/images/products/my-melody/02.jpg",
+    "assets/images/products/my-melody/03.jpg"
+  ],
+  "nostalgicPhoneBlue": [
+    "assets/images/products/nostalgic-phone-blue/01.jpg"
+  ],
+  "nostalgicPhonePink": [
+    "assets/images/products/nostalgic-phone-pink/01.jpg"
+  ],
+  "nostalgicPhoneOrange": [
+    "assets/images/products/nostalgic-phone-orange/01.jpg"
+  ],
+  "olaf": [
+    "assets/images/products/olaf/01.jpg",
+    "assets/images/products/olaf/02.jpg",
+    "assets/images/products/olaf/03.jpg"
+  ],
+  "pugsleyAddams": [
+    "assets/images/products/pugsley-addams/01.jpg",
+    "assets/images/products/pugsley-addams/02.jpg",
+    "assets/images/products/pugsley-addams/03.jpg"
+  ],
+  "vegetableSet": [
+    "assets/images/products/vegetable-set/01.jpg"
+  ],
+  "sonicBlack": [
+    "assets/images/products/sonic-black/01.jpg",
+    "assets/images/products/sonic-black/02.jpg",
+    "assets/images/products/sonic-black/03.jpg"
+  ],
+  "thing": [
+    "assets/images/products/thing/01.jpg",
+    "assets/images/products/thing/02.jpg",
+    "assets/images/products/thing/03.jpg"
+  ],
+  "trexDinosaur": [
+    "assets/images/products/trex-dinosaur/01.jpg",
+    "assets/images/products/trex-dinosaur/02.jpg",
+    "assets/images/products/trex-dinosaur/03.jpg"
+  ],
+  "wednesday": [
+    "assets/images/products/wednesday/01.jpg",
+    "assets/images/products/wednesday/02.jpg"
+  ]
+}

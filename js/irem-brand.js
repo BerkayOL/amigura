@@ -1,13 +1,14 @@
 /**
- * Amigura ó Brand mark & wordmark (single source of truth for nav brand UI).
+ * Amigura ù Brand mark & wordmark (single source of truth for nav brand UI).
  */
 (function () {
   "use strict";
 
-  /** @type {{ nameAccent: string; nameRest: string; logos: { src: string; type: string }[]; logoSize: number }} */
+  /** @type {{ displayName: string; namePrefix: string; nameAccent: string; logos: { src: string; type: string }[]; logoSize: number }} */
   var BRAND = {
-    nameAccent: "Ami",
-    nameRest: "gura",
+    displayName: "Amigurumirem",
+    namePrefix: "Amigurum",
+    nameAccent: "\u0130rem",
     logos: [
       { src: "assets/logo.webp", type: "image/webp" },
       { src: "assets/logo.png", type: "image/png" },
@@ -44,11 +45,11 @@
       "</picture></span>" +
       '<span class="site-brand__wordmark">' +
       '<span class="site-brand__name" aria-hidden="true">' +
+      '<span class="site-brand__name-rest">' +
+      BRAND.namePrefix +
+      "</span>" +
       '<span class="site-brand__name-accent">' +
       BRAND.nameAccent +
-      "</span>" +
-      '<span class="site-brand__name-rest">' +
-      BRAND.nameRest +
       "</span></span>" +
       '<span class="site-brand__tagline" data-i18n="nav.brandTagline">El Yap\u0131m\u0131 At\u00f6lye</span>' +
       "</span></a>"

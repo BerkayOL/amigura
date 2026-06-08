@@ -1,15 +1,11 @@
 /**
- * Amigura ? Product card UI
+ * Amigura — Product card UI
  */
 (function (global) {
   "use strict";
 
   function i18n() {
     return global.Irem && global.Irem.I18n;
-  }
-
-  function productStatus() {
-    return global.Irem && global.Irem.ProductStatus;
   }
 
   /**
@@ -22,15 +18,6 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
-  }
-
-  /**
-   * @param {string} status
-   * @returns {string}
-   */
-  function getStatusVariant(status) {
-    var ps = productStatus();
-    return ps ? ps.getVariant(status) : "custom";
   }
 
   const BUY_ICON_SVG =
@@ -84,9 +71,7 @@
     const price = escapeHtml(product.price);
     const image = escapeHtml(product.image);
     const fallback = escapeHtml(product.imageFallback);
-    const link = escapeHtml(product.trendyolLink);
-    const status = escapeHtml(product.status);
-    const statusClass = getStatusVariant(product.status);
+    const link = escapeHtml(product.instagramLink);
     const alt = escapeHtml(t("product.alt", { name: product.name }));
     const buyLabel = escapeHtml(t("product.buyAria", { name: product.name }));
     const careLabel = escapeHtml(t("product.careAria", { name: product.name }));
@@ -107,11 +92,6 @@
       escapeHtml(t("product.viewAria", { name: product.name })) +
       '"></a>' +
       '<div class="product-card__media">' +
-      '<span class="product-card__badge product-card__badge--' +
-      statusClass +
-      '">' +
-      status +
-      "</span>" +
       buildProductPictureHtml(image, alt, fallback, product.imageMime) +
       "</div>" +
       '<div class="product-card__body">' +
@@ -244,7 +224,6 @@
   }
 
   /**
-   * Update copy without destroying DOM (preserves intent / hover / reveal classes).
    * @param {HTMLElement} container
    */
   function updateTextsInPlace(container) {
@@ -256,14 +235,6 @@
       const intent = card.dataset.intent === "gift" ? "gift" : "self";
       const product = global.Irem.Products.getById(id);
       if (!product) return;
-
-      const badge = card.querySelector(".product-card__badge");
-      var ps = productStatus();
-      if (ps && badge instanceof HTMLElement) {
-        ps.applyToElement(badge, product.status);
-      } else if (badge) {
-        badge.textContent = product.status;
-      }
 
       const title = card.querySelector(".product-card__title");
       if (title) title.textContent = product.name;
@@ -284,7 +255,7 @@
 
       const buyLink = card.querySelector(".product-card__buy");
       if (buyLink instanceof HTMLAnchorElement) {
-        buyLink.href = product.trendyolLink;
+        buyLink.href = product.instagramLink;
       }
 
       setIntent(card, intent);

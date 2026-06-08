@@ -100,12 +100,59 @@
   }
 
   /**
-   * Lightweight HTML sanitizer for i18n strings.
-   * Allows only: b, strong, i, em, br. Strips all attributes.
+   * Lightweight HTML sanitizer for i18n strings (legal pages, rich copy).
    * @param {string} html
    */
   function sanitizeI18nHtml(html) {
-    const allowed = { b: true, strong: true, i: true, em: true, br: true };
+    const allowed = {
+      p: true,
+      h2: true,
+      h3: true,
+      ul: true,
+      ol: true,
+      li: true,
+      a: true,
+      b: true,
+      strong: true,
+      i: true,
+      em: true,
+      br: true,
+    };
+
+    /**
+     * @param {string} href
+     */
+    function sanitizeHref(href) {
+      const h = String(href || "").trim();
+      if (!h || h === "#") return "#";
+      if (/^javascript:/i.test(h) || /^data:/i.test(h)) return "#";
+      if (/^https?:\/\//i.test(h)) return h;
+      if (/^[a-z0-9./#?=&_%-]+$/i.test(h)) return h;
+      return "#";
+    }
+
+    /**
+     * @param {HTMLElement} el
+     */
+    function sanitizeElement(el) {
+      const tag = el.tagName.toLowerCase();
+      const keep = {};
+      if (tag === "a") {
+        const href = el.getAttribute("href");
+        if (href) keep.href = sanitizeHref(href);
+        const cls = el.getAttribute("class");
+        if (cls === "protected-contact") keep.class = "protected-contact";
+        const contactType = el.getAttribute("data-contact-type");
+        if (contactType === "email") keep["data-contact-type"] = "email";
+      }
+      Array.from(el.attributes).forEach(function (attr) {
+        if (!(attr.name in keep)) el.removeAttribute(attr.name);
+      });
+      Object.keys(keep).forEach(function (name) {
+        el.setAttribute(name, keep[name]);
+      });
+    }
+
     const tpl = document.createElement("template");
     tpl.innerHTML = String(html || "");
 
@@ -118,20 +165,14 @@
           const el = /** @type {HTMLElement} */ (child);
           const tag = el.tagName.toLowerCase();
           if (!allowed[tag]) {
-            // Replace element with its text content (drops nested markup).
             const text = document.createTextNode(el.textContent || "");
             el.replaceWith(text);
             continue;
           }
-          // Strip attributes
-          Array.from(el.attributes).forEach(function (attr) {
-            el.removeAttribute(attr.name);
-          });
+          sanitizeElement(el);
           walk(el);
         } else if (child.nodeType === Node.COMMENT_NODE) {
           child.parentNode && child.parentNode.removeChild(child);
-        } else {
-          // Text nodes are fine.
         }
       }
     }

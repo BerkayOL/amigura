@@ -1,5 +1,5 @@
 /**
- * Amigura ù Modals (care, Trendyol handoff)
+ * Amigura ÔøΩ Modals (care, Instagram outbound)
  */
 (function (global) {
   "use strict";
@@ -292,30 +292,12 @@
 
     const title = escapeHtml(product.name);
     const price = escapeHtml(product.price);
-    const trackedLink = buildTrackedUrl(product.trendyolLink, trigger) || product.trendyolLink;
+    const trackedLink = buildTrackedUrl(product.instagramLink, trigger) || product.instagramLink;
     const link = escapeHtml(trackedLink);
 
     const careWash = product.care && product.care.washing ? escapeHtml(product.care.washing) : "";
     const careSize = product.care && product.care.size ? escapeHtml(product.care.size) : "";
     const careSafety = product.care && product.care.safety ? escapeHtml(product.care.safety) : "";
-
-    const statusText = product.status || "";
-    const ps = global.Irem && global.Irem.ProductStatus ? global.Irem.ProductStatus : null;
-    const variant = ps && typeof ps.getVariant === "function" ? ps.getVariant(statusText) : "custom";
-    const scarcityText =
-      variant === "limited"
-        ? escapeHtml(t("quickview.scarcityLimited"))
-        : variant === "custom"
-          ? escapeHtml(t("quickview.scarcityCustom"))
-          : "";
-
-    // Minimal ìverified buyerî proof snippet sourced from existing i18n reviews.
-    var reviewIdx = String(product.id || "1");
-    if (!/^[1-5]$/.test(reviewIdx)) reviewIdx = "1";
-    const proofQuote = escapeHtml(t("reviews.r" + reviewIdx + ".quote"));
-    const proofName = escapeHtml(t("reviews.r" + reviewIdx + ".name"));
-    const proofCity = escapeHtml(t("reviews.r" + reviewIdx + ".city"));
-    const proofBadge = escapeHtml(t("reviews.verified"));
 
     const ICON_LOCK =
       '<svg class="trust-stack__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="5" y="11" width="14" height="10" rx="2"/></svg>';
@@ -342,9 +324,7 @@
       "</p>" +
       '<div class="quickview__badges"><span class="quickview__badge">' +
       escapeHtml(t("modal.quickViewOrganic")) +
-      "</span>" +
-      (scarcityText ? '<span class="quickview__badge quickview__badge--scarcity">' + scarcityText + "</span>" : "") +
-      "</div>" +
+      "</span></div>" +
       "</header>" +
       '<details class="quickview__details" open>' +
       '<summary class="quickview__summary">' +
@@ -361,26 +341,6 @@
       '">' +
       escapeHtml(t("modal.quickViewCta")) +
       "</button>" +
-      '<aside class="quickview-proof glass-surface" aria-label="' +
-      escapeHtml(t("quickview.socialProofLabel")) +
-      '">' +
-      '<div class="quickview-proof__head">' +
-      '<span class="quickview-proof__badge">' +
-      proofBadge +
-      "</span>" +
-      '<a class="quickview-proof__more" href="#reviews" data-modal-close>' +
-      escapeHtml(t("quickview.socialProofCta")) +
-      "</a>" +
-      "</div>" +
-      '<blockquote class="quickview-proof__quote">"' +
-      proofQuote +
-      '"</blockquote>' +
-      '<div class="quickview-proof__meta">' +
-      proofName +
-      " ∑ " +
-      proofCity +
-      "</div>" +
-      "</aside>" +
       '<ul class="trust-stack" aria-label="' +
       escapeHtml(t("trust.label")) +
       '">' +

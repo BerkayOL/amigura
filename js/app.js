@@ -25,25 +25,8 @@
     return u ? u.escapeHtml(str) : String(str);
   }
 
-  const REVIEW_COUNT = 5;
-  const REVIEW_INTERVAL_MS = 5500;
-
   function getConfig() {
     return window.Amigura && window.Amigura.Config;
-  }
-
-  function getReviews() {
-    const items = [];
-    for (let i = 1; i <= REVIEW_COUNT; i++) {
-      const base = "reviews.r" + i;
-      items.push({
-        quote: t(base + ".quote"),
-        name: t(base + ".name"),
-        city: t(base + ".city"),
-        product: t(base + ".product"),
-      });
-    }
-    return items;
   }
 
   /** @type {ReturnType<typeof cacheElements>} */
@@ -52,10 +35,6 @@
   let initialized = false;
   let productsRendered = false;
   let globalHandlersBound = false;
-  let reviewsCarouselBound = false;
-  /** @type {ReturnType<typeof setInterval> | null} */
-  let reviewAutoTimer = null;
-  const reviewState = { index: 0, paused: false, reducedMotion: false };
   /** @type {MediaQueryList | null} */
   let mqDark = null;
   /** @type {MediaQueryList | null} */
@@ -74,9 +53,6 @@
       main: document.getElementById("main"),
       modalRoot: document.getElementById("irem-modal-root"),
       cookieRoot: document.getElementById("irem-cookie-root"),
-      reviewsTrack: document.getElementById("reviews-track"),
-      reviewsDots: document.getElementById("reviews-dots"),
-      reviewsCarousel: document.getElementById("reviews-carousel"),
       newsletterForm: document.getElementById("newsletter-form"),
       newsletterSuccess: document.getElementById("newsletter-success"),
       newsletterSection: document.getElementById("newsletter"),
@@ -176,7 +152,6 @@
         initProductScrollReveal();
       }
     }
-    if (els.reviewsTrack) renderReviews();
     const closeBtn = document.querySelector(".modal-panel__close");
     if (closeBtn) closeBtn.setAttribute("aria-label", t("modal.close"));
     if (window.Irem.Cookie) window.Irem.Cookie.ensureCookieBanner();
@@ -231,130 +206,6 @@
     if (!els.productContainer) return;
     const cards = Array.from(els.productContainer.querySelectorAll(".product-card"));
     observeProductCards(cards);
-  }
-
-  function goToReview(index) {
-    refreshElements();
-    const reviews = getReviews();
-    if (!els.reviewsTrack || !reviews.length) return;
-    const total = reviews.length;
-    reviewState.index = ((index % total) + total) % total;
-    els.reviewsTrack.style.transform = "translate3d(-" + reviewState.index * 100 + "%, 0, 0)";
-    if (els.reviewsDots) {
-      els.reviewsDots.querySelectorAll(".reviews-carousel__dot").forEach(function (dot, i) {
-        const active = i === reviewState.index;
-        dot.classList.toggle("is-active", active);
-        dot.setAttribute("aria-selected", String(active));
-        dot.setAttribute("tabindex", active ? "0" : "-1");
-      });
-    }
-    if (els.reviewsTrack) {
-      els.reviewsTrack.querySelectorAll(".review-card").forEach(function (panel, i) {
-        if (!(panel instanceof HTMLElement)) return;
-        const active = i === reviewState.index;
-        panel.setAttribute("aria-hidden", String(!active));
-      });
-    }
-  }
-
-  function startReviewAutoplay() {
-    if (reviewState.reducedMotion || reviewState.paused) return;
-    stopReviewAutoplay();
-    reviewAutoTimer = setInterval(function () {
-      if (!reviewState.paused) goToReview(reviewState.index + 1);
-    }, REVIEW_INTERVAL_MS);
-  }
-
-  function stopReviewAutoplay() {
-    if (reviewAutoTimer !== null) {
-      clearInterval(reviewAutoTimer);
-      reviewAutoTimer = null;
-    }
-  }
-
-  function renderReviews() {
-    refreshElements();
-    if (!els.reviewsTrack || !els.reviewsDots) return;
-    const reviewItems = getReviews();
-    els.reviewsTrack.innerHTML = reviewItems
-      .map(function (review, i) {
-        return (
-          '<article class="review-card" id="reviews-panel-' +
-          i +
-          '" role="tabpanel" data-slide="' +
-          i +
-          '" aria-labelledby="reviews-tab-' +
-          i +
-          '"' +
-          (i === 0 ? ' aria-hidden="false"' : ' aria-hidden="true"') +
-          '><div class="review-card__inner glass-surface"><span class="review-card__badge">' +
-          escapeHtml(t("reviews.verified")) +
-          '</span><blockquote class="review-card__quote">"' +
-          escapeHtml(review.quote) +
-          '"</blockquote><footer class="review-card__meta">' +
-          escapeHtml(review.name) +
-          " · " +
-          escapeHtml(review.city) +
-          '<span class="review-card__product">' +
-          escapeHtml(review.product) +
-          "</span></footer></div></article>"
-        );
-      })
-      .join("");
-    els.reviewsDots.innerHTML = reviewItems
-      .map(function (_, i) {
-        return (
-          '<button type="button" class="reviews-carousel__dot' +
-          (i === 0 ? " is-active" : "") +
-          '" id="reviews-tab-' +
-          i +
-          '" data-slide="' +
-          i +
-          '" role="tab" aria-controls="reviews-panel-' +
-          i +
-          '" aria-selected="' +
-          (i === 0 ? "true" : "false") +
-          '" tabindex="' +
-          (i === 0 ? "0" : "-1") +
-          '" aria-label="' +
-          escapeHtml(t("reviews.dotAria", { n: String(i + 1) })) +
-          '"></button>'
-        );
-      })
-      .join("");
-    goToReview(0);
-  }
-
-  function initReviewsCarousel() {
-    if (reviewsCarouselBound) return;
-    refreshElements();
-    if (!els.reviewsCarousel || !els.reviewsTrack) return;
-    reviewsCarouselBound = true;
-    reviewState.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    renderReviews();
-    const carousel = els.reviewsCarousel;
-    carousel.addEventListener("mouseenter", function () {
-      reviewState.paused = true;
-      carousel.classList.add("is-paused");
-      stopReviewAutoplay();
-    });
-    carousel.addEventListener("mouseleave", function () {
-      reviewState.paused = false;
-      carousel.classList.remove("is-paused");
-      startReviewAutoplay();
-    });
-    carousel.addEventListener("focusin", function () {
-      reviewState.paused = true;
-      carousel.classList.add("is-paused");
-      stopReviewAutoplay();
-    });
-    carousel.addEventListener("focusout", function (e) {
-      if (carousel.contains(e.relatedTarget)) return;
-      reviewState.paused = false;
-      carousel.classList.remove("is-paused");
-      startReviewAutoplay();
-    });
-    if (!reviewState.reducedMotion) startReviewAutoplay();
   }
 
   /**
@@ -508,7 +359,6 @@
   }
 
   function initHomeSections() {
-    initReviewsCarousel();
     initProcessTimeline();
   }
 
@@ -644,21 +494,6 @@
       return;
     }
 
-    const reviewDot = target.closest(".reviews-carousel__dot");
-    if (reviewDot instanceof HTMLButtonElement) {
-      const idx = Number(reviewDot.getAttribute("data-slide"));
-      if (!Number.isNaN(idx)) goToReview(idx);
-      return;
-    }
-
-    const buyLink = target.closest(".product-card__buy");
-    if (buyLink instanceof HTMLAnchorElement && window.Irem.Modal) {
-      e.preventDefault();
-      const href = buyLink.getAttribute("href");
-      if (href) window.Irem.Modal.openHandoff(href, buyLink);
-      return;
-    }
-
     if (
       target.closest(".product-card__open, .pdp-similar-card, a[href*='urun.html']")
     ) {
@@ -668,15 +503,6 @@
 
   function onDocumentKeydown(e) {
     refreshElements();
-    if (
-      els.reviewsCarousel &&
-      els.reviewsCarousel.contains(document.activeElement) &&
-      (e.key === "ArrowLeft" || e.key === "ArrowRight")
-    ) {
-      e.preventDefault();
-      goToReview(reviewState.index + (e.key === "ArrowRight" ? 1 : -1));
-      return;
-    }
     if (e.key === "Escape") {
       if (window.Irem.Modal && window.Irem.Modal.isActive()) {
         window.Irem.Modal.close();
@@ -774,7 +600,7 @@
     if (els.productContainer && !productsRendered) renderProducts();
     if (els.productContainer) {
       initProductScrollReveal();
-      initHomeSections();
+      initProcessTimeline();
       ensureStickyConversionBar();
     }
   }

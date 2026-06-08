@@ -1,33 +1,55 @@
 /**
- * Amigura ù Site configuration (single source of truth for external links & feature flags).
- * Update values here before launch; runtime modules read via Amigura.Config.
+ * Amigura ? Site configuration (external links & feature flags).
  */
 (function (global) {
   "use strict";
 
+  var INSTAGRAM_PROFILE = "https://www.instagram.com/amigurumi__rem";
+
+  /** @type {Record<string, string>} */
+  var instagramLinks = {
+    barbie: "https://www.instagram.com/p/C7w0pvatzBI/?img_index=1",
+    elsa: "https://www.instagram.com/p/Ck8ZFRatqo3/?img_index=1",
+    olaf: "https://www.instagram.com/p/Ck8Z4IFN9GV/?img_index=1",
+    moana: "https://www.instagram.com/p/DU01Rx1DBtt/?img_index=1",
+    maui: "https://www.instagram.com/p/DUvsiVWjLB_/?img_index=1",
+    harryPotter: "https://www.instagram.com/p/DEaUDXzM6lq/?img_index=1",
+    hermione: "https://www.instagram.com/p/DEaUu7KsdFr/?img_index=1",
+    malefiz: "https://www.instagram.com/p/DJssqjGovmW/?img_index=1",
+    ronald: "https://www.instagram.com/p/DJnkRXioMww/?img_index=1",
+    wednesday: "https://www.instagram.com/p/CuU6eLut46F/?img_index=1",
+    thing: "https://www.instagram.com/p/CsMRS0oNcyi/?img_index=1",
+    pugsleyAddams: "https://www.instagram.com/p/C1PkWCSsVPc/?img_index=1",
+    enidSinclair: "https://www.instagram.com/p/CyHbDE6NLqI/?img_index=1",
+    kuromi: "https://www.instagram.com/p/DGdx9yEsSZ_/",
+    myMelody: "https://www.instagram.com/p/DGdzBnEs9wV/",
+    sonicBlue: "https://www.instagram.com/p/DGdxVeJMfOl/?img_index=1",
+    sonicRed: "https://www.instagram.com/p/DUn_DWZDMg3/?img_index=1",
+    sonicBlack: "https://www.instagram.com/p/DUvsiVWjLB_/?img_index=1",
+    tails: "https://www.instagram.com/p/DNRHoOhsauo/?img_index=1",
+    lolSurpriseDoll: "https://www.instagram.com/p/Clttxvetvof/?img_index=1",
+    crossbodyPaperBag: "https://www.instagram.com/p/Ceo9fgCqodi/?img_index=1",
+    lavenderClutch: "https://www.instagram.com/p/Cfr2VopqtfL/?img_index=1",
+    nostalgicPhoneBlue: "https://www.instagram.com/p/CLOnwNThrT9/?img_index=1",
+    nostalgicPhonePink: "https://www.instagram.com/p/CLOn7C9BCd2/?img_index=1",
+    nostalgicPhoneOrange: "https://www.instagram.com/p/CZRlH1Ct0-h/?img_index=1",
+    fruitSet: "https://www.instagram.com/p/CWtVuQ2qNM8/",
+    vegetableSet: "https://www.instagram.com/p/CWtVZNmKIJt/?img_index=1",
+    trexDinosaur: "https://www.instagram.com/p/CyHY1MotQx0/?img_index=1",
+  };
+
   /** @type {AmiguraConfig} */
   var Config = {
     brandEmailParts: ["hello", "amigura", "com"],
-    instagramUrl: "https://www.instagram.com/amigura",
+    instagramUrl: INSTAGRAM_PROFILE,
     etsyUrl: "https://www.etsy.com/shop/amigura",
     siteOrigin: "https://www.amigura.com",
+    instagramLinks: instagramLinks,
 
-    /** Trendyol ma?aza / ùrùn ù gerùek URL'lerle de?i?tirin */
-    trendyolStoreUrl: "https://www.trendyol.com/magaza/amigura",
-    trendyolLinks: {
-      harryPotter: "https://www.trendyol.com/magaza/amigura-m-12345",
-      hermione: "https://www.trendyol.com/magaza/amigura-m-12345",
-      malefiz: "https://www.trendyol.com/magaza/amigura-m-12345",
-      ronald: "https://www.trendyol.com/magaza/amigura-m-12345",
-    },
-
-    /** WhatsApp number parts (prevents naive scraping). Example: ["90","555","123","4567"] */
     whatsappParts: ["90", "555", "123", "4567"],
-
     orderRefPrefix: "AMG",
 
     newsletter: {
-      /** "api" | "mailto" ù api: POST endpoint; mailto: istemci e-posta uygulamas? */
       mode: "mailto",
       endpoint: "/api/newsletter",
     },
@@ -41,11 +63,11 @@
    * @param {string} slug
    * @returns {string}
    */
-  function getTrendyolLink(slug) {
-    if (Config.trendyolLinks && Config.trendyolLinks[slug]) {
-      return Config.trendyolLinks[slug];
+  function getInstagramLink(slug) {
+    if (Config.instagramLinks && Config.instagramLinks[slug]) {
+      return Config.instagramLinks[slug];
     }
-    return Config.trendyolStoreUrl;
+    return Config.instagramUrl;
   }
 
   /**
@@ -64,7 +86,7 @@
 
   global.Amigura = global.Amigura || {};
   global.Amigura.Config = Config;
-  global.Amigura.Config.getTrendyolLink = getTrendyolLink;
+  global.Amigura.Config.getInstagramLink = getInstagramLink;
   global.Amigura.Config.generateOrderRef = generateOrderRef;
   global.Amigura.Config.applyAnalyticsConsent = applyAnalyticsConsent;
 })(typeof window !== "undefined" ? window : globalThis);

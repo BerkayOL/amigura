@@ -1,5 +1,5 @@
 /**
- * Amigura  Product detail page (premium PDP)
+ * Amigura ? Product detail page (premium PDP)
  */
 (function () {
   "use strict";
@@ -27,6 +27,13 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function getBrandName() {
+    if (window.Irem && window.Irem.Brand && window.Irem.Brand.config && window.Irem.Brand.config.displayName) {
+      return window.Irem.Brand.config.displayName;
+    }
+    return "Amigurumirem";
   }
 
   function getParam(name) {
@@ -69,18 +76,6 @@
     );
   }
 
-  /**
-   * @param {number} productId
-   */
-  function getReviewForProduct(productId) {
-    const idx = productId >= 1 && productId <= 5 ? productId : 1;
-    return {
-      quote: t("reviews.r" + idx + ".quote"),
-      name: t("reviews.r" + idx + ".name"),
-      city: t("reviews.r" + idx + ".city"),
-    };
-  }
-
   const ICON_HAND =
     '<svg class="pdp-bullet__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12"/><path d="M11 12V4.5a1.5 1.5 0 0 1 3 0V12"/><path d="M14 12V6.5a1.5 1.5 0 0 1 3 0V14"/><path d="M8 13l-2 2.5a4 4 0 0 0 3.2 6.5H14a5 5 0 0 0 5-5v-3"/></svg>';
   const ICON_LEAF =
@@ -100,7 +95,6 @@
 
   function renderTrustStack() {
     const items = [
-      { icon: ICON_LOCK, text: t("pdp.verifiedNote") },
       { icon: ICON_PACKAGE, text: t("pdp.deliveryNote") },
       { icon: ICON_HAND, text: t("pdp.handmadeNote") },
     ];
@@ -141,7 +135,7 @@
     const rows = [
       { icon: ICON_HAND, text: t("trust.handmade") },
       { icon: ICON_LEAF, text: t("trust.organic") },
-      { icon: ICON_LOCK, text: t("trust.trendyol") },
+      { icon: ICON_LOCK, text: t("trust.instagram") },
       { icon: ICON_DOC, text: t("trust.kvkk") },
     ];
     return (
@@ -190,9 +184,12 @@
    */
   function renderSimilar(current) {
     if (!window.Irem || !window.Irem.Products) return "";
-    const others = window.Irem.Products.getAll().filter(function (p) {
-      return p.id !== current.id;
-    });
+    const others =
+      typeof window.Irem.Products.getSimilar === "function"
+        ? window.Irem.Products.getSimilar(current.id, 4)
+        : window.Irem.Products.getAll().filter(function (p) {
+            return p.id !== current.id;
+          }).slice(0, 4);
     if (!others.length) return "";
 
     const cards = others
@@ -247,7 +244,7 @@
       '<a class="btn-primary" href="index.html#products">' +
       escapeHtml(t("pdp.notFoundCta")) +
       "</a></section>";
-    document.title = t("pdp.notFoundTitle") + " | Amigura";
+    document.title = t("pdp.notFoundTitle") + " | " + getBrandName();
   }
 
   /**
@@ -255,16 +252,14 @@
    * @param {ReturnType<window.Irem.Products.getById>} product
    */
   function renderProduct(root, product) {
-    const statusVariant =
-      window.Irem && window.Irem.ProductStatus && window.Irem.ProductStatus.getVariant
-        ? window.Irem.ProductStatus.getVariant(product.status)
-        : "custom";
-
     const intent = getIntentFromUrl();
-    const review = getReviewForProduct(product.id);
-    const imgSrc = product.imageFallback || product.image;
+    const gallery =
+      product.gallery && product.gallery.length
+        ? product.gallery
+        : [product.imageFallback || product.image];
+    const imgSrc = gallery[0];
 
-    const thumbs = [imgSrc, imgSrc, imgSrc]
+    const thumbs = gallery
       .map(function (src, i) {
         return (
           '<button type="button" class="pdp-gallery__thumb' +
@@ -284,22 +279,12 @@
       })
       .join("");
 
-    const statusBadgeClass =
-      "pdp-status-badge product-card__badge product-card__badge--" +
-      escapeHtml(statusVariant) +
-      (statusVariant === "limited" ? " pdp-status-badge--pulse" : "");
-
     root.innerHTML =
       '<div class="pdp-layout">' +
       '<div class="pdp-col-media">' +
       '<section class="pdp-gallery pdp-float" aria-label="' +
       escapeHtml(t("pdp.galleryLabel")) +
       '">' +
-      '<span class="' +
-      statusBadgeClass +
-      '">' +
-      escapeHtml(product.status) +
-      "</span>" +
       '<div class="pdp-gallery__stage">' +
       '<img class="pdp-gallery__hero" id="pdp-hero-img" src="' +
       escapeHtml(imgSrc) +
@@ -312,28 +297,12 @@
       "</div>" +
       "</section>" +
       renderTrustStack() +
-      '<aside class="pdp-review pdp-float pdp-review--media" aria-label="' +
-      escapeHtml(t("quickview.socialProofLabel")) +
-      '">' +
-      '<span class="pdp-review__badge">' +
-      escapeHtml(t("reviews.verified")) +
-      "</span>" +
-      '<blockquote class="pdp-review__quote">"' +
-      escapeHtml(review.quote) +
-      '"</blockquote>' +
-      '<p class="pdp-review__meta">' +
-      escapeHtml(review.name) +
-      " \u00b7 " +
-      escapeHtml(review.city) +
-      "</p>" +
-      '<a class="pdp-review__link" href="index.html#reviews">' +
-      escapeHtml(t("quickview.socialProofCta")) +
-      "</a>" +
-      "</aside>" +
       "</div>" +
       '<div class="pdp-col-buy">' +
       '<header class="pdp-head">' +
-      '<p class="pdp-eyebrow">Amigura \u00b7 ' +
+      '<p class="pdp-eyebrow">' +
+      getBrandName() +
+      " \u00b7 " +
       escapeHtml(t("trust.handmade")) +
       "</p>" +
       '<h1 class="pdp-title" id="pdp-title">' +
@@ -423,11 +392,7 @@
       ) +
       renderAccordion(
         t("pdp.returnsTab"),
-        "<p>" +
-          escapeHtml(t("modal.handoffLead")) +
-          "</p><p>" +
-          escapeHtml(t("modal.handoffLi3")) +
-          "</p>",
+        "<p>" + escapeHtml(t("pdp.returnsBody")) + "</p>",
         false
       ) +
       "</section>" +
@@ -449,7 +414,7 @@
 
     const crumb = $("#pdp-crumb-current");
     if (crumb) crumb.textContent = product.name;
-    document.title = product.name + " | Amigura";
+    document.title = product.name + " | " + getBrandName();
   }
 
   function teardownPdpUi() {
@@ -536,14 +501,11 @@
   /**
    * @param {HTMLElement} trigger
    */
-  function openHandoff(trigger) {
+  function openInstagram(trigger) {
     var product = pdpState.product;
-    if (!product) return;
-    if (window.Irem && window.Irem.Modal && typeof window.Irem.Modal.openHandoff === "function") {
-      window.Irem.Modal.openHandoff(product.trendyolLink, trigger);
-      return;
-    }
-    window.open(product.trendyolLink, "_blank", "noopener,noreferrer");
+    if (!product || !product.instagramLink) return;
+    window.open(product.instagramLink, "_blank", "noopener,noreferrer");
+    if (trigger instanceof HTMLElement) trigger.blur();
   }
 
   /**
@@ -579,11 +541,11 @@
       }
 
       if (target.closest("#pdp-buy")) {
-        openHandoff(/** @type {HTMLElement} */ (target.closest("#pdp-buy")));
+        openInstagram(/** @type {HTMLElement} */ (target.closest("#pdp-buy")));
         return;
       }
       if (target.closest("#pdp-sticky-buy")) {
-        openHandoff(/** @type {HTMLElement} */ (target.closest("#pdp-sticky-buy")));
+        openInstagram(/** @type {HTMLElement} */ (target.closest("#pdp-sticky-buy")));
         return;
       }
 

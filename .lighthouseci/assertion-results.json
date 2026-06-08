@@ -5,7 +5,7 @@
     "actual": 0.69,
     "values": [
       0.69,
-      0.48
+      0.69
     ],
     "operator": ">=",
     "passed": false,
@@ -13,6 +13,21 @@
     "auditId": "categories",
     "level": "warn",
     "url": "http://127.0.0.1:8080/"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.75,
+    "actual": 0.7,
+    "values": [
+      0.7,
+      0.7
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/ozel-siparis.html"
   },
   {
     "name": "minScore",
@@ -27,15 +42,45 @@
     "auditProperty": "performance",
     "auditId": "categories",
     "level": "warn",
-    "url": "http://127.0.0.1:8080/ozel-siparis.html"
+    "url": "http://127.0.0.1:8080/urun.html?id=1"
   },
   {
     "name": "minScore",
     "expected": 0.75,
-    "actual": 0.48,
+    "actual": 0.7,
     "values": [
-      0.48,
-      0.48
+      0.7,
+      0.7
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "performance",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/tesekkur.html"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.9,
+    "actual": 0.66,
+    "values": [
+      0.66,
+      0.66
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "seo",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "http://127.0.0.1:8080/tesekkur.html"
+  },
+  {
+    "name": "minScore",
+    "expected": 0.75,
+    "actual": 0.47,
+    "values": [
+      0.47,
+      0.47
     ],
     "operator": ">=",
     "passed": false,
@@ -47,10 +92,10 @@
   {
     "name": "minScore",
     "expected": 0.75,
-    "actual": 0.48,
+    "actual": 0.47,
     "values": [
-      0.48,
-      0.48
+      0.47,
+      0.47
     ],
     "operator": ">=",
     "passed": false,

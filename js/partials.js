@@ -29,6 +29,44 @@
     return page === "home" ? hash : "index.html" + hash;
   }
 
+  function getInstagramUrl() {
+    if (window.Amigura && window.Amigura.Config && window.Amigura.Config.instagramUrl) {
+      return window.Amigura.Config.instagramUrl;
+    }
+    return "https://www.instagram.com/amigurumi__rem";
+  }
+
+  function renderInstagramIcon() {
+    return (
+      '<svg class="nav-social__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<rect x="2" y="2" width="20" height="20" rx="5"/>' +
+      '<circle cx="12" cy="12" r="4"/>' +
+      '<path d="M17.5 6.5h.01"/>' +
+      "</svg>"
+    );
+  }
+
+  /**
+   * @param {string} className
+   * @param {boolean} [showLabel]
+   */
+  function renderInstagramLink(className, showLabel) {
+    var labelMarkup = showLabel
+      ? '<span data-i18n="nav.instagram">Instagram</span>'
+      : '<span class="visually-hidden" data-i18n="nav.instagram">Instagram</span>';
+
+    return (
+      '<a href="' +
+      getInstagramUrl() +
+      '" class="' +
+      className +
+      '" target="_blank" rel="noopener noreferrer" data-i18n-aria="nav.instagram" data-i18n-title="nav.instagram">' +
+      renderInstagramIcon() +
+      labelMarkup +
+      "</a>"
+    );
+  }
+
   /**
    * @param {"home" | "kvkk" | "iade" | "tesekkur" | "ozel"} page
    */
@@ -41,7 +79,7 @@
     const brandMarkup =
       window.Irem && window.Irem.Brand
         ? window.Irem.Brand.renderNav(brandHref)
-        : '<a href="' + brandHref + '" class="site-brand" data-i18n-aria="nav.home">Amigura</a>';
+        : '<a href="' + brandHref + '" class="site-brand" data-i18n-aria="nav.home">Amigurumirem</a>';
 
     return `
       <header class="glass-nav" id="siteHeader" role="banner">
@@ -57,6 +95,8 @@
             </nav>
 
             <div class="glass-nav__controls">
+              ${renderInstagramLink("nav-social glass-surface")}
+
               <div class="lang-switch" role="group" data-i18n-aria="lang.label">
                 <button type="button" class="lang-switch__btn is-active" data-lang="tr" aria-pressed="true">TR</button>
                 <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
@@ -124,7 +164,7 @@
       <footer class="site-footer" role="contentinfo">
         <div class="site-footer__inner">
           <nav class="site-footer__nav" data-i18n-aria="footer.socialNav">
-            <a href="https://www.instagram.com/amigura" class="site-footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            ${renderInstagramLink("site-footer__link site-footer__link--ig", true)}
             <a href="https://www.etsy.com/shop/amigura" class="site-footer__link" target="_blank" rel="noopener noreferrer">Etsy</a>
             <a href="#" class="site-footer__link" data-contact-email data-i18n="footer.email">E-posta</a>
           </nav>
@@ -147,7 +187,7 @@
             </svg>
             <span class="sound-toggle__label" data-i18n="sound.label">Ses</span>
           </button>
-          <p class="site-footer__copy"><span class="site-footer__mark" aria-hidden="true">©</span> <span data-i18n="footer.copy">2026 Amigura. Tüm hakları saklıdır.</span></p>
+          <p class="site-footer__copy"><span class="site-footer__mark" aria-hidden="true">©</span> <span data-i18n="footer.copy">2026 Amigurumirem. T\u00fcm haklar\u0131 sakl\u0131d\u0131r.</span></p>
         </div>
       </footer>
     `;

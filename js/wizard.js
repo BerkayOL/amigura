@@ -66,13 +66,50 @@
     return "IRM-" + Date.now().toString(36).toUpperCase().slice(-8);
   }
 
-  var FIGURE_KEYS = ["harryPotter", "hermione", "malefiz", "ronald"];
+  function getFigureKeys() {
+    if (global.Irem && global.Irem.Products && typeof global.Irem.Products.getFigureSlugs === "function") {
+      return global.Irem.Products.getFigureSlugs();
+    }
+    return [];
+  }
 
   function getFigureLabel(key) {
-    if (FIGURE_KEYS.indexOf(key) !== -1) {
+    if (key && getFigureKeys().indexOf(key) !== -1) {
       return t("wizard." + key);
     }
     return key || "\u2014";
+  }
+
+  function getFigureThumb(slug) {
+    if (!global.Irem || !global.Irem.Products) return "assets/images/placeholder.svg";
+    var item = global.Irem.Products.catalog.find(function (p) {
+      return p.slug === slug;
+    });
+    if (!item) return "assets/images/placeholder.svg";
+    return global.Irem.Products.galleryPaths(item.folder, 1)[0];
+  }
+
+  function renderFigureGrid() {
+    var grid = document.querySelector(".wizard__figure-grid");
+    if (!grid) return;
+    var keys = getFigureKeys();
+    grid.innerHTML = keys
+      .map(function (key) {
+        var thumb = getFigureThumb(key);
+        return (
+          '<button type="button" class="wizard__figure-card" data-figure-key="' +
+          escapeHtml(key) +
+          '" aria-pressed="false">' +
+          '<img class="wizard__figure-thumb" src="' +
+          escapeHtml(thumb) +
+          '" alt="" width="72" height="72" loading="lazy" decoding="async">' +
+          '<span class="wizard__figure-name" data-i18n="wizard.' +
+          escapeHtml(key) +
+          '"></span></button>'
+        );
+      })
+      .join("");
+    if (global.Irem && global.Irem.I18n) global.Irem.I18n.apply(grid);
   }
 
   function getColorNames() {
@@ -326,6 +363,7 @@
     wizardBound = true;
     state.orderRef = generateOrderRef();
 
+    renderFigureGrid();
     renderPalette();
     updateSizeVisual();
     goToStep(1);
@@ -343,6 +381,7 @@
     }
 
     document.addEventListener("amigura:langchange", function () {
+      renderFigureGrid();
       if (global.Irem && global.Irem.I18n) global.Irem.I18n.apply(wizardEl);
       renderPalette();
       updatePaletteLabel();

@@ -11,9 +11,12 @@
   const SOUND_RUSTLE_MP3 = "assets/sounds/rustle.mp3";
   const SOUND_VOLUME = 0.05;
   const RUSTLE_VOLUME = 0.04;
-  const TRAIL_LENGTH = 12;
+  const TRAIL_LENGTH = 14;
   const IDLE_MS = 2500;
   const RUSTLE_DEBOUNCE_MS = 400;
+  const CURSOR_SMOOTH_MS = 34;
+  const CURSOR_CATCHUP_MS = 16;
+  const CURSOR_CATCHUP_DISTANCE = 24;
 
   const mqHover = window.matchMedia("(hover: hover) and (pointer: fine)");
   const mqReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -46,6 +49,8 @@
   /** @type {ReturnType<typeof setTimeout> | null} */
   let idleTimer = null;
   let pointerInView = false;
+  let pointerInitialized = false;
+  let lastFrameTime = 0;
 
   function canUseYarnCursor() {
     return mqHover.matches && !mqReduced.matches;
@@ -248,14 +253,26 @@
     idleTimer = setTimeout(stopCursorLoop, IDLE_MS);
   }
 
-  function drawCursor() {
+  function getCursorSmoothFactor(dt) {
+    const dist = Math.hypot(targetX - posX, targetY - posY);
+    const tau = dist > CURSOR_CATCHUP_DISTANCE ? CURSOR_CATCHUP_MS : CURSOR_SMOOTH_MS;
+    return 1 - Math.exp(-dt / tau);
+  }
+
+  function drawCursor(now) {
     if (!ctx || !canvas || !pointerInView) {
       rafId = null;
+      lastFrameTime = 0;
       return;
     }
 
-    posX += (targetX - posX) * 0.2;
-    posY += (targetY - posY) * 0.2;
+    const frameTime = typeof now === "number" ? now : performance.now();
+    const dt = lastFrameTime ? Math.min(frameTime - lastFrameTime, 40) : 16;
+    lastFrameTime = frameTime;
+
+    const factor = getCursorSmoothFactor(dt);
+    posX += (targetX - posX) * factor;
+    posY += (targetY - posY) * factor;
 
     trail.unshift({ x: posX, y: posY });
     if (trail.length > TRAIL_LENGTH) trail.length = TRAIL_LENGTH;
@@ -320,9 +337,11 @@
         targetX = e.clientX;
         targetY = e.clientY;
         pointerInView = true;
-        if (!posX && !posY) {
+        if (!pointerInitialized) {
           posX = targetX;
           posY = targetY;
+          pointerInitialized = true;
+          trail.length = 0;
         }
         startCursorLoop();
       },
@@ -334,6 +353,8 @@
       function () {
         pointerInView = false;
         isInteractive = false;
+        pointerInitialized = false;
+        lastFrameTime = 0;
         trail.length = 0;
         stopCursorLoop();
         if (ctx) ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
@@ -417,6 +438,8 @@
     canvas = null;
     ctx = null;
     trail.length = 0;
+    pointerInitialized = false;
+    lastFrameTime = 0;
   }
 
   /**

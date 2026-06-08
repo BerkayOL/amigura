@@ -147,6 +147,7 @@
             <a href="ozel-siparis.html" class="glass-nav__drawer-link glass-nav__link"${ozelCurrent} data-i18n="nav.custom">Özel Sipariş</a>
             <a href="${about}" class="glass-nav__drawer-link glass-nav__link" data-i18n="nav.about">Hakkımızda</a>
             <a href="${contact}" class="glass-nav__drawer-link glass-nav__link" data-i18n="nav.contact">İletişim</a>
+            ${renderInstagramLink("glass-nav__drawer-link glass-nav__drawer-link--social", true)}
           </div>
         </nav>
       </header>

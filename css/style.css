@@ -2980,12 +2980,6 @@ html.is-page-ready body[data-page="ozel"] .wizard__panel.is-active {
   transform: translateY(-1px);
 }
 
-@media (max-width: 480px) {
-  .wizard__figure-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ==========================================================================
    Modals (handoff + care)
    ========================================================================== */
@@ -5408,6 +5402,18 @@ body.has-cookie-banner {
     box-shadow: inset 3px 0 0 var(--color-accent);
   }
 
+  .glass-nav__drawer-link--social {
+    gap: 0.65rem;
+    margin-top: 0.35rem;
+    color: var(--color-accent);
+    border-color: color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+    background: var(--color-accent-soft);
+  }
+
+  .glass-nav__drawer-link--social .nav-social__icon {
+    flex-shrink: 0;
+  }
+
   .glass-nav.is-nav-open .glass-nav__drawer-link {
     animation: drawerLinkIn var(--motion-panel) var(--ease-out-quint) both;
   }
@@ -5426,6 +5432,10 @@ body.has-cookie-banner {
 
   .glass-nav.is-nav-open .glass-nav__drawer-link:nth-child(4) {
     animation-delay: 0.2s;
+  }
+
+  .glass-nav.is-nav-open .glass-nav__drawer-link:nth-child(5) {
+    animation-delay: 0.25s;
   }
 
   @keyframes drawerLinkIn {
@@ -5524,10 +5534,6 @@ body.has-cookie-banner {
   }
 
   /* Hero / products mobile layout: css/mobile.css */
-
-  .products__grid {
-    grid-template-columns: 1fr;
-  }
 
   .about {
     padding: var(--space-xl) var(--space-md);

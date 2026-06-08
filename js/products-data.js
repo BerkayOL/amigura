@@ -1,5 +1,5 @@
 /**
- * Amigura — Product catalog (locale keys via Irem.I18n)
+ * Amigurumirem - Product catalog (locale keys via Irem.I18n)
  */
 (function (global) {
   "use strict";

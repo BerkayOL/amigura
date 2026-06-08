@@ -1,5 +1,5 @@
 /**
- * Amigura � Modals (care, Instagram outbound)
+ * Amigurumirem - Modals (care, Instagram outbound)
  */
 (function (global) {
   "use strict";

@@ -1,6 +1,5 @@
 /**
- * Amigura — Clear stuck nav/modal overlays before paint (Özel Sipari? blank screen).
- * Sync load in <head>; no dependency on Irem.Modal.
+ * Amigurumirem - Page transition unlock helper
  */
 (function (global) {
   "use strict";

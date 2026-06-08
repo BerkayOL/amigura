@@ -1,5 +1,5 @@
 /**
- * Organize raw product photos into assets/images/products/{slug}/01.jpg 
+ * Organize raw product photos into assets/images/products/{slug}/01.jpg 
  * Run once: node scripts/organize-product-images.mjs
  */
 import fs from "node:fs";
@@ -18,7 +18,7 @@ const RULES = [
   {
     slug: "crossbodyPaperBag",
     folder: "crossbody-paper-bag",
-    test: (n) => /capraz|apraz/i.test(n) && /canta|anta/i.test(n),
+    test: (n) => /capraz|apraz/i.test(n) && /canta|anta/i.test(n),
   },
   {
     slug: "lavenderClutch",

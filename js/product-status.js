@@ -1,5 +1,5 @@
 /**
- * Amigura — Product status badge variant (DRY for cards & i18n updates).
+ * Amigurumirem - Product availability labels
  */
 (function (global) {
   "use strict";

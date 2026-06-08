@@ -68,33 +68,33 @@ const PRICES_EN = {
 const PALETTE_TR = {
   fig: {
     barbie: { pink: "?konik pembe", blush: "All?k tonu", blonde: "Platin sar?", black: "Siyah detay", white: "Beyaz" },
-    elsa: { iceBlue: "Buz mavisi", snow: "Kar beyaz?", silver: "Gümü?", blonde: "Sar? saç", cape: "Mor pelerin" },
-    olaf: { snow: "Kar beyaz?", coal: "Kömür siyah?", carrot: "Havuç turuncu", stick: "Dal kahverengi" },
-    moana: { redTop: "K?rm?z? üst", skirt: "Çimen ye?ili", hair: "Kahverengi saç", skin: "Ten rengi", teal: "Turkuaz" },
-    maui: { skin: "Ten rengi", hair: "Siyah saç", red: "K?rm?z? örtü", leaf: "Yaprak ye?ili", tattoo: "Dövme kahvesi" },
-    harryPotter: { hair: "Siyah saç", skin: "Ten rengi", scarfRed: "Gryffindor k?rm?z?", scarfGold: "Gryffindor alt?n", robe: "Siyah cübbe", shirt: "Krem gömlek" },
-    hermione: { hair: "Kahverengi saç", skin: "Ten rengi", tieRed: "Kravat k?rm?z?", tieGold: "Kravat alt?n", robe: "Siyah cübbe" },
-    malefiz: { black: "Siyah", purple: "Mor", green: "Zümrüt ye?ili", skin: "Soluk ten", gold: "Alt?n detay" },
-    ronald: { hair: "Turuncu saç", skin: "Ten rengi", scarfRed: "Gryffindor k?rm?z?", scarfGold: "Gryffindor alt?n", robe: "Siyah cübbe" },
-    wednesday: { dress: "Siyah elbise", collar: "Beyaz yaka", hair: "Siyah saç", skin: "Soluk ten" },
-    thing: { skin: "Ten rengi", nails: "Siyah t?rnak", highlight: "Gölge tonu" },
-    pugsleyAddams: { red: "K?rm?z? çizgi", black: "Siyah çizgi", skin: "Soluk ten", hair: "Koyu saç" },
+    elsa: { iceBlue: "Buz mavisi", snow: "Kar beyaz?", silver: "Gm?", blonde: "Sar? sa", cape: "Mor pelerin" },
+    olaf: { snow: "Kar beyaz?", coal: "Kmr siyah?", carrot: "Havu turuncu", stick: "Dal kahverengi" },
+    moana: { redTop: "K?rm?z? st", skirt: "imen ye?ili", hair: "Kahverengi sa", skin: "Ten rengi", teal: "Turkuaz" },
+    maui: { skin: "Ten rengi", hair: "Siyah sa", red: "K?rm?z? rt", leaf: "Yaprak ye?ili", tattoo: "Dvme kahvesi" },
+    harryPotter: { hair: "Siyah sa", skin: "Ten rengi", scarfRed: "Gryffindor k?rm?z?", scarfGold: "Gryffindor alt?n", robe: "Siyah cbbe", shirt: "Krem gmlek" },
+    hermione: { hair: "Kahverengi sa", skin: "Ten rengi", tieRed: "Kravat k?rm?z?", tieGold: "Kravat alt?n", robe: "Siyah cbbe" },
+    malefiz: { black: "Siyah", purple: "Mor", green: "Zmrt ye?ili", skin: "Soluk ten", gold: "Alt?n detay" },
+    ronald: { hair: "Turuncu sa", skin: "Ten rengi", scarfRed: "Gryffindor k?rm?z?", scarfGold: "Gryffindor alt?n", robe: "Siyah cbbe" },
+    wednesday: { dress: "Siyah elbise", collar: "Beyaz yaka", hair: "Siyah sa", skin: "Soluk ten" },
+    thing: { skin: "Ten rengi", nails: "Siyah t?rnak", highlight: "Glge tonu" },
+    pugsleyAddams: { red: "K?rm?z? izgi", black: "Siyah izgi", skin: "Soluk ten", hair: "Koyu sa" },
     enidSinclair: { yellow: "Sar?", lavender: "Eflatun", pink: "Pembe", brown: "Kahverengi", black: "Siyah" },
     kuromi: { black: "Siyah", pink: "Pembe", white: "Beyaz", purple: "Mor" },
-    myMelody: { white: "Beyaz", hood: "Pembe kapü?on", nose: "Sar? burun", pink: "Pembe" },
-    sonicBlue: { blue: "Sonic mavisi", skin: "Ten rengi", shoes: "K?rm?z? ayakkab?", gloves: "Beyaz eldiven", eyes: "Siyah göz" },
-    sonicRed: { red: "K?rm?z?", skin: "Ten rengi", gloves: "Beyaz eldiven", eyes: "Siyah göz" },
+    myMelody: { white: "Beyaz", hood: "Pembe kap?on", nose: "Sar? burun", pink: "Pembe" },
+    sonicBlue: { blue: "Sonic mavisi", skin: "Ten rengi", shoes: "K?rm?z? ayakkab?", gloves: "Beyaz eldiven", eyes: "Siyah gz" },
+    sonicRed: { red: "K?rm?z?", skin: "Ten rengi", gloves: "Beyaz eldiven", eyes: "Siyah gz" },
     sonicBlack: { black: "Siyah", skin: "Ten rengi", shoes: "K?rm?z? ayakkab?", gloves: "Beyaz eldiven" },
-    tails: { orange: "Turuncu tüy", chest: "Beyaz gö?üs", shoes: "Kahverengi ayakkab?", eyes: "Mavi göz", detail: "Siyah detay" },
+    tails: { orange: "Turuncu ty", chest: "Beyaz g?s", shoes: "Kahverengi ayakkab?", eyes: "Mavi gz", detail: "Siyah detay" },
     lolSurpriseDoll: { hotPink: "Fu?ya", purple: "Mor", turquoise: "Turkuaz", gold: "Alt?n", white: "Beyaz" },
     crossbodyPaperBag: { kraft: "Kraft kahve", cream: "Krem", strap: "Kahverengi ask?", black: "Siyah detay" },
-    lavenderClutch: { lavender: "Eflatun", lilac: "Lila", silver: "Gümü?", cream: "Krem" },
+    lavenderClutch: { lavender: "Eflatun", lilac: "Lila", silver: "Gm?", cream: "Krem" },
     nostalgicPhoneBlue: { body: "Retro mavi", dial: "Krem disk", accent: "K?rm?z? aksan", black: "Siyah" },
     nostalgicPhonePink: { body: "Retro pembe", dial: "Krem disk", accent: "K?rm?z? aksan", white: "Beyaz" },
     nostalgicPhoneOrange: { body: "Retro turuncu", dial: "Krem disk", brown: "Kahverengi", black: "Siyah" },
-    fruitSet: { apple: "Elma k?rm?z?s?", banana: "Muz sar?s?", grape: "Üzüm moru", leaf: "Yaprak ye?ili", orange: "Portakal" },
-    vegetableSet: { tomato: "Domates k?rm?z?s?", carrot: "Havuç turuncu", broccoli: "Brokoli ye?ili", eggplant: "Patl?can moru", corn: "M?s?r sar?s?" },
-    trexDinosaur: { green: "Orman ye?ili", belly: "Aç?k ye?il kar?n", teeth: "Beyaz di?", eyes: "Siyah göz", tongue: "K?rm?z? dil" },
+    fruitSet: { apple: "Elma k?rm?z?s?", banana: "Muz sar?s?", grape: "zm moru", leaf: "Yaprak ye?ili", orange: "Portakal" },
+    vegetableSet: { tomato: "Domates k?rm?z?s?", carrot: "Havu turuncu", broccoli: "Brokoli ye?ili", eggplant: "Patl?can moru", corn: "M?s?r sar?s?" },
+    trexDinosaur: { green: "Orman ye?ili", belly: "A?k ye?il kar?n", teeth: "Beyaz di?", eyes: "Siyah gz", tongue: "K?rm?z? dil" },
   },
 };
 
@@ -131,7 +131,7 @@ const PALETTE_EN = {
   },
 };
 
-const LEGAL_PRIVACY_TR = `<p>Bu Ki?isel Verilerin Korunmas? ve Gizlilik Politikas? ("Politika"), <strong>Amigurumirem</strong> el yap?m? amigurumi atölyesi taraf?ndan i?letilen <strong>amigurumirem.com</strong> vitrin web sitesi kapsam?nda, 6698 say?l? Ki?isel Verilerin Korunmas? Kanunu ("KVKK") ve ilgili ikincil mevzuat uyar?nca ki?isel verilerinizin i?lenmesine ili?kin sizi bilgilendirmek amac?yla haz?rlanm??t?r.</p>
+const LEGAL_PRIVACY_TR = `<p>Bu Ki?isel Verilerin Korunmas? ve Gizlilik Politikas? ("Politika"), <strong>Amigurumirem</strong> el yap?m? amigurumi atlyesi taraf?ndan i?letilen <strong>amigurumirem.com</strong> vitrin web sitesi kapsam?nda, 6698 say?l? Ki?isel Verilerin Korunmas? Kanunu ("KVKK") ve ilgili ikincil mevzuat uyar?nca ki?isel verilerinizin i?lenmesine ili?kin sizi bilgilendirmek amac?yla haz?rlanm??t?r.</p>
 
 <h2>1. Veri Sorumlusu</h2>
 <p>KVKK kapsam?nda veri sorumlusu:</p>
@@ -139,64 +139,64 @@ const LEGAL_PRIVACY_TR = `<p>Bu Ki?isel Verilerin Korunmas? ve Gizlilik Politika
 <li><strong>Ticari unvan / marka:</strong> Amigurumirem</li>
 <li><strong>E-posta:</strong> <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a></li>
 <li><strong>Web sitesi:</strong> <a href="https://www.amigurumirem.com/">amigurumirem.com</a></li>
-<li><strong>?leti?im:</strong> <a href="index.html#contact">?leti?im bölümü</a> · <a href="https://www.instagram.com/amigurumi__rem" target="_blank" rel="noopener noreferrer">@amigurumi__rem</a></li>
+<li><strong>?leti?im:</strong> <a href="index.html#contact">?leti?im blm</a>  <a href="https://www.instagram.com/amigurumi__rem" target="_blank" rel="noopener noreferrer">@amigurumi__rem</a></li>
 </ul>
 
 <h2>2. Hizmetin Niteli?i</h2>
-<p><strong>amigurumirem.com</strong> bir ürün vitrini sunar; bu sitede do?rudan ödeme al?nmaz. Haz?r koleksiyon ürünlerinin sat?n alma, ödeme, fatura ve kargo süreçleri <strong>Instagram</strong> üzerinden yürütülür. Özel sipari? talepleri e-posta, WhatsApp veya Instagram mesaj? ile al?nabilir.</p>
+<p><strong>amigurumirem.com</strong> bir rn vitrini sunar; bu sitede do?rudan deme al?nmaz. Haz?r koleksiyon rnlerinin sat?n alma, deme, fatura ve kargo sreleri <strong>Instagram</strong> zerinden yrtlr. zel sipari? talepleri e-posta, WhatsApp veya Instagram mesaj? ile al?nabilir.</p>
 
 <h2>3. ??lenen Ki?isel Veri Kategorileri</h2>
 <ul>
-<li><strong>Kimlik ve ileti?im:</strong> Ad-soyad, e-posta adresi, telefon numaras? (bizimle ileti?ime geçmeniz hâlinde).</li>
-<li><strong>Sipari? ve özel sipari?:</strong> Figür tercihi, karakter renk paleti, ölçü, notlar, referans numaras?.</li>
-<li><strong>??lem güvenli?i:</strong> IP adresi, taray?c? ve cihaz bilgisi, oturum loglar?, eri?im tarihi/saati.</li>
-<li><strong>Çerez verileri:</strong> Zorunlu çerezler; analitik çerezler yaln?zca aç?k r?zan?z ile.</li>
-<li><strong>Pazarlama:</strong> Bülten e-posta adresi (yaln?zca abone olman?z hâlinde).</li>
+<li><strong>Kimlik ve ileti?im:</strong> Ad-soyad, e-posta adresi, telefon numaras? (bizimle ileti?ime gemeniz hlinde).</li>
+<li><strong>Sipari? ve zel sipari?:</strong> Figr tercihi, karakter renk paleti, l, notlar, referans numaras?.</li>
+<li><strong>??lem gvenli?i:</strong> IP adresi, taray?c? ve cihaz bilgisi, oturum loglar?, eri?im tarihi/saati.</li>
+<li><strong>erez verileri:</strong> Zorunlu erezler; analitik erezler yaln?zca a?k r?zan?z ile.</li>
+<li><strong>Pazarlama:</strong> Blten e-posta adresi (yaln?zca abone olman?z hlinde).</li>
 </ul>
-<p>Instagram üzerinden tamamlanan al??veri?lerde ödeme kart?, teslimat adresi ve sipari? geçmi?i verileri Instagram taraf?ndan ayr? bir veri sorumlusu olarak i?lenir.</p>
+<p>Instagram zerinden tamamlanan al??veri?lerde deme kart?, teslimat adresi ve sipari? gemi?i verileri Instagram taraf?ndan ayr? bir veri sorumlusu olarak i?lenir.</p>
 
-<h2>4. ??leme Amaçlar?</h2>
+<h2>4. ??leme Amalar?</h2>
 <ul>
-<li>Web sitesinin güvenli, h?zl? ve kesintisiz sunulmas?</li>
-<li>?leti?im taleplerinin ve özel sipari? ba?vurular?n?n de?erlendirilmesi</li>
-<li>Sipari? sürecinin yürütülmesi ve mü?teri deste?i</li>
-<li>Bülten gönderimi (aç?k onay?n?z dahilinde)</li>
-<li>Mevzuattan kaynaklanan yükümlülüklerin yerine getirilmesi</li>
+<li>Web sitesinin gvenli, h?zl? ve kesintisiz sunulmas?</li>
+<li>?leti?im taleplerinin ve zel sipari? ba?vurular?n?n de?erlendirilmesi</li>
+<li>Sipari? srecinin yrtlmesi ve m?teri deste?i</li>
+<li>Blten gnderimi (a?k onay?n?z dahilinde)</li>
+<li>Mevzuattan kaynaklanan ykmllklerin yerine getirilmesi</li>
 <li>Haklar?n tesisi, kullan?lmas? veya korunmas?</li>
-<li>Hizmet kalitesinin ölçülmesi ve iyile?tirilmesi (anonimle?tirilmi? analitik)</li>
+<li>Hizmet kalitesinin llmesi ve iyile?tirilmesi (anonimle?tirilmi? analitik)</li>
 </ul>
 
 <h2>5. Hukuki Sebepler</h2>
-<p>Ki?isel verileriniz KVKK md. 5 kapsam?nda; bir sözle?menin kurulmas? veya ifas?, hukuki yükümlülük, ilgili ki?inin temel hak ve özgürlüklerine zarar vermemek kayd?yla veri sorumlusunun me?ru menfaati ve aç?k r?zan?z (analitik çerezler, bülten) hukuki sebeplerine dayan?larak i?lenebilir.</p>
+<p>Ki?isel verileriniz KVKK md. 5 kapsam?nda; bir szle?menin kurulmas? veya ifas?, hukuki ykmllk, ilgili ki?inin temel hak ve zgrlklerine zarar vermemek kayd?yla veri sorumlusunun me?ru menfaati ve a?k r?zan?z (analitik erezler, blten) hukuki sebeplerine dayan?larak i?lenebilir.</p>
 
 <h2>6. Aktar?m ve Al?c? Gruplar?</h2>
-<p>Verileriniz; bar?nd?rma (hosting) sa?lay?c?lar?, e-posta hizmeti sa?lay?c?lar?, analitik araç sa?lay?c?lar? (yaln?zca r?za ile), kargo/lojistik i? ortaklar? (sipari? teslimat?nda), hukuk dan??manlar? ve yasal zorunluluk hâlinde yetkili kamu kurumlar? ile payla??labilir. Yurt d???na aktar?m söz konusu olursa KVKK md. 9 hükümlerine uyulur.</p>
+<p>Verileriniz; bar?nd?rma (hosting) sa?lay?c?lar?, e-posta hizmeti sa?lay?c?lar?, analitik ara sa?lay?c?lar? (yaln?zca r?za ile), kargo/lojistik i? ortaklar? (sipari? teslimat?nda), hukuk dan??manlar? ve yasal zorunluluk hlinde yetkili kamu kurumlar? ile payla??labilir. Yurt d???na aktar?m sz konusu olursa KVKK md. 9 hkmlerine uyulur.</p>
 
-<h2>7. Saklama Süreleri</h2>
-<p>Veriler, i?leme amac? için gerekli süre boyunca ve ilgili mevzuattaki zamana??m? süreleri kadar saklan?r; süre sonunda silinir, yok edilir veya anonim hale getirilir. Özel sipari? yaz??malar? genellikle son i?lemden itibaren <strong>3 y?l</strong>; bülten kay?tlar? abonelik süresince saklan?r.</p>
+<h2>7. Saklama Sreleri</h2>
+<p>Veriler, i?leme amac? iin gerekli sre boyunca ve ilgili mevzuattaki zamana??m? sreleri kadar saklan?r; sre sonunda silinir, yok edilir veya anonim hale getirilir. zel sipari? yaz??malar? genellikle son i?lemden itibaren <strong>3 y?l</strong>; blten kay?tlar? abonelik sresince saklan?r.</p>
 
 <h2>8. KVKK Kapsam?ndaki Haklar?n?z</h2>
-<p>KVKK md. 11 uyar?nca; verilerinizin i?lenip i?lenmedi?ini ö?renme, bilgi talep etme, i?lenme amac?n? ö?renme, yurt içi/yurt d??? aktar?lan üçüncü ki?ileri bilme, eksik veya yanl?? i?lenmi?se düzeltilmesini isteme, silinmesini veya yok edilmesini isteme, otomatik sistemlerle analiz sonucuna itiraz etme ve kanuna ayk?r? i?leme nedeniyle zarara u?raman?z hâlinde tazminat talep etme haklar?na sahipsiniz.</p>
-<p>Ba?vurular?n?z? <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a> adresine iletebilirsiniz. Ba?vurular ücretsiz olarak en geç <strong>30 gün</strong> içinde sonuçland?r?l?r.</p>
+<p>KVKK md. 11 uyar?nca; verilerinizin i?lenip i?lenmedi?ini ?renme, bilgi talep etme, i?lenme amac?n? ?renme, yurt ii/yurt d??? aktar?lan nc ki?ileri bilme, eksik veya yanl?? i?lenmi?se dzeltilmesini isteme, silinmesini veya yok edilmesini isteme, otomatik sistemlerle analiz sonucuna itiraz etme ve kanuna ayk?r? i?leme nedeniyle zarara u?raman?z hlinde tazminat talep etme haklar?na sahipsiniz.</p>
+<p>Ba?vurular?n?z? <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a> adresine iletebilirsiniz. Ba?vurular cretsiz olarak en ge <strong>30 gn</strong> iinde sonuland?r?l?r.</p>
 
-<h2>9. Çerezler</h2>
-<p>Zorunlu çerezler site i?levselli?i için gereklidir. Analitik çerezler yaln?zca çerez banner üzerinden onay vermeniz hâlinde kullan?l?r. Tercihlerinizi banner veya taray?c? ayarlar?ndan de?i?tirebilirsiniz.</p>
+<h2>9. erezler</h2>
+<p>Zorunlu erezler site i?levselli?i iin gereklidir. Analitik erezler yaln?zca erez banner zerinden onay vermeniz hlinde kullan?l?r. Tercihlerinizi banner veya taray?c? ayarlar?ndan de?i?tirebilirsiniz.</p>
 
-<h2>10. Çocuklar?n Gizlili?i</h2>
-<p>Sitemiz 18 ya? alt?ndaki ki?ilerden bilerek ki?isel veri toplamaz. Ebeveyn veya veli iseniz ve çocu?unuza ait veri i?lendi?ini dü?ünüyorsan?z bizimle ileti?ime geçin.</p>
+<h2>10. ocuklar?n Gizlili?i</h2>
+<p>Sitemiz 18 ya? alt?ndaki ki?ilerden bilerek ki?isel veri toplamaz. Ebeveyn veya veli iseniz ve ocu?unuza ait veri i?lendi?ini d?nyorsan?z bizimle ileti?ime gein.</p>
 
-<h2>11. Güvenlik</h2>
-<p>Ki?isel verilerin korunmas? için uygun teknik ve idari tedbirler uygulanmaktad?r; ancak internet üzerinden iletimin tamamen risksiz oldu?u garanti edilemez.</p>
+<h2>11. Gvenlik</h2>
+<p>Ki?isel verilerin korunmas? iin uygun teknik ve idari tedbirler uygulanmaktad?r; ancak internet zerinden iletimin tamamen risksiz oldu?u garanti edilemez.</p>
 
 <h2>12. Politika De?i?iklikleri</h2>
-<p>Bu politika güncellenebilir. Güncel sürüm bu sayfada yay?mlan?r; önemli de?i?ikliklerde "son güncelleme" tarihi revize edilir.</p>
+<p>Bu politika gncellenebilir. Gncel srm bu sayfada yay?mlan?r; nemli de?i?ikliklerde "son gncelleme" tarihi revize edilir.</p>
 
-<p class="legal-content__notice">Bu metin bilgilendirme amaçl?d?r. Özel durumunuz için hukuk dan??man?na ba?vurman?z önerilir.</p>`;
+<p class="legal-content__notice">Bu metin bilgilendirme amal?d?r. zel durumunuz iin hukuk dan??man?na ba?vurman?z nerilir.</p>`;
 
-const LEGAL_RETURNS_TR = `<p>Bu ?ptal ve ?ade Ko?ullar?, <strong>Amigurumirem</strong> el yap?m? amigurumi ürünlerine ili?kin iptal, iade, cayma hakk? ve mü?teri destek süreçlerini aç?klar. Lütfen bu metni, <strong>amigurumirem.com</strong> üzerindeki bilgilerle ve <strong>Instagram</strong> platform ko?ullar?yla birlikte okuyunuz.</p>
+const LEGAL_RETURNS_TR = `<p>Bu ?ptal ve ?ade Ko?ullar?, <strong>Amigurumirem</strong> el yap?m? amigurumi rnlerine ili?kin iptal, iade, cayma hakk? ve m?teri destek srelerini a?klar. Ltfen bu metni, <strong>amigurumirem.com</strong> zerindeki bilgilerle ve <strong>Instagram</strong> platform ko?ullar?yla birlikte okuyunuz.</p>
 
 <h2>1. Genel Bilgilendirme</h2>
-<p><strong>amigurumirem.com</strong> ürün vitrini sunar; bu sitede ödeme al?nmaz. Haz?r koleksiyon ürünlerinin sat???, ödemesi ve kargosu <strong>Instagram</strong> üzerinden yap?l?r. ?ade ve iptal ba?vurular? öncelikle Instagram sipari? süreçleri üzerinden yönetilir; atölyemiz üretim kalitesi, paketleme ve mü?teri ileti?iminden sorumludur.</p>
+<p><strong>amigurumirem.com</strong> rn vitrini sunar; bu sitede deme al?nmaz. Haz?r koleksiyon rnlerinin sat???, demesi ve kargosu <strong>Instagram</strong> zerinden yap?l?r. ?ade ve iptal ba?vurular? ncelikle Instagram sipari? sreleri zerinden ynetilir; atlyemiz retim kalitesi, paketleme ve m?teri ileti?iminden sorumludur.</p>
 
 <h2>2. Sat?c? ?leti?im</h2>
 <ul>
@@ -205,53 +205,53 @@ const LEGAL_RETURNS_TR = `<p>Bu ?ptal ve ?ade Ko?ullar?, <strong>Amigurumirem</s
 <li><strong>Instagram:</strong> <a href="https://www.instagram.com/amigurumi__rem" target="_blank" rel="noopener noreferrer">@amigurumi__rem</a></li>
 </ul>
 
-<h2>3. Haz?r Koleksiyon Ürünleri — 14 Günlük Cayma Hakk?</h2>
-<p>6502 say?l? Tüketicinin Korunmas? Hakk?nda Kanun ve Mesafeli Sözle?meler Yönetmeli?i kapsam?nda, haz?r koleksiyon ürünlerinde teslimattan itibaren <strong>14 gün</strong> içinde herhangi bir gerekçe göstermeksizin cayma hakk?na sahipsiniz (ki?iye özel üretilen ürünler hariç).</p>
+<h2>3. Haz?r Koleksiyon rnleri  14 Gnlk Cayma Hakk?</h2>
+<p>6502 say?l? Tketicinin Korunmas? Hakk?nda Kanun ve Mesafeli Szle?meler Ynetmeli?i kapsam?nda, haz?r koleksiyon rnlerinde teslimattan itibaren <strong>14 gn</strong> iinde herhangi bir gereke gstermeksizin cayma hakk?na sahipsiniz (ki?iye zel retilen rnler hari).</p>
 <ul>
-<li>?ade sürecini Instagram hesab?n?zdan veya sat?c? ileti?im kanallar?ndan ba?lat?n.</li>
-<li>Ürün kullan?lmam??, hasars?z ve mümkünse orijinal ambalaj?nda olmal?d?r.</li>
-<li>?ade kargo süreci Instagram ve kargo firmas? kurallar?na tabidir.</li>
-<li>Ödeme iadesi Instagram prosedürleriyle yap?l?r; süre bankan?za göre de?i?ebilir.</li>
+<li>?ade srecini Instagram hesab?n?zdan veya sat?c? ileti?im kanallar?ndan ba?lat?n.</li>
+<li>rn kullan?lmam??, hasars?z ve mmknse orijinal ambalaj?nda olmal?d?r.</li>
+<li>?ade kargo sreci Instagram ve kargo firmas? kurallar?na tabidir.</li>
+<li>deme iadesi Instagram prosedrleriyle yap?l?r; sre bankan?za gre de?i?ebilir.</li>
 </ul>
 
-<h2>4. Ki?iselle?tirilmi? ve Özel Sipari? Ürünleri</h2>
-<p>Mesafeli Sözle?meler Yönetmeli?i md. 15 uyar?nca, <strong>tüketicinin seçim veya istekleri do?rultusunda ki?iselle?tirilen</strong> mallarda cayma hakk? kullan?lamaz.</p>
+<h2>4. Ki?iselle?tirilmi? ve zel Sipari? rnleri</h2>
+<p>Mesafeli Szle?meler Ynetmeli?i md. 15 uyar?nca, <strong>tketicinin seim veya istekleri do?rultusunda ki?iselle?tirilen</strong> mallarda cayma hakk? kullan?lamaz.</p>
 <p>Buna ?unlar dahildir:</p>
 <ul>
-<li>Özel sipari? sihirbaz? ile talep edilen figür, karakter renk paleti, ölçü veya isim nak???</li>
-<li>Üretime ba?lanm?? özel tasar?m sipari?ler</li>
-<li>Ki?iye özel hediye notu veya ambalaj talebiyle üretilen parçalar</li>
+<li>zel sipari? sihirbaz? ile talep edilen figr, karakter renk paleti, l veya isim nak???</li>
+<li>retime ba?lanm?? zel tasar?m sipari?ler</li>
+<li>Ki?iye zel hediye notu veya ambalaj talebiyle retilen paralar</li>
 </ul>
-<p>Özel sipari? onay?ndan sonra iptal genellikle mümkün de?ildir; üretim ba?lamadan önce yaz?l? olarak sorabilirsiniz.</p>
+<p>zel sipari? onay?ndan sonra iptal genellikle mmkn de?ildir; retim ba?lamadan nce yaz?l? olarak sorabilirsiniz.</p>
 
 <h2>5. Hasarl? veya Eksik Teslimat</h2>
-<p>Ürün hasarl? veya eksik geldiyse teslimattan itibaren <strong>48 saat</strong> içinde foto?raf ve sipari? bilgisiyle bildirin. Instagram üzerinden veya <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a> adresinden bize ula?abilirsiniz. Uygun hâllerde yeniden üretim, de?i?im veya iade de?erlendirilir.</p>
+<p>rn hasarl? veya eksik geldiyse teslimattan itibaren <strong>48 saat</strong> iinde foto?raf ve sipari? bilgisiyle bildirin. Instagram zerinden veya <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a> adresinden bize ula?abilirsiniz. Uygun hllerde yeniden retim, de?i?im veya iade de?erlendirilir.</p>
 
 <h2>6. Sipari? ?ptali (Kargoya Verilmeden)</h2>
-<p>Instagram üzerinden verilen ve henüz kargoya verilmemi? standart sipari?ler, platform kurallar? çerçevesinde iptal edilebilir.</p>
+<p>Instagram zerinden verilen ve henz kargoya verilmemi? standart sipari?ler, platform kurallar? erevesinde iptal edilebilir.</p>
 
 <h2>7. De?i?im</h2>
-<p>Do?rudan de?i?im hizmeti sunulmamaktad?r. Uygun ürünlerde iade sonras? yeni sipari? verebilirsiniz.</p>
+<p>Do?rudan de?i?im hizmeti sunulmamaktad?r. Uygun rnlerde iade sonras? yeni sipari? verebilirsiniz.</p>
 
-<h2>8. Özel Sipari? Ödemeleri</h2>
-<p>Atölyemizle do?rudan yap?lan özel sipari?lerde ödeme ve iade ko?ullar? sipari? onay?nda yaz?l? olarak payla??l?r.</p>
+<h2>8. zel Sipari? demeleri</h2>
+<p>Atlyemizle do?rudan yap?lan zel sipari?lerde deme ve iade ko?ullar? sipari? onay?nda yaz?l? olarak payla??l?r.</p>
 
-<h2>9. Fiyatlar ve Güncellemeler</h2>
-<p>Vitrinde görünen fiyatlar bilgilendirme amaçl?d?r; güncel sat?? fiyat? Instagram ürün sayfas?nda geçerlidir. El eme?i, iplik maliyeti ve i?çilik süresine göre fiyatlar güncellenebilir.</p>
+<h2>9. Fiyatlar ve Gncellemeler</h2>
+<p>Vitrinde grnen fiyatlar bilgilendirme amal?d?r; gncel sat?? fiyat? Instagram rn sayfas?nda geerlidir. El eme?i, iplik maliyeti ve i?ilik sresine gre fiyatlar gncellenebilir.</p>
 
 <h2>10. ?leti?im</h2>
-<p>?ade ve iptal sorular?n?z için: <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a></p>
+<p>?ade ve iptal sorular?n?z iin: <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a></p>
 
-<p class="legal-content__notice">Güncel ko?ullar için ilgili Instagram gönderisi ve platform ?artlar?n? da inceleyiniz.</p>`;
+<p class="legal-content__notice">Gncel ko?ullar iin ilgili Instagram gnderisi ve platform ?artlar?n? da inceleyiniz.</p>`;
 
-const LEGAL_PRIVACY_EN = `<p>This Privacy Policy explains how <strong>Amigurumirem</strong> ("we", "us") collects and uses personal data when you visit <strong>amigurumirem.com</strong>. We are a handmade amigurumi studio based in Türkiye. This website is a product showcase; checkout for collection items is completed on <strong>Instagram</strong>.</p>
+const LEGAL_PRIVACY_EN = `<p>This Privacy Policy explains how <strong>Amigurumirem</strong> ("we", "us") collects and uses personal data when you visit <strong>amigurumirem.com</strong>. We are a handmade amigurumi studio based in Trkiye. This website is a product showcase; checkout for collection items is completed on <strong>Instagram</strong>.</p>
 
 <h2>1. Data Controller</h2>
 <ul>
 <li><strong>Brand:</strong> Amigurumirem</li>
 <li><strong>Email:</strong> <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a></li>
 <li><strong>Website:</strong> <a href="https://www.amigurumirem.com/">amigurumirem.com</a></li>
-<li><strong>Contact:</strong> <a href="index.html#contact">Contact section</a> · <a href="https://www.instagram.com/amigurumi__rem" target="_blank" rel="noopener noreferrer">@amigurumi__rem</a></li>
+<li><strong>Contact:</strong> <a href="index.html#contact">Contact section</a>  <a href="https://www.instagram.com/amigurumi__rem" target="_blank" rel="noopener noreferrer">@amigurumi__rem</a></li>
 </ul>
 
 <h2>2. What This Website Does</h2>
@@ -297,7 +297,7 @@ const LEGAL_RETURNS_EN = `<p>This Returns and Cancellation Policy explains how r
 <li><strong>Instagram:</strong> <a href="https://www.instagram.com/amigurumi__rem" target="_blank" rel="noopener noreferrer">@amigurumi__rem</a></li>
 </ul>
 
-<h2>3. Ready-Made Items — 14-Day Withdrawal</h2>
+<h2>3. Ready-Made Items  14-Day Withdrawal</h2>
 <p>For standard ready-made collection items, consumers generally have a <strong>14-day right of withdrawal</strong> from delivery under Turkish consumer law (excluding personalised goods).</p>
 <ul>
 <li>Start the return via Instagram or by contacting us.</li>
@@ -306,7 +306,7 @@ const LEGAL_RETURNS_EN = `<p>This Returns and Cancellation Policy explains how r
 </ul>
 
 <h2>4. Custom and Personalised Orders</h2>
-<p>Made-to-order pieces — including wizard requests with figure, character colours, size, or name embroidery — are excluded from the standard withdrawal right once production is agreed.</p>
+<p>Made-to-order pieces  including wizard requests with figure, character colours, size, or name embroidery  are excluded from the standard withdrawal right once production is agreed.</p>
 
 <h2>5. Damaged or Missing Deliveries</h2>
 <p>Report damage or missing items within <strong>48 hours</strong> with photos to <a href="mailto:calanguirem@gmail.com">calanguirem@gmail.com</a> or via Instagram.</p>
@@ -385,28 +385,28 @@ function patchWizardStrings(file, lang) {
   let text = fs.readFileSync(file, "utf8");
   if (lang === "tr") {
     text = text.replace(
-      '"colorLead": "En fazla 3 renk seçebilirsiniz."',
-      '"colorLead": "Genel renk paletinden en fazla 4 ton seçebilirsiniz.",\n    "colorTitleCharacter": "{figure} — karakter renkleri",\n    "colorLeadCharacter": "{figure} için özgün karakter tonlar?. Vurgulamak istedi?iniz renkleri seçin (en fazla 4)."'
+      '"colorLead": "En fazla 3 renk seebilirsiniz."',
+      '"colorLead": "Genel renk paletinden en fazla 4 ton seebilirsiniz.",\n    "colorTitleCharacter": "{figure}  karakter renkleri",\n    "colorLeadCharacter": "{figure} iin zgn karakter tonlar?. Vurgulamak istedi?iniz renkleri sein (en fazla 4)."'
     );
     if (!text.includes("colorTitleCharacter")) {
       text = text.replace(
         '"colorTitle": "Renk paletiniz",',
-        '"colorTitle": "Renk paletiniz",\n    "colorTitleCharacter": "{figure} — karakter renkleri",\n    "colorLeadCharacter": "{figure} için özgün karakter tonlar?. Vurgulamak istedi?iniz renkleri seçin (en fazla 4).",'
+        '"colorTitle": "Renk paletiniz",\n    "colorTitleCharacter": "{figure}  karakter renkleri",\n    "colorLeadCharacter": "{figure} iin zgn karakter tonlar?. Vurgulamak istedi?iniz renkleri sein (en fazla 4).",'
       );
       text = text.replace(
-        '"colorLead": "En fazla 3 renk seçebilirsiniz."',
-        '"colorLead": "Genel renk paletinden en fazla 4 ton seçebilirsiniz."'
+        '"colorLead": "En fazla 3 renk seebilirsiniz."',
+        '"colorLead": "Genel renk paletinden en fazla 4 ton seebilirsiniz."'
       );
     }
   } else {
     text = text.replace(
       '"colorLead": "Choose up to 3 colours."',
-      '"colorLead": "Choose up to 4 tones from the general palette.",\n    "colorTitleCharacter": "{figure} — character colours",\n    "colorLeadCharacter": "Authentic tones for {figure}. Select the colours you want to emphasise (up to 4)."'
+      '"colorLead": "Choose up to 4 tones from the general palette.",\n    "colorTitleCharacter": "{figure}  character colours",\n    "colorLeadCharacter": "Authentic tones for {figure}. Select the colours you want to emphasise (up to 4)."'
     );
     if (!text.includes("colorTitleCharacter")) {
       text = text.replace(
         '"colorTitle": "Your colour palette",',
-        '"colorTitle": "Your colour palette",\n    "colorTitleCharacter": "{figure} — character colours",\n    "colorLeadCharacter": "Authentic tones for {figure}. Select the colours you want to emphasise (up to 4).",'
+        '"colorTitle": "Your colour palette",\n    "colorTitleCharacter": "{figure}  character colours",\n    "colorLeadCharacter": "Authentic tones for {figure}. Select the colours you want to emphasise (up to 4).",'
       );
       text = text.replace(
         /"colorLead": "[^"]+",/,

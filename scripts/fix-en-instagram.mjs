@@ -7,7 +7,7 @@ const filePath = path.join(__dirname, "..", "js", "locales", "en.js");
 let content = fs.readFileSync(filePath, "utf8");
 
 const fixes = [
-  [/"handoffLoading": "[^"]*"/, '"handoffLoading": "Redirecting you to the product post on Instagram…"'],
+  [/"handoffLoading": "[^"]*"/, '"handoffLoading": "Redirecting you to the product post on Instagram"'],
   [
     /"handoffLead": "[^"]*"/,
     '"handoffLead": "You are being redirected to the product post on Instagram for orders and messages. Every piece is handmade with care at the Amigura studio."',

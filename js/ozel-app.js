@@ -1,6 +1,5 @@
 /**
- * Amigura — Özel sipari? page only (nav, theme, i18n, cookie).
- * Avoids loading full home app.js (products, reviews, carousel).
+ * Amigurumirem - Custom order page bootstrap
  */
 (function () {
   "use strict";

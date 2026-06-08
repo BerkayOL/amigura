@@ -1,5 +1,5 @@
 /**
- * Amigura � Cookie consent banner
+ * Amigurumirem - Cookie consent banner
  */
 (function (global) {
   "use strict";

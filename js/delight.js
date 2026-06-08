@@ -1,5 +1,5 @@
 /**
- * Amigura P3 � Yarn cursor, opt-in micro-sound, idle-safe rAF
+ * Amigurumirem P3 - Yarn cursor, opt-in micro-sound, idle-safe rAF
  */
 (function () {
   "use strict";

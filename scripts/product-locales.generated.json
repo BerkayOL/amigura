@@ -1,6 +1,562 @@
 {
-  "productsTr": "    \"barbie\": {\n      \"name\": \"Barbie Amigurumi\",\n      \"desc\": \"?konik pembe tonlar?, �zenli sa� detay? ve zarif elbise i?lemesiyle klasik Barbie sil�eti.\",\n      \"price\": \"549 ?\",\n      \"careWash\": \"So?uk y?kama (30�C), yumu?ak deterjan.\",\n      \"careSize\": \"Yakla??k 20 cm oturur pozisyon.\",\n      \"careSafety\": \"G�venli g�z i?leme; organik pamuk iplik.\"\n    },\n    \"elsa\": {\n      \"name\": \"Elsa Amigurumi\",\n      \"desc\": \"Buz mavisi elbise, �rg� sa� �rg�s� ve kar tanesi detaylar?yla Arendelle prensesi.\",\n      \"price\": \"579 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 19 cm oturur pozisyon.\",\n      \"careSafety\": \"El nak??? detaylar; yumu?ak dokulu iplik.\"\n    },\n    \"olaf\": {\n      \"name\": \"Olaf Amigurumi\",\n      \"desc\": \"Sevimli havu� burun, dala� kollar ve s?cak g�l�msemeyle k???n en sevilen kardan adam?.\",\n      \"price\": \"499 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 16 cm oturur pozisyon.\",\n      \"careSafety\": \"�ocuklar i�in g�venli diki? ve g�z i?leme.\"\n    },\n    \"moana\": {\n      \"name\": \"Moana Amigurumi\",\n      \"desc\": \"Tropikal renkler, �zg�r ruhlu ifade ve el i?i aksesuar detaylar?yla cesur denizci k?z?.\",\n      \"price\": \"569 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 18 cm oturur pozisyon.\",\n      \"careSafety\": \"Organik pamuk iplik; el eme?i kalite kontrol�.\"\n    },\n    \"maui\": {\n      \"name\": \"Maui Amigurumi\",\n      \"desc\": \"G��l� sil�et, d�vme desenli detaylar ve karakteristik sa�/topuz i?�ili?iyle efsanevi yar? tanr?.\",\n      \"price\": \"589 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 20 cm oturur pozisyon.\",\n      \"careSafety\": \"S?n?rl? �retim; �zenli el nak???.\"\n    },\n    \"wednesday\": {\n      \"name\": \"Wednesday Amigurumi\",\n      \"desc\": \"Siyah elbise, �rg�l� sa� ve karakteristik ciddi ifadeyle Addams ailesinin ikonik k?z?.\",\n      \"price\": \"559 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 18 cm oturur pozisyon.\",\n      \"careSafety\": \"Koleksiyon par�as?; el i?�ili?i detaylar.\"\n    },\n    \"thing\": {\n      \"name\": \"Thing Amigurumi\",\n      \"desc\": \"Wednesday evreninden sevimli el fig�r� � ifadeli parmak detaylar? ve yumu?ak dokulu �rg�.\",\n      \"price\": \"449 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 12 cm.\",\n      \"careSafety\": \"Dekoratif ve oyun ama�l?; g�venli diki?.\"\n    },\n    \"pugsleyAddams\": {\n      \"name\": \"Pugsley Addams Amigurumi\",\n      \"desc\": \"�izgili kaza?? ve sevimli ifadesiyle Addams ailesinin ne?eli �yesi.\",\n      \"price\": \"529 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 17 cm oturur pozisyon.\",\n      \"careSafety\": \"Organik pamuk iplik; el nak??? g�z detay?.\"\n    },\n    \"enidSinclair\": {\n      \"name\": \"Enid Sinclair Amigurumi\",\n      \"desc\": \"Pastel renkler, canl? ifade ve �zenli sa� detay?yla Wednesday evreninin renkli karakteri.\",\n      \"price\": \"549 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 18 cm oturur pozisyon.\",\n      \"careSafety\": \"Yumu?ak dokulu iplik; el eme?i aksesuarlar.\"\n    },\n    \"kuromi\": {\n      \"name\": \"Kuromi Amigurumi\",\n      \"desc\": \"Siyah-pembe palet, ikonik kukuleta ve sevimli asi ifadeyle Sanrio favorisi.\",\n      \"price\": \"539 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 16 cm oturur pozisyon.\",\n      \"careSafety\": \"G�venli g�z i?leme; organik iplik.\"\n    },\n    \"myMelody\": {\n      \"name\": \"My Melody Amigurumi\",\n      \"desc\": \"Pembe kukuleta, yumu?ak kulak detaylar? ve tatl? pastel tonlarla Sanrio klasi?i.\",\n      \"price\": \"539 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 16 cm oturur pozisyon.\",\n      \"careSafety\": \"El nak??? detaylar; yumu?ak pamuk iplik.\"\n    },\n    \"sonicBlue\": {\n      \"name\": \"Mavi Sonic Amigurumi\",\n      \"desc\": \"Canl? mavi tonlar, h?zl? duru? ve ikonik ayakkab? detaylar?yla efsanevi kirpi.\",\n      \"price\": \"519 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 17 cm oturur pozisyon.\",\n      \"careSafety\": \"G�venli diki?; koleksiyon oyunca??.\"\n    },\n    \"sonicRed\": {\n      \"name\": \"K?rm?z? Sonic Amigurumi\",\n      \"desc\": \"K?rm?z? renk varyant?, enerjik ifade ve �zenli aksesuar i?�ili?iyle �zel seri kirpi.\",\n      \"price\": \"529 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 17 cm oturur pozisyon.\",\n      \"careSafety\": \"S?n?rl? seri; kalite kontroll� el i?�ili?i.\"\n    },\n    \"sonicBlack\": {\n      \"name\": \"Siyah Sonic Amigurumi\",\n      \"desc\": \"Koyu tonlar, ??k sil�et ve karakteristik h?z �izgisi detaylar?yla modern varyant.\",\n      \"price\": \"519 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 17 cm oturur pozisyon.\",\n      \"careSafety\": \"Organik pamuk iplik; g�venli g�z i?leme.\"\n    },\n    \"tails\": {\n      \"name\": \"Tails Amigurumi\",\n      \"desc\": \"Turuncu t�yler, �ift kuyruk ve merakl? ifadeyle Sonic'in sad?k arkada?? Miles.\",\n      \"price\": \"549 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 16 cm oturur pozisyon.\",\n      \"careSafety\": \"El eme?i kuyruk detay?; yumu?ak dokulu iplik.\"\n    },\n    \"lolSurpriseDoll\": {\n      \"name\": \"LoL Bebek Amigurumi\",\n      \"desc\": \"Parlak renkler, moda aksesuarlar? ve koleksiyonluk ifadeyle LoL tarz? bebek fig�r�.\",\n      \"price\": \"559 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 18 cm oturur pozisyon.\",\n      \"careSafety\": \"G�venli g�z i?leme; hediye paketine uygun.\"\n    },\n    \"crossbodyPaperBag\": {\n      \"name\": \"�apraz Ask?l? Ka??t ?p �anta\",\n      \"desc\": \"El �rg�s� ka??t iplik, �apraz ask? ve g�nl�k kullan?ma uygun ??k sil�et.\",\n      \"price\": \"479 ?\",\n      \"careWash\": \"Nemli bezle silin; y?kamay?n.\",\n      \"careSize\": \"Yakla??k 22 � 18 cm g�vde.\",\n      \"careSafety\": \"Dayan?kl? ka??t iplik; metal aksesuar detay?.\"\n    },\n    \"lavenderClutch\": {\n      \"name\": \"Eflatun Ka??t ?p Kol �antas?\",\n      \"desc\": \"Eflatun tonlar?nda el �rg�s� kol �antas? � ka??t iplik dokusu ve minimal tasar?m.\",\n      \"price\": \"459 ?\",\n      \"careWash\": \"Nemli bezle silin; y?kamay?n.\",\n      \"careSize\": \"Yakla??k 20 � 14 cm.\",\n      \"careSafety\": \"Hafif ve dayan?kl?; �zel g�nler i�in ideal.\"\n    },\n    \"nostalgicPhoneBlue\": {\n      \"name\": \"Nostaljik Mavi Telefon\",\n      \"desc\": \"Ankes�rl� retro telefon formu, mavi pastel tonlar ve dekoratif el �rg�s� detay.\",\n      \"price\": \"429 ?\",\n      \"careWash\": \"Kuru bezle temizleyin.\",\n      \"careSize\": \"Yakla??k 18 cm y�kseklik.\",\n      \"careSafety\": \"Dekoratif par�a; ger�ek telefon de?ildir.\"\n    },\n    \"nostalgicPhonePink\": {\n      \"name\": \"Nostaljik Pembe Telefon\",\n      \"desc\": \"Pembe tonlarda ankes�rl� telefon fig�r� � vintage dekor ve koleksiyon par�as?.\",\n      \"price\": \"429 ?\",\n      \"careWash\": \"Kuru bezle temizleyin.\",\n      \"careSize\": \"Yakla??k 18 cm y�kseklik.\",\n      \"careSafety\": \"Dekoratif par�a; �ocuk odas? i�in sevimli aksesuar.\"\n    },\n    \"nostalgicPhoneOrange\": {\n      \"name\": \"Nostaljik Turuncu Telefon\",\n      \"desc\": \"Turuncu retro telefon tasar?m?, ankes�r detay? ve el �rg�s� nostalji dokusu.\",\n      \"price\": \"429 ?\",\n      \"careWash\": \"Kuru bezle temizleyin.\",\n      \"careSize\": \"Yakla??k 18 cm y�kseklik.\",\n      \"careSafety\": \"Dekoratif par�a; raflarda vitrin g�r�n�m�.\"\n    },\n    \"fruitSet\": {\n      \"name\": \"Meyve Seti Amigurumi\",\n      \"desc\": \"Elma, armut ve daha fazlas? � oyun ve dekor i�in renkli meyve fig�rleri seti.\",\n      \"price\": \"399 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Par�a ba??na yakla??k 8�12 cm.\",\n      \"careSafety\": \"Oyun mutfa?? ve �?retici oyun i�in uygun.\"\n    },\n    \"vegetableSet\": {\n      \"name\": \"Sebze Seti Amigurumi\",\n      \"desc\": \"Taze renklerde sebze fig�rleri � mutfak oyunu ve dekoratif sunum i�in set.\",\n      \"price\": \"389 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Par�a ba??na yakla??k 8�14 cm.\",\n      \"careSafety\": \"Yumu?ak iplik; g�venli el i?�ili?i.\"\n    },\n    \"trexDinosaur\": {\n      \"name\": \"T-Rex Dinozor Amigurumi\",\n      \"desc\": \"Ye?il tonlar, g��l� duru? ve sevimli ifadeyle �ocuklar?n favori dinozor fig�r�.\",\n      \"price\": \"549 ?\",\n      \"careWash\": \"So?uk y?kama, sererek kurutma.\",\n      \"careSize\": \"Yakla??k 20 cm oturur pozisyon.\",\n      \"careSafety\": \"S?n?rl? seri; g�venli g�z i?leme.\"\n    }",
-  "productsEn": "    \"barbie\": {\n      \"name\": \"Barbie Amigurumi\",\n      \"desc\": \"Classic Barbie silhouette with signature pink tones, detailed hair and a delicate dress finish.\",\n      \"price\": \"549 TRY\",\n      \"careWash\": \"Cold wash (30C), mild detergent.\",\n      \"careSize\": \"Approx. 20 cm sitting.\",\n      \"careSafety\": \"Safe embroidered eyes; organic cotton yarn.\"\n    },\n    \"elsa\": {\n      \"name\": \"Elsa Amigurumi\",\n      \"desc\": \"Arendelle princess with ice-blue gown, braided hair and snowflake accents.\",\n      \"price\": \"579 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 19 cm sitting.\",\n      \"careSafety\": \"Hand-embroidered details; soft-touch yarn.\"\n    },\n    \"olaf\": {\n      \"name\": \"Olaf Amigurumi\",\n      \"desc\": \"Beloved snowman with carrot nose, twig arms and a warm cheerful smile.\",\n      \"price\": \"499 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 16 cm sitting.\",\n      \"careSafety\": \"Child-safe stitching and embroidered eyes.\"\n    },\n    \"moana\": {\n      \"name\": \"Moana Amigurumi\",\n      \"desc\": \"Brave wayfinder with tropical colours, spirited expression and hand-finished accessories.\",\n      \"price\": \"569 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 18 cm sitting.\",\n      \"careSafety\": \"Organic cotton yarn; hand-finished quality check.\"\n    },\n    \"maui\": {\n      \"name\": \"Maui Amigurumi\",\n      \"desc\": \"Legendary demigod with bold silhouette, tattoo-style details and signature topknot.\",\n      \"price\": \"589 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 20 cm sitting.\",\n      \"careSafety\": \"Limited run; careful hand embroidery.\"\n    },\n    \"wednesday\": {\n      \"name\": \"Wednesday Amigurumi\",\n      \"desc\": \"Iconic Addams daughter with black dress, braided hair and signature solemn expression.\",\n      \"price\": \"559 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 18 cm sitting.\",\n      \"careSafety\": \"Collector piece; handcrafted details.\"\n    },\n    \"thing\": {\n      \"name\": \"Thing Amigurumi\",\n      \"desc\": \"Charming hand figure from the Wednesday universe with expressive finger details.\",\n      \"price\": \"449 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 12 cm.\",\n      \"careSafety\": \"Decorative and play-friendly; secure stitching.\"\n    },\n    \"pugsleyAddams\": {\n      \"name\": \"Pugsley Addams Amigurumi\",\n      \"desc\": \"Cheerful Addams family member with striped jumper and playful expression.\",\n      \"price\": \"529 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 17 cm sitting.\",\n      \"careSafety\": \"Organic cotton yarn; embroidered eyes.\"\n    },\n    \"enidSinclair\": {\n      \"name\": \"Enid Sinclair Amigurumi\",\n      \"desc\": \"Colourful Wednesday character with pastel tones, bright expression and detailed hair.\",\n      \"price\": \"549 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 18 cm sitting.\",\n      \"careSafety\": \"Soft-touch yarn; hand-finished accessories.\"\n    },\n    \"kuromi\": {\n      \"name\": \"Kuromi Amigurumi\",\n      \"desc\": \"Sanrio favourite with black-pink palette, iconic hood and mischievous charm.\",\n      \"price\": \"539 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 16 cm sitting.\",\n      \"careSafety\": \"Safe embroidered eyes; organic yarn.\"\n    },\n    \"myMelody\": {\n      \"name\": \"My Melody Amigurumi\",\n      \"desc\": \"Sanrio classic with pink hood, soft ear details and sweet pastel tones.\",\n      \"price\": \"539 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 16 cm sitting.\",\n      \"careSafety\": \"Hand-embroidered details; soft cotton yarn.\"\n    },\n    \"sonicBlue\": {\n      \"name\": \"Blue Sonic Amigurumi\",\n      \"desc\": \"Legendary hedgehog in vivid blue with dynamic pose and iconic shoe details.\",\n      \"price\": \"519 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 17 cm sitting.\",\n      \"careSafety\": \"Secure stitching; collector-friendly toy.\"\n    },\n    \"sonicRed\": {\n      \"name\": \"Red Sonic Amigurumi\",\n      \"desc\": \"Special-series hedgehog in bold red with energetic expression and detailed accessories.\",\n      \"price\": \"529 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 17 cm sitting.\",\n      \"careSafety\": \"Limited edition; quality-controlled handcraft.\"\n    },\n    \"sonicBlack\": {\n      \"name\": \"Black Sonic Amigurumi\",\n      \"desc\": \"Modern variant in deep tones with sleek silhouette and speed-line accents.\",\n      \"price\": \"519 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 17 cm sitting.\",\n      \"careSafety\": \"Organic cotton yarn; safe embroidered eyes.\"\n    },\n    \"tails\": {\n      \"name\": \"Tails Amigurumi\",\n      \"desc\": \"Sonic's loyal friend Miles with orange fur, twin tails and curious expression.\",\n      \"price\": \"549 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 16 cm sitting.\",\n      \"careSafety\": \"Hand-finished tail detail; soft-touch yarn.\"\n    },\n    \"lolSurpriseDoll\": {\n      \"name\": \"LOL Surprise Doll Amigurumi\",\n      \"desc\": \"LOL-inspired doll figure with bold colours, fashion accessories and collector appeal.\",\n      \"price\": \"559 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 18 cm sitting.\",\n      \"careSafety\": \"Safe embroidered eyes; gift-ready finish.\"\n    },\n    \"crossbodyPaperBag\": {\n      \"name\": \"Crossbody Paper Rope Bag\",\n      \"desc\": \"Hand-crocheted paper yarn crossbody with everyday-ready elegant silhouette.\",\n      \"price\": \"479 TRY\",\n      \"careWash\": \"Spot clean with a damp cloth; do not machine wash.\",\n      \"careSize\": \"Approx. 22 x 18 cm body.\",\n      \"careSafety\": \"Durable paper yarn; metal hardware detail.\"\n    },\n    \"lavenderClutch\": {\n      \"name\": \"Lavender Paper Rope Clutch\",\n      \"desc\": \"Hand-crocheted lavender clutch in paper yarn with a minimal refined design.\",\n      \"price\": \"459 TRY\",\n      \"careWash\": \"Spot clean with a damp cloth; do not machine wash.\",\n      \"careSize\": \"Approx. 20 x 14 cm.\",\n      \"careSafety\": \"Lightweight and durable; ideal for special occasions.\"\n    },\n    \"nostalgicPhoneBlue\": {\n      \"name\": \"Nostalgic Blue Cord Phone\",\n      \"desc\": \"Retro corded phone shape in blue pastel tones � decorative crochet piece.\",\n      \"price\": \"429 TRY\",\n      \"careWash\": \"Clean with a dry cloth.\",\n      \"careSize\": \"Approx. 18 cm tall.\",\n      \"careSafety\": \"Decorative item; not a functional phone.\"\n    },\n    \"nostalgicPhonePink\": {\n      \"name\": \"Nostalgic Pink Cord Phone\",\n      \"desc\": \"Corded phone figure in pink tones � vintage decor and collector piece.\",\n      \"price\": \"429 TRY\",\n      \"careWash\": \"Clean with a dry cloth.\",\n      \"careSize\": \"Approx. 18 cm tall.\",\n      \"careSafety\": \"Decorative item; charming nursery accent.\"\n    },\n    \"nostalgicPhoneOrange\": {\n      \"name\": \"Nostalgic Orange Cord Phone\",\n      \"desc\": \"Orange retro phone design with cord detail and nostalgic crochet texture.\",\n      \"price\": \"429 TRY\",\n      \"careWash\": \"Clean with a dry cloth.\",\n      \"careSize\": \"Approx. 18 cm tall.\",\n      \"careSafety\": \"Decorative item; display-shelf ready.\"\n    },\n    \"fruitSet\": {\n      \"name\": \"Fruit Set Amigurumi\",\n      \"desc\": \"Apples, pears and more � colourful fruit figures for play and decor.\",\n      \"price\": \"399 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 8-12 cm per piece.\",\n      \"careSafety\": \"Suitable for play kitchens and learning play.\"\n    },\n    \"vegetableSet\": {\n      \"name\": \"Vegetable Set Amigurumi\",\n      \"desc\": \"Vegetable figures in fresh colours � set for kitchen play and decorative display.\",\n      \"price\": \"389 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 8-14 cm per piece.\",\n      \"careSafety\": \"Soft yarn; safe handcraft finish.\"\n    },\n    \"trexDinosaur\": {\n      \"name\": \"T-Rex Dinosaur Amigurumi\",\n      \"desc\": \"Children's favourite dinosaur in green tones with bold stance and cute expression.\",\n      \"price\": \"549 TRY\",\n      \"careWash\": \"Cold wash, lay flat to dry.\",\n      \"careSize\": \"Approx. 20 cm sitting.\",\n      \"careSafety\": \"Limited edition; safe embroidered eyes.\"\n    }",
-  "wizardTr": "    \"barbie\": \"Barbie\",\n    \"elsa\": \"Elsa\",\n    \"olaf\": \"Olaf\",\n    \"moana\": \"Moana\",\n    \"maui\": \"Maui\",\n    \"wednesday\": \"Wednesday\",\n    \"thing\": \"Thing\",\n    \"pugsleyAddams\": \"Pugsley Addams\",\n    \"enidSinclair\": \"Enid Sinclair\",\n    \"kuromi\": \"Kuromi\",\n    \"myMelody\": \"My Melody\",\n    \"sonicBlue\": \"Mavi Sonic\",\n    \"sonicRed\": \"K?rm?z? Sonic\",\n    \"sonicBlack\": \"Siyah Sonic\",\n    \"tails\": \"Tails\",\n    \"lolSurpriseDoll\": \"LoL Bebek\",\n    \"crossbodyPaperBag\": \"�apraz Ask?l? �anta\",\n    \"lavenderClutch\": \"Eflatun Kol �antas?\",\n    \"nostalgicPhoneBlue\": \"Nostaljik Mavi Telefon\",\n    \"nostalgicPhonePink\": \"Nostaljik Pembe Telefon\",\n    \"nostalgicPhoneOrange\": \"Nostaljik Turuncu Telefon\",\n    \"fruitSet\": \"Meyve Seti\",\n    \"vegetableSet\": \"Sebze Seti\",\n    \"trexDinosaur\": \"T-Rex Dinozor\"",
-  "wizardEn": "    \"barbie\": \"Barbie\",\n    \"elsa\": \"Elsa\",\n    \"olaf\": \"Olaf\",\n    \"moana\": \"Moana\",\n    \"maui\": \"Maui\",\n    \"wednesday\": \"Wednesday\",\n    \"thing\": \"Thing\",\n    \"pugsleyAddams\": \"Pugsley Addams\",\n    \"enidSinclair\": \"Enid Sinclair\",\n    \"kuromi\": \"Kuromi\",\n    \"myMelody\": \"My Melody\",\n    \"sonicBlue\": \"Blue Sonic\",\n    \"sonicRed\": \"Red Sonic\",\n    \"sonicBlack\": \"Black Sonic\",\n    \"tails\": \"Tails\",\n    \"lolSurpriseDoll\": \"LOL Doll\",\n    \"crossbodyPaperBag\": \"Crossbody Bag\",\n    \"lavenderClutch\": \"Lavender Clutch\",\n    \"nostalgicPhoneBlue\": \"Nostalgic Blue Phone\",\n    \"nostalgicPhonePink\": \"Nostalgic Pink Phone\",\n    \"nostalgicPhoneOrange\": \"Nostalgic Orange Phone\",\n    \"fruitSet\": \"Fruit Set\",\n    \"vegetableSet\": \"Vegetable Set\",\n    \"trexDinosaur\": \"T-Rex Dinosaur\""
+  "barbie": {
+    "tr": {
+      "name": "Barbie Amigurumi",
+      "desc": "İkonik pembe tonları, özenli saç detayı ve zarif elbise işlemesiyle klasik Barbie silüeti.",
+      "price": "1.150 ₺",
+      "careWash": "Soğuk yıkama (30°C), yumuşak deterjan.",
+      "careSize": "Yaklaşık 20 cm oturur pozisyon.",
+      "careSafety": "Güvenli göz işleme; organik pamuk iplik.",
+      "wizard": "Barbie"
+    },
+    "en": {
+      "name": "Barbie Amigurumi",
+      "desc": "Classic Barbie silhouette with signature pink tones, detailed hair and a delicate dress finish.",
+      "price": "₺1,150",
+      "careWash": "Cold wash (30°C), mild detergent.",
+      "careSize": "Approx. 20 cm sitting.",
+      "careSafety": "Safe embroidered eyes; organic cotton yarn.",
+      "wizard": "Barbie"
+    }
+  },
+  "elsa": {
+    "tr": {
+      "name": "Elsa Amigurumi",
+      "desc": "Buz mavisi elbise, örgü saç örgüsü ve kar tanesi detaylarıyla Arendelle prensesi.",
+      "price": "1.190 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 19 cm oturur pozisyon.",
+      "careSafety": "El nakışı detaylar; yumuşak dokulu iplik.",
+      "wizard": "Elsa"
+    },
+    "en": {
+      "name": "Elsa Amigurumi",
+      "desc": "Arendelle princess with ice-blue gown, braided hair and snowflake accents.",
+      "price": "₺1,190",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 19 cm sitting.",
+      "careSafety": "Hand-embroidered details; soft-touch yarn.",
+      "wizard": "Elsa"
+    }
+  },
+  "olaf": {
+    "tr": {
+      "name": "Olaf Amigurumi",
+      "desc": "Sevimli havuç burun, dal kollar ve sıcak gülümsemeyle kışın en sevilen kardan adamı.",
+      "price": "890 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 16 cm oturur pozisyon.",
+      "careSafety": "Çocuklar için güvenli dikiş ve göz işleme.",
+      "wizard": "Olaf"
+    },
+    "en": {
+      "name": "Olaf Amigurumi",
+      "desc": "Beloved snowman with carrot nose, twig arms and a warm cheerful smile.",
+      "price": "₺890",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 16 cm sitting.",
+      "careSafety": "Child-safe stitching and embroidered eyes.",
+      "wizard": "Olaf"
+    }
+  },
+  "moana": {
+    "tr": {
+      "name": "Moana Amigurumi",
+      "desc": "Tropikal renkler, özgür ruhlu ifade ve el işi aksesuar detaylarıyla cesur denizci kızı.",
+      "price": "950 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 18 cm oturur pozisyon.",
+      "careSafety": "Organik pamuk iplik; el emeği kalite kontrolü.",
+      "wizard": "Moana"
+    },
+    "en": {
+      "name": "Moana Amigurumi",
+      "desc": "Brave wayfinder with tropical colours, spirited expression and hand-finished accessories.",
+      "price": "₺950",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 18 cm sitting.",
+      "careSafety": "Organic cotton yarn; hand-finished quality check.",
+      "wizard": "Moana"
+    }
+  },
+  "maui": {
+    "tr": {
+      "name": "Maui Amigurumi",
+      "desc": "Güçlü silüet, karakteristik saç/topuz işçiliğiyle efsanevi yarı tanrı.",
+      "price": "1.150 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 20 cm oturur pozisyon.",
+      "careSafety": "Sınırlı üretim; özenli el nakışı.",
+      "wizard": "Maui"
+    },
+    "en": {
+      "name": "Maui Amigurumi",
+      "desc": "Legendary demigod with bold silhouette, tattoo-style details and signature topknot.",
+      "price": "₺1,150",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 20 cm sitting.",
+      "careSafety": "Limited run; careful hand embroidery.",
+      "wizard": "Maui"
+    }
+  },
+  "harryPotter": {
+    "tr": {
+      "name": "Harry Potter Amigurumi",
+      "desc": "Yuvarlak gözlük, Gryffindor atkısı ve yıldız işlemeli şapka ile sevilen büyücü.",
+      "price": "990 ₺",
+      "careWash": "Soğuk yıkama (30°C), yumuşak deterjan.",
+      "careSize": "Yaklaşık 18 cm oturur pozisyon.",
+      "careSafety": "Güvenli göz işleme; 3 yaş altı için uygundur.",
+      "wizard": "Harry Potter"
+    },
+    "en": {
+      "name": "Harry Potter Amigurumi",
+      "desc": "The beloved wizard with round glasses, a Gryffindor scarf, and a star-embroidered hat.",
+      "price": "₺990",
+      "careWash": "Cold wash (30°C), mild detergent.",
+      "careSize": "Approx. 18 cm in a seated pose.",
+      "careSafety": "Secure embroidered eyes; suitable for ages 3+ with supervision.",
+      "wizard": "Harry Potter"
+    }
+  },
+  "hermione": {
+    "tr": {
+      "name": "Hermione Granger Amigurumi",
+      "desc": "Kahverengi bukle saç, Hogwarts uniforması ve asa detayıyla zeki kahraman.",
+      "price": "990 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 17 cm oturur pozisyon.",
+      "careSafety": "Organik pamuk iplik; el nakışı detaylar.",
+      "wizard": "Hermione Granger"
+    },
+    "en": {
+      "name": "Hermione Granger Amigurumi",
+      "desc": "Brown curly hair, Hogwarts uniform, and wand detail — the clever hero of the trio.",
+      "price": "₺990",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 17 cm in a seated pose.",
+      "careSafety": "Organic cotton yarn with hand-embroidered details.",
+      "wizard": "Hermione Granger"
+    }
+  },
+  "malefiz": {
+    "tr": {
+      "name": "Malefiz Amigurumi",
+      "desc": "Siyah pelerin, boynuzlu başlık ve mor aksesuarlarla görkemli kötü karakter.",
+      "price": "1.290 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 19 cm (başlık detayıyla).",
+      "careSafety": "Sınırlı seri; kalite kontrollü el işçiliği.",
+      "wizard": "Malefiz"
+    },
+    "en": {
+      "name": "Maleficent Amigurumi",
+      "desc": "A striking villain in black cape, horned headpiece, and rich purple accents.",
+      "price": "₺1,290",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 19 cm tall (including headpiece).",
+      "careSafety": "Limited edition; quality-checked handcraft.",
+      "wizard": "Maleficent"
+    }
+  },
+  "ronald": {
+    "tr": {
+      "name": "Ronald Weasley Amigurumi",
+      "desc": "Turuncu saç, Gryffindor kazak ve sevimli ifadeyle sadık arkadaş.",
+      "price": "890 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 17 cm oturur pozisyon.",
+      "careSafety": "Güvenli dikiş ve göz işleme.",
+      "wizard": "Ronald Weasley"
+    },
+    "en": {
+      "name": "Ron Weasley Amigurumi",
+      "desc": "Ginger hair, Gryffindor jumper, and a warm loyal smile — Harry's steadfast friend.",
+      "price": "₺890",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 17 cm in a seated pose.",
+      "careSafety": "Secure stitching and embroidered eyes.",
+      "wizard": "Ronald Weasley"
+    }
+  },
+  "wednesday": {
+    "tr": {
+      "name": "Wednesday Amigurumi",
+      "desc": "Siyah elbise, örgülü saç ve karakteristik ciddi ifadeyle Addams ailesinin ikonik kızı.",
+      "price": "990 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 18 cm oturur pozisyon.",
+      "careSafety": "Koleksiyon parçası; el işçiliği detaylar.",
+      "wizard": "Wednesday"
+    },
+    "en": {
+      "name": "Wednesday Amigurumi",
+      "desc": "Iconic Addams daughter with black dress, braided hair and signature solemn expression.",
+      "price": "₺990",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 18 cm sitting.",
+      "careSafety": "Collector piece; handcrafted details.",
+      "wizard": "Wednesday"
+    }
+  },
+  "thing": {
+    "tr": {
+      "name": "Thing Amigurumi",
+      "desc": "Wednesday evreninden sevimli el figürü — ifadeli parmak detayları ve yumuşak dokulu.",
+      "price": "690 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 12 cm.",
+      "careSafety": "Dekoratif ve oyun amaçlı; güvenli dikiş.",
+      "wizard": "Thing"
+    },
+    "en": {
+      "name": "Thing Amigurumi",
+      "desc": "Charming hand figure from the Wednesday universe with expressive finger details.",
+      "price": "₺690",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 12 cm.",
+      "careSafety": "Decorative and play-friendly; secure stitching.",
+      "wizard": "Thing"
+    }
+  },
+  "pugsleyAddams": {
+    "tr": {
+      "name": "Pugsley Addams Amigurumi",
+      "desc": "Çizgili kazağı ve sevimli ifadesiyle Addams ailesinin neşeli üyesi.",
+      "price": "890 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 17 cm oturur pozisyon.",
+      "careSafety": "Organik pamuk iplik; el nakışı göz detayı.",
+      "wizard": "Pugsley Addams"
+    },
+    "en": {
+      "name": "Pugsley Addams Amigurumi",
+      "desc": "Cheerful Addams family member with striped jumper and playful expression.",
+      "price": "₺890",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 17 cm sitting.",
+      "careSafety": "Organic cotton yarn; embroidered eyes.",
+      "wizard": "Pugsley Addams"
+    }
+  },
+  "enidSinclair": {
+    "tr": {
+      "name": "Enid Sinclair Amigurumi",
+      "desc": "Pastel renkler, canlı ifade ve özenli saç detayıyla Wednesday evreninin renkli karakteri.",
+      "price": "950 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 18 cm oturur pozisyon.",
+      "careSafety": "Yumuşak dokulu iplik; el emeği aksesuarlar.",
+      "wizard": "Enid Sinclair"
+    },
+    "en": {
+      "name": "Enid Sinclair Amigurumi",
+      "desc": "Colourful Wednesday character with pastel tones, bright expression and detailed hair.",
+      "price": "₺950",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 18 cm sitting.",
+      "careSafety": "Soft-touch yarn; hand-finished accessories.",
+      "wizard": "Enid Sinclair"
+    }
+  },
+  "kuromi": {
+    "tr": {
+      "name": "Kuromi Amigurumi",
+      "desc": "Siyah-pembe palet, ikonik kukuleta ve sevimli asi ifadeyle Sanrio favorisi.",
+      "price": "890 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 16 cm oturur pozisyon.",
+      "careSafety": "Güvenli göz işleme; organik iplik.",
+      "wizard": "Kuromi"
+    },
+    "en": {
+      "name": "Kuromi Amigurumi",
+      "desc": "Sanrio favourite with black-pink palette, iconic hood and mischievous charm.",
+      "price": "₺890",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 16 cm sitting.",
+      "careSafety": "Safe embroidered eyes; organic yarn.",
+      "wizard": "Kuromi"
+    }
+  },
+  "myMelody": {
+    "tr": {
+      "name": "My Melody Amigurumi",
+      "desc": "Pembe kukuleta, yumuşak kulak detayları ve tatlı pastel tonlarla Sanrio klasiği.",
+      "price": "890 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 16 cm oturur pozisyon.",
+      "careSafety": "El nakışı detaylar; yumuşak pamuk iplik.",
+      "wizard": "My Melody"
+    },
+    "en": {
+      "name": "My Melody Amigurumi",
+      "desc": "Sanrio classic with pink hood, soft ear details and sweet pastel tones.",
+      "price": "₺890",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 16 cm sitting.",
+      "careSafety": "Hand-embroidered details; soft cotton yarn.",
+      "wizard": "My Melody"
+    }
+  },
+  "sonicBlue": {
+    "tr": {
+      "name": "Mavi Sonic Amigurumi",
+      "desc": "Canlı mavi tonlar, hızlı duruş ve ikonik ayakkabı detaylarıyla efsanevi kirpi.",
+      "price": "850 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 17 cm oturur pozisyon.",
+      "careSafety": "Güvenli dikiş; koleksiyon oyuncağı.",
+      "wizard": "Mavi Sonic"
+    },
+    "en": {
+      "name": "Blue Sonic Amigurumi",
+      "desc": "Legendary hedgehog in vivid blue with dynamic pose and iconic shoe details.",
+      "price": "₺850",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 17 cm sitting.",
+      "careSafety": "Secure stitching; collector-friendly toy.",
+      "wizard": "Blue Sonic"
+    }
+  },
+  "sonicRed": {
+    "tr": {
+      "name": "Kırmızı Sonic Amigurumi",
+      "desc": "Kırmızı renk varyantı, enerjik ifade ve özenli aksesuar işçiliğiyle özel seri kirpi.",
+      "price": "850 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 17 cm oturur pozisyon.",
+      "careSafety": "Sınırlı seri; kalite kontrollü el işçiliği.",
+      "wizard": "Kırmızı Sonic"
+    },
+    "en": {
+      "name": "Red Sonic Amigurumi",
+      "desc": "Special-series hedgehog in bold red with energetic expression and detailed accessories.",
+      "price": "₺850",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 17 cm sitting.",
+      "careSafety": "Limited edition; quality-controlled handcraft.",
+      "wizard": "Red Sonic"
+    }
+  },
+  "sonicBlack": {
+    "tr": {
+      "name": "Siyah Sonic Amigurumi",
+      "desc": "Koyu tonlar, şık silüet ve karakteristik hız çizgisi detaylarıyla modern varyant.",
+      "price": "850 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 17 cm oturur pozisyon.",
+      "careSafety": "Organik pamuk iplik; güvenli göz işleme.",
+      "wizard": "Siyah Sonic"
+    },
+    "en": {
+      "name": "Black Sonic Amigurumi",
+      "desc": "Modern variant in deep tones with sleek silhouette and speed-line accents.",
+      "price": "₺850",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 17 cm sitting.",
+      "careSafety": "Organic cotton yarn; safe embroidered eyes.",
+      "wizard": "Black Sonic"
+    }
+  },
+  "tails": {
+    "tr": {
+      "name": "Tails Amigurumi",
+      "desc": "Turuncu tüyler, çift kuyruk ve meraklı ifadeyle Sonic'in sadık arkadaşı Miles.",
+      "price": "950 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 16 cm oturur pozisyon.",
+      "careSafety": "El emeği kuyruk detayı; yumuşak dokulu iplik.",
+      "wizard": "Tails"
+    },
+    "en": {
+      "name": "Tails Amigurumi",
+      "desc": "Sonic's loyal friend Miles with orange fur, twin tails and curious expression.",
+      "price": "₺950",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 16 cm sitting.",
+      "careSafety": "Hand-finished tail detail; soft-touch yarn.",
+      "wizard": "Tails"
+    }
+  },
+  "lolSurpriseDoll": {
+    "tr": {
+      "name": "LoL Bebek Amigurumi",
+      "desc": "Parlak renkler, moda aksesuarları ve koleksiyonluk ifadeyle LoL tarzı bebek figürü.",
+      "price": "990 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 18 cm oturur pozisyon.",
+      "careSafety": "Güvenli göz işleme; hediye paketine uygun.",
+      "wizard": "LoL Bebek"
+    },
+    "en": {
+      "name": "LOL Surprise Doll Amigurumi",
+      "desc": "LOL-inspired doll figure with bold colours, fashion accessories and collector appeal.",
+      "price": "₺990",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 18 cm sitting.",
+      "careSafety": "Safe embroidered eyes; gift-ready finish.",
+      "wizard": "LOL Doll"
+    }
+  },
+  "crossbodyPaperBag": {
+    "tr": {
+      "name": "Çapraz Askılı Kağıt İp Çanta",
+      "desc": "El örgüsü kağıt iplik, çapraz askı ve günlük kullanıma uygun şık silüet.",
+      "price": "1.290 ₺",
+      "careWash": "Nemli bezle silin; yıkamayın.",
+      "careSize": "Yaklaşık 22 × 18 cm gövde.",
+      "careSafety": "Dayanıklı kağıt iplik; metal aksesuar detayı.",
+      "wizard": "Çapraz Askılı Çanta"
+    },
+    "en": {
+      "name": "Crossbody Paper Rope Bag",
+      "desc": "Hand-crocheted paper yarn crossbody with everyday-ready elegant silhouette.",
+      "price": "₺1,290",
+      "careWash": "Spot clean with a damp cloth; do not machine wash.",
+      "careSize": "Approx. 22 x 18 cm body.",
+      "careSafety": "Durable paper yarn; metal hardware detail.",
+      "wizard": "Crossbody Bag"
+    }
+  },
+  "lavenderClutch": {
+    "tr": {
+      "name": "Eflatun Kağıt İp Kol Çantası",
+      "desc": "Eflatun tonlarında el örgüsü kol çantası — kağıt iplik dokusu ve minimal tasarım.",
+      "price": "1.150 ₺",
+      "careWash": "Nemli bezle silin; yıkamayın.",
+      "careSize": "Yaklaşık 20 × 14 cm.",
+      "careSafety": "Hafif ve dayanıklı; özel günler için ideal.",
+      "wizard": "Eflatun Kol Çantası"
+    },
+    "en": {
+      "name": "Lavender Paper Rope Clutch",
+      "desc": "Hand-crocheted lavender clutch in paper yarn with a minimal refined design.",
+      "price": "₺1,150",
+      "careWash": "Spot clean with a damp cloth; do not machine wash.",
+      "careSize": "Approx. 20 x 14 cm.",
+      "careSafety": "Lightweight and durable; ideal for special occasions.",
+      "wizard": "Lavender Clutch"
+    }
+  },
+  "nostalgicPhoneBlue": {
+    "tr": {
+      "name": "Nostaljik Mavi Telefon",
+      "desc": "Ankesörlü retro telefon formu, mavi pastel tonlar ve dekoratif el örgüsü detay.",
+      "price": "590 ₺",
+      "careWash": "Kuru bezle temizleyin.",
+      "careSize": "Yaklaşık 18 cm yükseklik.",
+      "careSafety": "Dekoratif parça; gerçek telefon değildir.",
+      "wizard": "Nostaljik Mavi Telefon"
+    },
+    "en": {
+      "name": "Nostalgic Blue Cord Phone",
+      "desc": "Retro corded phone shape in blue pastel tones — decorative crochet piece.",
+      "price": "₺590",
+      "careWash": "Clean with a dry cloth.",
+      "careSize": "Approx. 18 cm tall.",
+      "careSafety": "Decorative item; not a functional phone.",
+      "wizard": "Nostalgic Blue Phone"
+    }
+  },
+  "nostalgicPhonePink": {
+    "tr": {
+      "name": "Nostaljik Pembe Telefon",
+      "desc": "Pembe tonlarda ankesörlü telefon figürü — vintage dekor ve koleksiyon parçası.",
+      "price": "590 ₺",
+      "careWash": "Kuru bezle temizleyin.",
+      "careSize": "Yaklaşık 18 cm yükseklik.",
+      "careSafety": "Dekoratif parça; çocuk odası için sevimli aksesuar.",
+      "wizard": "Nostaljik Pembe Telefon"
+    },
+    "en": {
+      "name": "Nostalgic Pink Cord Phone",
+      "desc": "Corded phone figure in pink tones — vintage decor and collector piece.",
+      "price": "₺590",
+      "careWash": "Clean with a dry cloth.",
+      "careSize": "Approx. 18 cm tall.",
+      "careSafety": "Decorative item; charming nursery accent.",
+      "wizard": "Nostalgic Pink Phone"
+    }
+  },
+  "nostalgicPhoneOrange": {
+    "tr": {
+      "name": "Nostaljik Turuncu Telefon",
+      "desc": "Turuncu retro telefon tasarımı, ankesör detayı ve el örgüsü nostalji dokusu.",
+      "price": "590 ₺",
+      "careWash": "Kuru bezle temizleyin.",
+      "careSize": "Yaklaşık 18 cm yükseklik.",
+      "careSafety": "Dekoratif parça; raflarda vitrin görünümü.",
+      "wizard": "Nostaljik Turuncu Telefon"
+    },
+    "en": {
+      "name": "Nostalgic Orange Cord Phone",
+      "desc": "Orange retro phone design with cord detail and nostalgic crochet texture.",
+      "price": "₺590",
+      "careWash": "Clean with a dry cloth.",
+      "careSize": "Approx. 18 cm tall.",
+      "careSafety": "Decorative item; display-shelf ready.",
+      "wizard": "Nostalgic Orange Phone"
+    }
+  },
+  "fruitSet": {
+    "tr": {
+      "name": "Meyve Seti Amigurumi",
+      "desc": "Elma, armut ve daha fazlası — oyun ve dekor için renkli meyve figürleri seti.",
+      "price": "750 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Parça başına yaklaşık 8–12 cm.",
+      "careSafety": "Oyun mutfağı ve öğretici oyun için uygun.",
+      "wizard": "Meyve Seti"
+    },
+    "en": {
+      "name": "Fruit Set Amigurumi",
+      "desc": "Apples, pears and more — colourful fruit figures for play and decor.",
+      "price": "₺750",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 8-12 cm per piece.",
+      "careSafety": "Suitable for play kitchens and learning play.",
+      "wizard": "Fruit Set"
+    }
+  },
+  "vegetableSet": {
+    "tr": {
+      "name": "Sebze Seti Amigurumi",
+      "desc": "Taze renklerde sebze figürleri — mutfak oyunu ve dekoratif sunum için set.",
+      "price": "690 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Parça başına yaklaşık 8–14 cm.",
+      "careSafety": "Yumuşak iplik; güvenli el işçiliği.",
+      "wizard": "Sebze Seti"
+    },
+    "en": {
+      "name": "Vegetable Set Amigurumi",
+      "desc": "Vegetable figures in fresh colours — set for kitchen play and decorative display.",
+      "price": "₺690",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 8-14 cm per piece.",
+      "careSafety": "Soft yarn; safe handcraft finish.",
+      "wizard": "Vegetable Set"
+    }
+  },
+  "trexDinosaur": {
+    "tr": {
+      "name": "T-Rex Dinozor Amigurumi",
+      "desc": "Yeşil tonlar, güçlü duruş ve sevimli ifadeyle çocukların favori dinozor figürü.",
+      "price": "950 ₺",
+      "careWash": "Soğuk yıkama, sererek kurutma.",
+      "careSize": "Yaklaşık 20 cm oturur pozisyon.",
+      "careSafety": "Sınırlı seri; güvenli göz işleme.",
+      "wizard": "T-Rex Dinozor"
+    },
+    "en": {
+      "name": "T-Rex Dinosaur Amigurumi",
+      "desc": "Children's favourite dinosaur in green tones with bold stance and cute expression.",
+      "price": "₺950",
+      "careWash": "Cold wash, lay flat to dry.",
+      "careSize": "Approx. 20 cm sitting.",
+      "careSafety": "Limited edition; safe embroidered eyes.",
+      "wizard": "T-Rex Dinosaur"
+    }
+  }
 }

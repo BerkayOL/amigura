@@ -1,4 +1,4 @@
-/** Turkish locale ù ASCII source with \\u escapes (UTF-8 safe on Windows) */
+/** Turkish locale  ASCII source with \\u escapes (UTF-8 safe on Windows) */
 export const tr = {
   meta: {
     homeTitle: "Amigura | El Yap\u0131m\u0131 Amigurumi Koleksiyonu",

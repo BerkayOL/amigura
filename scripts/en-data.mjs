@@ -174,7 +174,7 @@ export const en = {
  "Amigura is a design studio that champions the warmth of handcraft and organic fibres against mass production.",
  text:
  "Every amigurumi crocheted by founder Irem with premium organic cotton is more than a toy - safe for your children and a memory for you. We bring nature and wonder home.",
- imgAlt: "Amigura studio — handmade amigurumi",
+ imgAlt: "Amigura studio  handmade amigurumi",
  },
  newsletter: {
  eyebrow: "Stitch Newsletter",

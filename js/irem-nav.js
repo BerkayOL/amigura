@@ -1,5 +1,5 @@
 /**
- * Amigura ù Mobile / desktop navigation
+ * Amigurumirem - Mobile and desktop navigation
  */
 (function (global) {
   "use strict";

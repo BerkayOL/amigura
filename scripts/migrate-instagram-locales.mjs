@@ -6,15 +6,15 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 const HP_PRODUCTS_TR = `    "harryPotter": {
       "name": "Harry Potter Amigurumi",
-      "desc": "Yuvarlak gözlük, Gryffindor atk? ve y?ld?z i?lemeli ?apka ile sevilen büyücü.",
+      "desc": "Yuvarlak gzlk, Gryffindor atk? ve y?ld?z i?lemeli ?apka ile sevilen byc.",
       "price": "549 ?",
-      "careWash": "So?uk y?kama (30°C), yumu?ak deterjan.",
+      "careWash": "So?uk y?kama (30C), yumu?ak deterjan.",
       "careSize": "Yakla??k 18 cm oturur pozisyon.",
-      "careSafety": "Güvenli göz i?leme; 3 ya? alt? için uygundur."
+      "careSafety": "Gvenli gz i?leme; 3 ya? alt? iin uygundur."
     },
     "hermione": {
       "name": "Hermione Granger Amigurumi",
-      "desc": "Kahverengi bukle saç, Hogwarts uniformas? ve asa detay?yla zeki kahraman.",
+      "desc": "Kahverengi bukle sa, Hogwarts uniformas? ve asa detay?yla zeki kahraman.",
       "price": "529 ?",
       "careWash": "So?uk y?kama, sererek kurutma.",
       "careSize": "Yakla??k 17 cm oturur pozisyon.",
@@ -22,19 +22,19 @@ const HP_PRODUCTS_TR = `    "harryPotter": {
     },
     "malefiz": {
       "name": "Malefiz Amigurumi",
-      "desc": "Siyah pelerin, boynuzlu ba?l?k ve mor aksesuarlarla görkemli kötü karakter.",
+      "desc": "Siyah pelerin, boynuzlu ba?l?k ve mor aksesuarlarla grkemli kt karakter.",
       "price": "579 ?",
       "careWash": "So?uk y?kama, sererek kurutma.",
       "careSize": "Yakla??k 19 cm (ba?l?k detay?yla).",
-      "careSafety": "S?n?rl? seri; kalite kontrollü el i?çili?i."
+      "careSafety": "S?n?rl? seri; kalite kontroll el i?ili?i."
     },
     "ronald": {
       "name": "Ronald Weasley Amigurumi",
-      "desc": "Turuncu saç, Gryffindor kazak ve sevimli ifadeyle sad?k arkada?.",
+      "desc": "Turuncu sa, Gryffindor kazak ve sevimli ifadeyle sad?k arkada?.",
       "price": "499 ?",
       "careWash": "So?uk y?kama, sererek kurutma.",
       "careSize": "Yakla??k 17 cm oturur pozisyon.",
-      "careSafety": "Güvenli diki? ve göz i?leme."
+      "careSafety": "Gvenli diki? ve gz i?leme."
     },`;
 
 const HP_PRODUCTS_EN = `    "harryPotter": {
@@ -85,23 +85,23 @@ function patchFile(file, isTr) {
 
   const replacements = isTr
     ? [
-        [/Trendyol üzerinden güvenle sipari? verin/g, "Instagram üzerinden ke?fedin ve sipari? verin"],
+        [/Trendyol zerinden gvenle sipari? verin/g, "Instagram zerinden ke?fedin ve sipari? verin"],
         [/Trendyol sat??lar?/g, "Instagram sipari?leri"],
-        [/Trendyol üzerinden güvenle sipari? verin\./g, "Instagram'da ke?fedin ve sipari? verin."],
-        [/Trendyol üzerinden güvenle sipari? verin/g, "Instagram'da ke?fedin ve sipari? verin"],
-        [/"trendyol": "Trendyol güvenli ödeme"/g, '"instagram": "Instagram\'da sipari?"'],
-        [/Trendyol üzerinden güvenle sipari? verin/g, "Instagram'da ke?fedin ve sipari? verin"],
+        [/Trendyol zerinden gvenle sipari? verin\./g, "Instagram'da ke?fedin ve sipari? verin."],
+        [/Trendyol zerinden gvenle sipari? verin/g, "Instagram'da ke?fedin ve sipari? verin"],
+        [/"trendyol": "Trendyol gvenli deme"/g, '"instagram": "Instagram\'da sipari?"'],
+        [/Trendyol zerinden gvenle sipari? verin/g, "Instagram'da ke?fedin ve sipari? verin"],
         [
           /"lead": "[^"]*Trendyol[^"]*"/,
-          '"lead": "Barbie\'den Sonic\'e, el örgüsü çantalardan nostaljik telefonlara — ilmek ilmek el eme?i. Favorinizi seçin ve Instagram\'da ke?fedin."',
+          '"lead": "Barbie\'den Sonic\'e, el rgs antalardan nostaljik telefonlara  ilmek ilmek el eme?i. Favorinizi sein ve Instagram\'da ke?fedin."',
         ],
-        [/"buy": "Trendyol'da Al"/g, '"buy": "Instagram\'da Gör"'],
-        [/"buyGift": "Hediye Gönder"/g, '"buyGift": "Instagram\'da Gör"'],
+        [/"buy": "Trendyol'da Al"/g, '"buy": "Instagram\'da Gr"'],
+        [/"buyGift": "Hediye Gnder"/g, '"buyGift": "Instagram\'da Gr"'],
         [/Trendyol'da \{name\}/g, "Instagram'da {name}"],
         [/Trendyol'da hediye/g, "Instagram'da hediye"],
-        [/"stickyBuy": "Trendyol'da sat?n al"/g, '"stickyBuy": "Instagram\'da Gör"'],
+        [/"stickyBuy": "Trendyol'da sat?n al"/g, '"stickyBuy": "Instagram\'da Gr"'],
         [/"checkoutHeading": "Sat?n alma"/g, '"checkoutHeading": "Sipari?"'],
-        [/"checkoutSub": "Trendyol üzerinden güvenli ödeme"/g, '"checkoutSub": "Instagram üzerinden sipari? ve ileti?im"'],
+        [/"checkoutSub": "Trendyol zerinden gvenli deme"/g, '"checkoutSub": "Instagram zerinden sipari? ve ileti?im"'],
         [/"verifiedNote": "[^"]*"/g, '"verifiedNote": "Instagram DM ile h?zl? ileti?im"'],
         [/Trendyol/g, "Instagram"],
       ]
@@ -147,7 +147,7 @@ function patchFile(file, isTr) {
       /("handmadeNote": "[^"]*",)\n(\s+"status":)/,
       `$1\n    "returnsBody": ${JSON.stringify(
         isTr
-          ? "Koleksiyon sipari?leri Instagram üzerinden al?n?r. Özel sipari?ler için özel sipari? sihirbaz?n? veya ileti?im kanallar?m?z? kullanabilirsiniz."
+          ? "Koleksiyon sipari?leri Instagram zerinden al?n?r. zel sipari?ler iin zel sipari? sihirbaz?n? veya ileti?im kanallar?m?z? kullanabilirsiniz."
           : "Collection orders are placed via Instagram. For custom pieces, use our custom order wizard or contact channels."
       )},\n$2`
     );

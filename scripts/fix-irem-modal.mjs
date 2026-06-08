@@ -109,7 +109,7 @@ const replacement = `  function openQuickViewModal(product, trigger) {
 content = content.slice(0, start) + replacement + content.slice(end);
 content = content.replace(
   /Amigura . Modals \(care, Trendyol handoff\)/,
-  "Amigura — Modals (care, Instagram outbound)"
+  "Amigura  Modals (care, Instagram outbound)"
 );
 
 fs.writeFileSync(filePath, content, "utf8");

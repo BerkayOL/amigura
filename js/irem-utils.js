@@ -1,5 +1,5 @@
 /**
- * Amigura � Shared utilities (i18n helper, HTML escape)
+ * Amigurumirem - Shared utilities (i18n helper, HTML escape)
  */
 (function (global) {
   "use strict";

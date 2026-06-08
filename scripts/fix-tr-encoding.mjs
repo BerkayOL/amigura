@@ -9,20 +9,20 @@ let content = fs.readFileSync(filePath, "utf8");
 const fixes = [
   [
     /"lead": "[^"]*"/,
-    '"lead": "Barbie\'den Sonic\'e, el örgüsü çantalardan nostaljik telefonlara — ilmek ilmek el eme?i. Favorinizi seçin ve Instagram\'da ke?fedin."',
+    '"lead": "Barbie\'den Sonic\'e, el rgs antalardan nostaljik telefonlara  ilmek ilmek el eme?i. Favorinizi sein ve Instagram\'da ke?fedin."',
   ],
-  [/"buy": "Instagram'da G[^"]*"/, '"buy": "Instagram\'da Gör"'],
+  [/"buy": "Instagram'da G[^"]*"/, '"buy": "Instagram\'da Gr"'],
   [
     /"handoffTitle": "[^"]*"/,
-    '"handoffTitle": "Instagram\'a yönlendiriliyorsunuz"',
+    '"handoffTitle": "Instagram\'a ynlendiriliyorsunuz"',
   ],
   [
     /"handoffLoading": "[^"]*"/,
-    '"handoffLoading": "Ürün gönderisine yönlendiriliyorsunuz…"',
+    '"handoffLoading": "rn gnderisine ynlendiriliyorsunuz"',
   ],
   [
     /"handoffLead": "[^"]*"/,
-    '"handoffLead": "Sipari? ve ileti?im için ürünün Instagram gönderisine yönlendiriliyorsunuz. Amigura atölyesinden özenle haz?rlanm?? parçalar."',
+    '"handoffLead": "Sipari? ve ileti?im iin rnn Instagram gnderisine ynlendiriliyorsunuz. Amigura atlyesinden zenle haz?rlanm?? paralar."',
   ],
   [
     /"handoffLi1": "[^"]*"/,
@@ -34,23 +34,23 @@ const fixes = [
   ],
   [
     /"handoffLi3": "[^"]*"/,
-    '"handoffLi3": "El yap?m? ürünlerde özenli paketleme"',
+    '"handoffLi3": "El yap?m? rnlerde zenli paketleme"',
   ],
   [
     /"handoffLi4": "[^"]*"/,
-    '"handoffLi4": "Atölyeden do?rudan, ki?isel hizmet"',
+    '"handoffLi4": "Atlyeden do?rudan, ki?isel hizmet"',
   ],
   [
     /"quickViewTrust1": "[^"]*"/,
-    '"quickViewTrust1": "Instagram üzerinden güvenli ileti?im"',
+    '"quickViewTrust1": "Instagram zerinden gvenli ileti?im"',
   ],
   [
     /"quickViewTrust2": "[^"]*"/,
-    '"quickViewTrust2": "Özenli paketleme ve teslimat"',
+    '"quickViewTrust2": "zenli paketleme ve teslimat"',
   ],
   [
     /"checkoutSub": "[^"]*"/,
-    '"checkoutSub": "Instagram gönderisinden sipari?"',
+    '"checkoutSub": "Instagram gnderisinden sipari?"',
   ],
 ];
 

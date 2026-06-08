@@ -474,189 +474,189 @@
     "charcoal": "Charcoal",
     "white": "White",
     "fig": {
-        "barbie": {
-            "pink": "Iconic pink",
-            "blush": "Blush",
-            "blonde": "Platinum blonde",
-            "black": "Black accent",
-            "white": "White"
-        },
-        "elsa": {
-            "iceBlue": "Ice blue",
-            "snow": "Snow white",
-            "silver": "Silver",
-            "blonde": "Blonde hair",
-            "cape": "Purple cape"
-        },
-        "olaf": {
-            "snow": "Snow white",
-            "coal": "Coal black",
-            "carrot": "Carrot orange",
-            "stick": "Stick brown"
-        },
-        "moana": {
-            "redTop": "Red top",
-            "skirt": "Grass green",
-            "hair": "Brown hair",
-            "skin": "Skin tone",
-            "teal": "Teal"
-        },
-        "maui": {
-            "skin": "Skin tone",
-            "hair": "Black hair",
-            "red": "Red wrap",
-            "leaf": "Leaf green",
-            "tattoo": "Tattoo brown"
-        },
-        "harryPotter": {
-            "hair": "Black hair",
-            "skin": "Skin tone",
-            "scarfRed": "Gryffindor red",
-            "scarfGold": "Gryffindor gold",
-            "robe": "Black robe",
-            "shirt": "Cream shirt"
-        },
-        "hermione": {
-            "hair": "Brown hair",
-            "skin": "Skin tone",
-            "tieRed": "Tie red",
-            "tieGold": "Tie gold",
-            "robe": "Black robe"
-        },
-        "malefiz": {
-            "black": "Black",
-            "purple": "Purple",
-            "green": "Emerald green",
-            "skin": "Pale skin",
-            "gold": "Gold accent"
-        },
-        "ronald": {
-            "hair": "Ginger hair",
-            "skin": "Skin tone",
-            "scarfRed": "Gryffindor red",
-            "scarfGold": "Gryffindor gold",
-            "robe": "Black robe"
-        },
-        "wednesday": {
-            "dress": "Black dress",
-            "collar": "White collar",
-            "hair": "Black hair",
-            "skin": "Pale skin"
-        },
-        "thing": {
-            "skin": "Skin tone",
-            "nails": "Black nails",
-            "highlight": "Shadow tone"
-        },
-        "pugsleyAddams": {
-            "red": "Red stripe",
-            "black": "Black stripe",
-            "skin": "Pale skin",
-            "hair": "Dark hair"
-        },
-        "enidSinclair": {
-            "yellow": "Yellow",
-            "lavender": "Lavender",
-            "pink": "Pink",
-            "brown": "Brown",
-            "black": "Black"
-        },
-        "kuromi": {
-            "black": "Black",
-            "pink": "Pink",
-            "white": "White",
-            "purple": "Purple"
-        },
-        "myMelody": {
-            "white": "White",
-            "hood": "Pink hood",
-            "nose": "Yellow nose",
-            "pink": "Pink"
-        },
-        "sonicBlue": {
-            "blue": "Sonic blue",
-            "skin": "Skin tone",
-            "shoes": "Red shoes",
-            "gloves": "White gloves",
-            "eyes": "Black eyes"
-        },
-        "sonicRed": {
-            "red": "Red",
-            "skin": "Skin tone",
-            "gloves": "White gloves",
-            "eyes": "Black eyes"
-        },
-        "sonicBlack": {
-            "black": "Black",
-            "skin": "Skin tone",
-            "shoes": "Red shoes",
-            "gloves": "White gloves"
-        },
-        "tails": {
-            "orange": "Orange fur",
-            "chest": "White chest",
-            "shoes": "Brown shoes",
-            "eyes": "Blue eyes",
-            "detail": "Black detail"
-        },
-        "lolSurpriseDoll": {
-            "hotPink": "Hot pink",
-            "purple": "Purple",
-            "turquoise": "Turquoise",
-            "gold": "Gold",
-            "white": "White"
-        },
-        "crossbodyPaperBag": {
-            "kraft": "Kraft brown",
-            "cream": "Cream",
-            "strap": "Brown strap",
-            "black": "Black accent"
-        },
-        "lavenderClutch": {
-            "lavender": "Lavender",
-            "lilac": "Lilac",
-            "silver": "Silver",
-            "cream": "Cream"
-        },
-        "nostalgicPhoneBlue": {
-            "body": "Retro blue",
-            "dial": "Cream dial",
-            "accent": "Red accent",
-            "black": "Black"
-        },
-        "nostalgicPhonePink": {
-            "body": "Retro pink",
-            "dial": "Cream dial",
-            "accent": "Red accent",
-            "white": "White"
-        },
-        "nostalgicPhoneOrange": {
-            "body": "Retro orange",
-            "dial": "Cream dial",
-            "brown": "Brown",
-            "black": "Black"
-        },
-        "fruitSet": {
-            "apple": "Apple red",
-            "banana": "Banana yellow",
-            "grape": "Grape purple",
-            "leaf": "Leaf green",
-            "orange": "Orange"
-        },
-        "vegetableSet": {
-            "tomato": "Tomato red",
-            "carrot": "Carrot orange",
-            "broccoli": "Broccoli green",
-            "eggplant": "Eggplant purple",
-            "corn": "Corn yellow"
-        },
-        "trexDinosaur": {
-            "green": "Jungle green",
-            "belly": "Light green belly",
-            "teeth": "White teeth",
-            "eyes": "Black eyes",
-            "tongue": "Red tongue"
-        }
+      "barbie": {
+        "pink": "Iconic pink",
+        "blush": "Blush",
+        "blonde": "Platinum blonde",
+        "black": "Black accent",
+        "white": "White"
+      },
+      "elsa": {
+        "iceBlue": "Ice blue",
+        "snow": "Snow white",
+        "silver": "Silver",
+        "blonde": "Blonde hair",
+        "cape": "Purple cape"
+      },
+      "olaf": {
+        "snow": "Snow white",
+        "coal": "Coal black",
+        "carrot": "Carrot orange",
+        "stick": "Stick brown"
+      },
+      "moana": {
+        "redTop": "Red top",
+        "skirt": "Grass green",
+        "hair": "Brown hair",
+        "skin": "Skin tone",
+        "teal": "Teal"
+      },
+      "maui": {
+        "skin": "Skin tone",
+        "hair": "Black hair",
+        "red": "Red wrap",
+        "leaf": "Leaf green",
+        "tattoo": "Tattoo brown"
+      },
+      "harryPotter": {
+        "hair": "Black hair",
+        "skin": "Skin tone",
+        "scarfRed": "Gryffindor red",
+        "scarfGold": "Gryffindor gold",
+        "robe": "Black robe",
+        "shirt": "Cream shirt"
+      },
+      "hermione": {
+        "hair": "Brown hair",
+        "skin": "Skin tone",
+        "tieRed": "Tie red",
+        "tieGold": "Tie gold",
+        "robe": "Black robe"
+      },
+      "malefiz": {
+        "black": "Black",
+        "purple": "Purple",
+        "green": "Emerald green",
+        "skin": "Pale skin",
+        "gold": "Gold accent"
+      },
+      "ronald": {
+        "hair": "Ginger hair",
+        "skin": "Skin tone",
+        "scarfRed": "Gryffindor red",
+        "scarfGold": "Gryffindor gold",
+        "robe": "Black robe"
+      },
+      "wednesday": {
+        "dress": "Black dress",
+        "collar": "White collar",
+        "hair": "Black hair",
+        "skin": "Pale skin"
+      },
+      "thing": {
+        "skin": "Skin tone",
+        "nails": "Black nails",
+        "highlight": "Shadow tone"
+      },
+      "pugsleyAddams": {
+        "red": "Red stripe",
+        "black": "Black stripe",
+        "skin": "Pale skin",
+        "hair": "Dark hair"
+      },
+      "enidSinclair": {
+        "yellow": "Yellow",
+        "lavender": "Lavender",
+        "pink": "Pink",
+        "brown": "Brown",
+        "black": "Black"
+      },
+      "kuromi": {
+        "black": "Black",
+        "pink": "Pink",
+        "white": "White",
+        "purple": "Purple"
+      },
+      "myMelody": {
+        "white": "White",
+        "hood": "Pink hood",
+        "nose": "Yellow nose",
+        "pink": "Pink"
+      },
+      "sonicBlue": {
+        "blue": "Sonic blue",
+        "skin": "Skin tone",
+        "shoes": "Red shoes",
+        "gloves": "White gloves",
+        "eyes": "Black eyes"
+      },
+      "sonicRed": {
+        "red": "Red",
+        "skin": "Skin tone",
+        "gloves": "White gloves",
+        "eyes": "Black eyes"
+      },
+      "sonicBlack": {
+        "black": "Black",
+        "skin": "Skin tone",
+        "shoes": "Red shoes",
+        "gloves": "White gloves"
+      },
+      "tails": {
+        "orange": "Orange fur",
+        "chest": "White chest",
+        "shoes": "Brown shoes",
+        "eyes": "Blue eyes",
+        "detail": "Black detail"
+      },
+      "lolSurpriseDoll": {
+        "hotPink": "Hot pink",
+        "purple": "Purple",
+        "turquoise": "Turquoise",
+        "gold": "Gold",
+        "white": "White"
+      },
+      "crossbodyPaperBag": {
+        "kraft": "Kraft brown",
+        "cream": "Cream",
+        "strap": "Brown strap",
+        "black": "Black accent"
+      },
+      "lavenderClutch": {
+        "lavender": "Lavender",
+        "lilac": "Lilac",
+        "silver": "Silver",
+        "cream": "Cream"
+      },
+      "nostalgicPhoneBlue": {
+        "body": "Retro blue",
+        "dial": "Cream dial",
+        "accent": "Red accent",
+        "black": "Black"
+      },
+      "nostalgicPhonePink": {
+        "body": "Retro pink",
+        "dial": "Cream dial",
+        "accent": "Red accent",
+        "white": "White"
+      },
+      "nostalgicPhoneOrange": {
+        "body": "Retro orange",
+        "dial": "Cream dial",
+        "brown": "Brown",
+        "black": "Black"
+      },
+      "fruitSet": {
+        "apple": "Apple red",
+        "banana": "Banana yellow",
+        "grape": "Grape purple",
+        "leaf": "Leaf green",
+        "orange": "Orange"
+      },
+      "vegetableSet": {
+        "tomato": "Tomato red",
+        "carrot": "Carrot orange",
+        "broccoli": "Broccoli green",
+        "eggplant": "Eggplant purple",
+        "corn": "Corn yellow"
+      },
+      "trexDinosaur": {
+        "green": "Jungle green",
+        "belly": "Light green belly",
+        "teeth": "White teeth",
+        "eyes": "Black eyes",
+        "tongue": "Red tongue"
+      }
     }
   },
   "wizard": {
@@ -742,7 +742,7 @@
     "title": "Thank you for your order",
     "lead": "Your package was prepared with care. This little figure left our studio with love - may it warm your memories for years.",
     "careTitle": "Care tips",
-    "care1": "Cold wash (30�C) or delicate cycle; use mild detergent.",
+    "care1": "Cold wash (30C) or delicate cycle; use mild detergent.",
     "care2": "Lay flat to dry; avoid tumble dryers.",
     "care3": "Avoid prolonged direct sun to keep colours vibrant.",
     "care4": "For small marks, a lightly damp cloth is enough.",
@@ -758,13 +758,13 @@
     "privacy": {
       "title": "Privacy Policy",
       "updated": "Last updated: 8 June 2026",
-      "body": "<p>This Privacy Policy explains how <strong>Amigurumirem</strong> (\"we\", \"us\") collects and uses personal data when you visit <strong>amigurumirem.com</strong>. We are a handmade amigurumi studio based in T\\u00FCrkiye. This website is a product showcase; checkout for collection items is completed on <strong>Instagram</strong>.</p>\\n\\n<h2>1. Data Controller</h2>\\n<ul>\\n<li><strong>Brand:</strong> Amigurumirem</li>\\n<li><strong>Email:</strong> <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a></li>\\n<li><strong>Website:</strong> <a href=\"https://www.amigurumirem.com/\">amigurumirem.com</a></li>\\n<li><strong>Contact:</strong> <a href=\"index.html#contact\">Contact section</a> \\u00B7 <a href=\"https://www.instagram.com/amigurumi__rem\" target=\"_blank\" rel=\"noopener noreferrer\">@amigurumi__rem</a></li>\\n</ul>\\n\\n<h2>2. What This Website Does</h2>\\n<p><strong>amigurumirem.com</strong> displays our handmade crochet collection. We do not process card payments on this site. Ready-made purchases are completed on Instagram. Custom order requests may be sent by email, WhatsApp, or Instagram message.</p>\\n\\n<h2>3. Personal Data We Process</h2>\\n<ul>\\n<li><strong>Identity and contact:</strong> Name, email, phone (when you contact us).</li>\\n<li><strong>Orders and custom requests:</strong> Figure choice, character colour palette, size, notes, reference number.</li>\\n<li><strong>Security logs:</strong> IP address, browser/device data, access timestamps.</li>\\n<li><strong>Cookies:</strong> Essential cookies; analytics cookies only with your consent.</li>\\n<li><strong>Marketing:</strong> Newsletter email (only if you subscribe).</li>\\n</ul>\\n\\n<h2>4. Purposes and Legal Bases</h2>\\n<p>We process data to operate the website securely, respond to enquiries, fulfil orders, send newsletters (with consent), comply with law, and improve our service under applicable Turkish data protection rules including KVKK.</p>\\n\\n<h2>5. Recipients and Transfers</h2>\\n<p>Data may be shared with hosting, email, analytics (with consent), shipping partners, legal advisers, and authorities when required. International transfers follow KVKK Article 9 safeguards.</p>\\n\\n<h2>6. Retention</h2>\\n<p>Data is kept only as long as necessary for the stated purpose and legal retention periods. Custom order correspondence is typically retained for <strong>3 years</strong> after the last interaction.</p>\\n\\n<h2>7. Your Rights</h2>\\n<p>Under KVKK you may request information, correction, deletion, objection to automated processing, and compensation where applicable. Contact <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a>. We respond within <strong>30 days</strong>.</p>\\n\\n<h2>8. Cookies and Children</h2>\\n<p>Essential cookies are required for site function. Analytics cookies are optional. We do not knowingly collect data from children under 18.</p>\\n\\n<h2>9. Security and Updates</h2>\\n<p>We apply appropriate technical and organisational measures. This policy may be updated; the current version is always published on this page.</p>\\n\\n<p class=\"legal-content__notice\">This text is for information only. Seek legal advice for your specific situation.</p>",
+      "body": "<p>This Privacy Policy explains how <strong>Amigurumirem</strong> (\"we\", \"us\") collects and uses personal data when you visit <strong>amigurumirem.com</strong>. We are a handmade amigurumi studio based in Türkiye. This website is a product showcase; checkout for collection items is completed on <strong>Instagram</strong>.</p>\n\n<h2>1. Data Controller</h2>\n<ul>\n<li><strong>Brand:</strong> Amigurumirem</li>\n<li><strong>Email:</strong> <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a></li>\n<li><strong>Website:</strong> <a href=\"https://www.amigurumirem.com/\">amigurumirem.com</a></li>\n<li><strong>Contact:</strong> <a href=\"index.html#contact\">Contact section</a> · <a href=\"https://www.instagram.com/amigurumi__rem\" target=\"_blank\" rel=\"noopener noreferrer\">@amigurumi__rem</a></li>\n</ul>\n\n<h2>2. What This Website Does</h2>\n<p><strong>amigurumirem.com</strong> displays our handmade crochet collection. We do not process card payments on this site. Ready-made purchases are completed on Instagram. Custom order requests may be sent by email, WhatsApp, or Instagram message.</p>\n\n<h2>3. Personal Data We Process</h2>\n<ul>\n<li><strong>Identity and contact:</strong> Name, email, phone (when you contact us).</li>\n<li><strong>Orders and custom requests:</strong> Figure choice, character colour palette, size, notes, reference number.</li>\n<li><strong>Security logs:</strong> IP address, browser/device data, access timestamps.</li>\n<li><strong>Cookies:</strong> Essential cookies; analytics cookies only with your consent.</li>\n<li><strong>Marketing:</strong> Newsletter email (only if you subscribe).</li>\n</ul>\n\n<h2>4. Purposes and Legal Bases</h2>\n<p>We process data to operate the website securely, respond to enquiries, fulfil orders, send newsletters (with consent), comply with law, and improve our service under applicable Turkish data protection rules including KVKK.</p>\n\n<h2>5. Recipients and Transfers</h2>\n<p>Data may be shared with hosting, email, analytics (with consent), shipping partners, legal advisers, and authorities when required. International transfers follow KVKK Article 9 safeguards.</p>\n\n<h2>6. Retention</h2>\n<p>Data is kept only as long as necessary for the stated purpose and legal retention periods. Custom order correspondence is typically retained for <strong>3 years</strong> after the last interaction.</p>\n\n<h2>7. Your Rights</h2>\n<p>Under KVKK you may request information, correction, deletion, objection to automated processing, and compensation where applicable. Contact <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a>. We respond within <strong>30 days</strong>.</p>\n\n<h2>8. Cookies and Children</h2>\n<p>Essential cookies are required for site function. Analytics cookies are optional. We do not knowingly collect data from children under 18.</p>\n\n<h2>9. Security and Updates</h2>\n<p>We apply appropriate technical and organisational measures. This policy may be updated; the current version is always published on this page.</p>\n\n<p class=\"legal-content__notice\">This text is for information only. Seek legal advice for your specific situation.</p>",
       "contactLead": "For privacy requests:"
     },
     "returns": {
       "title": "Returns & Cancellation",
       "updated": "Last updated: 8 June 2026",
-      "body": "<p>This Returns and Cancellation Policy explains how returns, refunds, and cancellations work for <strong>Amigurumirem</strong> handmade amigurumi products. Please read it together with <strong>amigurumirem.com</strong> information and <strong>Instagram</strong> terms.</p>\\n\\n<h2>1. Overview</h2>\\n<p><strong>amigurumirem.com</strong> is a showcase site with no checkout. Ready-made items are sold, paid for, and shipped through <strong>Instagram</strong>. Custom studio orders may have separate written terms.</p>\\n\\n<h2>2. Contact</h2>\\n<ul>\\n<li><strong>Email:</strong> <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a></li>\\n<li><strong>Instagram:</strong> <a href=\"https://www.instagram.com/amigurumi__rem\" target=\"_blank\" rel=\"noopener noreferrer\">@amigurumi__rem</a></li>\\n</ul>\\n\\n<h2>3. Ready-Made Items \\u2014 14-Day Withdrawal</h2>\\n<p>For standard ready-made collection items, consumers generally have a <strong>14-day right of withdrawal</strong> from delivery under Turkish consumer law (excluding personalised goods).</p>\\n<ul>\\n<li>Start the return via Instagram or by contacting us.</li>\\n<li>Items should be unused, undamaged, and in original packaging where possible.</li>\\n<li>Refunds follow Instagram procedures; timing depends on your bank.</li>\\n</ul>\\n\\n<h2>4. Custom and Personalised Orders</h2>\\n<p>Made-to-order pieces \\u2014 including wizard requests with figure, character colours, size, or name embroidery \\u2014 are excluded from the standard withdrawal right once production is agreed.</p>\\n\\n<h2>5. Damaged or Missing Deliveries</h2>\\n<p>Report damage or missing items within <strong>48 hours</strong> with photos to <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a> or via Instagram.</p>\\n\\n<h2>6. Cancellations Before Shipping</h2>\\n<p>Unshipped Instagram orders may be cancelled under platform rules.</p>\\n\\n<h2>7. Exchanges and Pricing</h2>\\n<p>We do not offer direct exchanges. Prices shown on the showcase are indicative; the Instagram listing price applies at purchase.</p>\\n\\n<h2>8. Questions</h2>\\n<p>Email <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a> for returns and cancellation support.</p>\\n\\n<p class=\"legal-content__notice\">Also review the relevant Instagram post and platform terms before purchasing.</p>",
+      "body": "<p>This Returns and Cancellation Policy explains how returns, refunds, and cancellations work for <strong>Amigurumirem</strong> handmade amigurumi products. Please read it together with <strong>amigurumirem.com</strong> information and <strong>Instagram</strong> terms.</p>\n\n<h2>1. Overview</h2>\n<p><strong>amigurumirem.com</strong> is a showcase site with no checkout. Ready-made items are sold, paid for, and shipped through <strong>Instagram</strong>. Custom studio orders may have separate written terms.</p>\n\n<h2>2. Contact</h2>\n<ul>\n<li><strong>Email:</strong> <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a></li>\n<li><strong>Instagram:</strong> <a href=\"https://www.instagram.com/amigurumi__rem\" target=\"_blank\" rel=\"noopener noreferrer\">@amigurumi__rem</a></li>\n</ul>\n\n<h2>3. Ready-Made Items — 14-Day Withdrawal</h2>\n<p>For standard ready-made collection items, consumers generally have a <strong>14-day right of withdrawal</strong> from delivery under Turkish consumer law (excluding personalised goods).</p>\n<ul>\n<li>Start the return via Instagram or by contacting us.</li>\n<li>Items should be unused, undamaged, and in original packaging where possible.</li>\n<li>Refunds follow Instagram procedures; timing depends on your bank.</li>\n</ul>\n\n<h2>4. Custom and Personalised Orders</h2>\n<p>Made-to-order pieces — including wizard requests with figure, character colours, size, or name embroidery — are excluded from the standard withdrawal right once production is agreed.</p>\n\n<h2>5. Damaged or Missing Deliveries</h2>\n<p>Report damage or missing items within <strong>48 hours</strong> with photos to <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a> or via Instagram.</p>\n\n<h2>6. Cancellations Before Shipping</h2>\n<p>Unshipped Instagram orders may be cancelled under platform rules.</p>\n\n<h2>7. Exchanges and Pricing</h2>\n<p>We do not offer direct exchanges. Prices shown on the showcase are indicative; the Instagram listing price applies at purchase.</p>\n\n<h2>8. Questions</h2>\n<p>Email <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a> for returns and cancellation support.</p>\n\n<p class=\"legal-content__notice\">Also review the relevant Instagram post and platform terms before purchasing.</p>",
       "contactLead": "For return questions:"
     }
   },

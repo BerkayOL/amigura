@@ -1,5 +1,5 @@
 /**
- * Amigura ù Brand mark & wordmark (single source of truth for nav brand UI).
+ * Amigurumirem - Brand mark and wordmark
  */
 (function () {
   "use strict";

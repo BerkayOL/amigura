@@ -46,6 +46,7 @@ jobs:
             --accept 200,204,301,302,303,307,308,429
             --exclude '^data:'
             --exclude '^https://www\.amigurumirem\.com/'
+            --exclude '^https://www\.amigura\.com/'
             --exclude '^https://www\.etsy\.com/'
             --exclude '^https://www\.instagram\.com/'
             --exclude-path css/fonts.css

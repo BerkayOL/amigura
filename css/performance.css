@@ -50,21 +50,12 @@ html:not(.is-hero-visible) .hero__orb {
   animation-play-state: paused !important;
 }
 
-.glass-nav__bar {
-  backface-visibility: hidden;
-}
-
-html.is-scrolling .glass-nav__bar.glass-surface {
-  box-shadow: 0 1px 0 var(--glass-stroke);
-}
-
 /* --- Touch / coarse pointer: strip expensive effects --- */
 @media (hover: none), (pointer: coarse) {
   body {
     text-rendering: auto;
   }
 
-  .glass-nav__bar.glass-surface,
   .sticky-convert__inner.glass-surface,
   .cookie-banner.glass-surface,
   .pdp-sticky__inner {
@@ -73,7 +64,6 @@ html.is-scrolling .glass-nav__bar.glass-surface {
     background: var(--color-bg-elevated);
   }
 
-  .glass-nav__bar.glass-surface::before,
   .sticky-convert__inner.glass-surface::before,
   .cookie-banner.glass-surface::before {
     display: none;
@@ -140,13 +130,8 @@ html.is-scrolling .glass-nav__bar.glass-surface {
   }
 }
 
-/* Desktop: reduce sticky nav blur cost during active scroll */
+/* Desktop: reduce sticky bar blur cost during active scroll */
 @media (hover: hover) and (pointer: fine) {
-  html.is-scrolling .glass-nav__bar.glass-surface {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-
   html.is-scrolling .sticky-convert__inner.glass-surface,
   html.is-scrolling .pdp-sticky__inner {
     backdrop-filter: blur(8px);

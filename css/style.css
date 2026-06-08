@@ -71,6 +71,8 @@
   --glass-bg: rgba(255, 255, 255, 0.55);
   --glass-border: rgba(255, 255, 255, 0.65);
   --glass-shadow: 0 8px 32px rgba(28, 31, 38, 0.06);
+  --nav-bar-bg: rgba(255, 255, 255, 0.97);
+  --nav-bar-shadow: 0 1px 0 rgba(28, 31, 38, 0.06);
 
   /* UI */
   --color-border: rgba(28, 31, 38, 0.08);
@@ -208,6 +210,8 @@
   --glass-bg: rgba(20, 26, 38, 0.78);
   --glass-border: rgba(255, 255, 255, 0.11);
   --glass-shadow: 0 10px 40px rgba(0, 0, 0, 0.48);
+  --nav-bar-bg: rgba(20, 26, 38, 0.97);
+  --nav-bar-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
   --glass-highlight-top: rgba(255, 255, 255, 0.16);
   --glass-highlight-inset: rgba(255, 255, 255, 0.08);
   --glass-noise-opacity: 0.18;
@@ -488,7 +492,6 @@ button:focus-visible {
   top: 0;
   z-index: var(--z-nav);
   width: 100%;
-  isolation: isolate;
 }
 
 .glass-nav__bar {
@@ -498,14 +501,28 @@ button:focus-visible {
   border-left: none;
   border-right: none;
   border-top: none;
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--nav-bar-shadow);
   transition:
-    background var(--transition-theme),
+    background-color var(--transition-theme),
     border-color var(--transition-theme),
-    box-shadow var(--transition-theme);
+    color var(--transition-theme);
+}
+
+/* Sticky app bar: solid surface — avoids delayed backdrop-filter repaint on scroll */
+.glass-nav__bar.glass-surface {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: var(--nav-bar-bg);
+  box-shadow: var(--nav-bar-shadow);
+}
+
+.glass-nav__bar.glass-surface::before {
+  display: none;
 }
 
 .glass-nav__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -513,6 +530,19 @@ button:focus-visible {
   max-width: var(--max-width);
   margin: 0 auto;
   min-height: calc(var(--nav-height) - var(--space-sm) * 2);
+}
+
+.glass-nav__bar-tools .glass-surface,
+.glass-nav__bar-tools .nav-social.glass-surface {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: var(--color-surface-muted);
+  box-shadow: none;
+}
+
+.glass-nav__bar-tools .glass-surface::before,
+.glass-nav__bar-tools .nav-social.glass-surface::before {
+  display: none;
 }
 
 /* Site brand (app bar) */

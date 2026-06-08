@@ -47,7 +47,8 @@
     siteOrigin: "https://www.amigurumirem.com",
     instagramLinks: instagramLinks,
 
-    whatsappParts: ["90", "555", "123", "4567"],
+    brandPhoneDisplay: "+90 534 017 52 72",
+    whatsappParts: ["90", "534", "017", "5272"],
     orderRefPrefix: "AMG",
 
     newsletter: {
@@ -85,9 +86,45 @@
     global.AmiguraAnalytics = !!(allowAnalytics && Config.analytics.enabled);
   }
 
+  function getPhoneDigits() {
+    return Config.whatsappParts && Config.whatsappParts.length
+      ? Config.whatsappParts.join("")
+      : "";
+  }
+
+  function getBrandPhoneTel() {
+    var digits = getPhoneDigits();
+    return digits ? "+" + digits : "";
+  }
+
+  function buildWhatsappLink() {
+    var digits = getPhoneDigits();
+    return digits ? "https://wa.me/" + digits : "https://wa.me/";
+  }
+
+  function initContactLinks() {
+    if (!global.document) return;
+    var tel = getBrandPhoneTel();
+    var display = Config.brandPhoneDisplay || tel;
+    var wa = buildWhatsappLink();
+    global.document.querySelectorAll("[data-contact-phone]").forEach(function (el) {
+      if (!(el instanceof HTMLAnchorElement) || !tel) return;
+      el.href = "tel:" + tel;
+      if (el.hasAttribute("data-contact-phone-display")) {
+        el.textContent = display;
+      }
+    });
+    global.document.querySelectorAll("[data-contact-whatsapp]").forEach(function (el) {
+      if (el instanceof HTMLAnchorElement) el.href = wa;
+    });
+  }
+
   global.Amigura = global.Amigura || {};
   global.Amigura.Config = Config;
   global.Amigura.Config.getInstagramLink = getInstagramLink;
   global.Amigura.Config.generateOrderRef = generateOrderRef;
   global.Amigura.Config.applyAnalyticsConsent = applyAnalyticsConsent;
+  global.Amigura.Config.getBrandPhoneTel = getBrandPhoneTel;
+  global.Amigura.Config.buildWhatsappLink = buildWhatsappLink;
+  global.Amigura.Config.initContactLinks = initContactLinks;
 })(typeof window !== "undefined" ? window : globalThis);

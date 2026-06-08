@@ -4900,6 +4900,15 @@ body.has-cookie-banner {
   margin-bottom: var(--space-md);
 }
 
+.contact__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.contact__phone,
+.contact__whatsapp,
 .contact__email {
   display: inline-block;
   font-size: 1.15rem;
@@ -4910,8 +4919,23 @@ body.has-cookie-banner {
   transition: color var(--transition-fast);
 }
 
+.contact__phone:hover,
+.contact__whatsapp:hover,
 .contact__email:hover {
   color: var(--color-text);
+}
+
+.contact--compact .contact__lead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.75rem;
+}
+
+.contact--compact .contact__phone,
+.contact--compact .contact__email {
+  font-size: 1rem;
 }
 
 /* ==========================================================================

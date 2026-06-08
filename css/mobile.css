@@ -59,24 +59,38 @@
   .site-brand {
     flex: 1 1 auto;
     min-width: 0;
-    max-width: none;
-    gap: 0;
+    max-width: calc(100% - 3.5rem);
+    gap: 0.55rem;
     padding: 0;
     margin: 0;
   }
 
   .site-brand__wordmark {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .site-brand__name {
+    font-size: clamp(0.95rem, 4.2vw, 1.1rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-brand__tagline {
     display: none;
   }
 
   .site-brand__mark {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
   }
 
   .site-brand__logo {
-    width: 2rem;
-    height: 2rem;
+    width: 1.85rem;
+    height: 1.85rem;
   }
 
   .glass-nav__controls {

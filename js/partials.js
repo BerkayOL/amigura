@@ -166,6 +166,8 @@
               <span class="glass-nav__drawer-utils-key" data-i18n="nav.drawerTheme">Tema</span>
               ${renderThemeToggle(false)}
             </div>
+            <a href="tel:+905340175272" class="glass-nav__drawer-link" data-contact-phone data-contact-phone-display data-i18n="contact.phone">+90\u00a0534\u00a0017\u00a052\u00a072</a>
+            <a href="#" class="glass-nav__drawer-link glass-nav__drawer-link--social" data-contact-whatsapp data-i18n="footer.whatsapp">WhatsApp</a>
             ${renderInstagramLink("glass-nav__drawer-link glass-nav__drawer-link--social", true)}
           </div>
         </nav>
@@ -185,7 +187,8 @@
         <div class="site-footer__inner">
           <nav class="site-footer__nav" data-i18n-aria="footer.socialNav">
             ${renderInstagramLink("site-footer__link site-footer__link--ig", true)}
-            <a href="https://www.etsy.com/shop/amigura" class="site-footer__link" target="_blank" rel="noopener noreferrer">Etsy</a>
+            <a href="tel:+905340175272" class="site-footer__link" data-contact-phone data-contact-phone-display data-i18n="contact.phone">+90\u00a0534\u00a0017\u00a052\u00a072</a>
+            <a href="#" class="site-footer__link" data-contact-whatsapp data-i18n="footer.whatsapp">WhatsApp</a>
             <a href="#" class="site-footer__link" data-contact-email data-i18n="footer.email">E-posta</a>
           </nav>
           <nav class="site-footer__legal" data-i18n-aria="footer.legalNav">
@@ -237,6 +240,9 @@
     }
     if (window.Irem && window.Irem.I18n) {
       window.Irem.I18n.apply(document);
+    }
+    if (window.Amigura && window.Amigura.Config && window.Amigura.Config.initContactLinks) {
+      window.Amigura.Config.initContactLinks();
     }
     if (typeof window.AmiguraPageUnlock === "function") {
       window.AmiguraPageUnlock();

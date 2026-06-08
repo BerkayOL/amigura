@@ -272,11 +272,10 @@
 
   function buildWhatsappLink() {
     const cfg = getConfig();
+    if (cfg && typeof cfg.buildWhatsappLink === "function") return cfg.buildWhatsappLink();
     const parts = cfg && cfg.whatsappParts ? cfg.whatsappParts : null;
-    const number = parts && parts.length ? parts.join("") : "";
-    const digits = number.replace(/[^\d]/g, "");
-    if (!digits) return "https://wa.me/";
-    return "https://wa.me/" + digits;
+    const digits = parts && parts.length ? parts.join("") : "";
+    return digits ? "https://wa.me/" + digits : "https://wa.me/";
   }
 
   function bindContactLinkAssembly() {

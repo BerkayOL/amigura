@@ -11,6 +11,8 @@
     url: "https://www.amigurumirem.com",
     logo: "https://www.amigurumirem.com/assets/logo.png",
     description: "El yap\u0131m\u0131, organik ipliklerle \u00f6r\u00fclen l\u00fcks amigurumi koleksiyonu.",
+    telephone: "+90-534-017-52-72",
+    email: "calanguirem@gmail.com",
     sameAs: ["https://www.instagram.com/amigurumi__rem", "https://www.etsy.com/shop/amigura"],
   };
 

@@ -30,8 +30,7 @@
 
   function cacheElements() {
     return {
-      toggle: document.getElementById("themeToggle"),
-      toggleLabel: document.querySelector("#themeToggle .theme-toggle__label"),
+      toggle: document.querySelector(".theme-toggle"),
       siteHeader: document.getElementById("siteHeader"),
       navToggle: document.getElementById("navToggle"),
       navClose: document.getElementById("navClose"),
@@ -76,13 +75,13 @@
     root.setAttribute("data-theme", theme);
     updateThemeColorMeta(theme);
     refreshElements();
-    if (els.toggle) {
-      els.toggle.setAttribute("aria-pressed", String(isDark));
-      els.toggle.setAttribute("aria-label", isDark ? t("theme.toLight") : t("theme.toDark"));
-    }
-    if (els.toggleLabel) {
-      els.toggleLabel.textContent = isDark ? t("theme.dark") : t("theme.light");
-    }
+    document.querySelectorAll(".theme-toggle").forEach(function (toggle) {
+      if (!toggle || !toggle.setAttribute) return;
+      toggle.setAttribute("aria-pressed", String(isDark));
+      toggle.setAttribute("aria-label", isDark ? t("theme.toLight") : t("theme.toDark"));
+      var label = toggle.querySelector(".theme-toggle__label");
+      if (label) label.textContent = isDark ? t("theme.dark") : t("theme.light");
+    });
   }
 
   function getPreferredTheme() {
@@ -118,7 +117,7 @@
       return;
     }
 
-    if (target.closest("#themeToggle")) {
+    if (target.closest(".theme-toggle")) {
       var current = root.getAttribute("data-theme") || THEME_LIGHT;
       var next = current === THEME_DARK ? THEME_LIGHT : THEME_DARK;
       localStorage.setItem(STORAGE_KEY, next);

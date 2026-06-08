@@ -28,7 +28,9 @@
     "closeMenu": "Close menu",
     "menuLabel": "Main menu",
     "menuMobile": "Mobile menu",
-    "instagram": "Follow on Instagram"
+    "instagram": "Follow on Instagram",
+    "drawerPrefs": "Preferences",
+    "drawerTheme": "Theme"
   },
   "theme": {
     "toDark": "Dark theme",

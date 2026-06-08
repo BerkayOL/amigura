@@ -67,6 +67,28 @@
     );
   }
 
+  function renderLangSwitch() {
+    return (
+      '<div class="lang-switch" role="group" data-i18n-aria="lang.label">' +
+      '<button type="button" class="lang-switch__btn is-active" data-lang="tr" aria-pressed="true">TR</button>' +
+      '<button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>' +
+      "</div>"
+    );
+  }
+
+  function renderThemeToggle(compact) {
+    var labelMarkup = compact
+      ? '<span class="theme-toggle__label visually-hidden" data-i18n="theme.light">Açık</span>'
+      : '<span class="theme-toggle__label" data-i18n="theme.light">Açık</span>';
+
+    return (
+      '<button type="button" class="theme-toggle" data-i18n-aria="theme.toDark" aria-pressed="false">' +
+      '<span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__thumb"></span></span>' +
+      labelMarkup +
+      "</button>"
+    );
+  }
+
   /**
    * @param {"home" | "kvkk" | "iade" | "tesekkur" | "ozel"} page
    */
@@ -95,25 +117,11 @@
             </nav>
 
             <div class="glass-nav__controls">
-              ${renderInstagramLink("nav-social glass-surface")}
-
-              <div class="lang-switch" role="group" data-i18n-aria="lang.label">
-                <button type="button" class="lang-switch__btn is-active" data-lang="tr" aria-pressed="true">TR</button>
-                <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+              <div class="glass-nav__bar-tools">
+                ${renderInstagramLink("nav-social glass-surface")}
+                ${renderLangSwitch()}
+                ${renderThemeToggle(true)}
               </div>
-
-              <button
-                type="button"
-                class="theme-toggle"
-                id="themeToggle"
-                data-i18n-aria="theme.toDark"
-                aria-pressed="false"
-              >
-                <span class="theme-toggle__track" aria-hidden="true">
-                  <span class="theme-toggle__thumb"></span>
-                </span>
-                <span class="theme-toggle__label" data-i18n="theme.light">Açık</span>
-              </button>
 
               <button
                 type="button"
@@ -147,6 +155,17 @@
             <a href="ozel-siparis.html" class="glass-nav__drawer-link glass-nav__link"${ozelCurrent} data-i18n="nav.custom">Özel Sipariş</a>
             <a href="${about}" class="glass-nav__drawer-link glass-nav__link" data-i18n="nav.about">Hakkımızda</a>
             <a href="${contact}" class="glass-nav__drawer-link glass-nav__link" data-i18n="nav.contact">İletişim</a>
+          </div>
+          <div class="glass-nav__drawer-utils">
+            <p class="glass-nav__drawer-utils-label" data-i18n="nav.drawerPrefs">Tercihler</p>
+            <div class="glass-nav__drawer-utils-row">
+              <span class="glass-nav__drawer-utils-key" data-i18n="lang.label">Dil seçimi</span>
+              ${renderLangSwitch()}
+            </div>
+            <div class="glass-nav__drawer-utils-row">
+              <span class="glass-nav__drawer-utils-key" data-i18n="nav.drawerTheme">Tema</span>
+              ${renderThemeToggle(false)}
+            </div>
             ${renderInstagramLink("glass-nav__drawer-link glass-nav__drawer-link--social", true)}
           </div>
         </nav>

@@ -28,7 +28,9 @@
     "closeMenu": "Ana menüyü kapat",
     "menuLabel": "Ana menü",
     "menuMobile": "Ana menü mobil",
-    "instagram": "Instagram'da takip et"
+    "instagram": "Instagram'da takip et",
+    "drawerPrefs": "Tercihler",
+    "drawerTheme": "Tema"
   },
   "theme": {
     "toDark": "Koyu tema",

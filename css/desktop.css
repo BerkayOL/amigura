@@ -35,10 +35,19 @@
 
   .site-brand {
     max-width: none;
+    gap: 0.875rem;
+  }
+
+  .site-brand__wordmark {
+    display: flex;
   }
 
   .site-brand__name {
     font-size: 1.35rem;
+  }
+
+  .glass-nav__drawer-utils {
+    display: none !important;
   }
 
   /* Hero — full viewport beat, larger type */

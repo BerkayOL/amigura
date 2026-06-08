@@ -42,8 +42,7 @@
 
   function cacheElements() {
     return {
-      toggle: document.getElementById("themeToggle"),
-      toggleLabel: document.querySelector("#themeToggle .theme-toggle__label"),
+      toggle: document.querySelector(".theme-toggle"),
       productContainer: document.getElementById("product-container"),
       siteHeader: document.getElementById("siteHeader"),
       navToggle: document.getElementById("navToggle"),
@@ -93,13 +92,13 @@
     updateThemeColorMeta(theme);
     refreshElements();
 
-    if (els.toggle) {
-      els.toggle.setAttribute("aria-pressed", String(isDark));
-      els.toggle.setAttribute("aria-label", isDark ? t("theme.toLight") : t("theme.toDark"));
-    }
-    if (els.toggleLabel) {
-      els.toggleLabel.textContent = isDark ? t("theme.dark") : t("theme.light");
-    }
+    document.querySelectorAll(".theme-toggle").forEach(function (toggle) {
+      if (!(toggle instanceof HTMLButtonElement)) return;
+      toggle.setAttribute("aria-pressed", String(isDark));
+      toggle.setAttribute("aria-label", isDark ? t("theme.toLight") : t("theme.toDark"));
+      const label = toggle.querySelector(".theme-toggle__label");
+      if (label) label.textContent = isDark ? t("theme.dark") : t("theme.light");
+    });
   }
 
   function getPreferredTheme() {
@@ -437,7 +436,7 @@
       return;
     }
 
-    if (target.closest("#themeToggle")) {
+    if (target.closest(".theme-toggle")) {
       onThemeToggleClick();
       return;
     }

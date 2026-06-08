@@ -40,10 +40,11 @@
 
   /** @type {AmiguraConfig} */
   var Config = {
-    brandEmailParts: ["hello", "amigura", "com"],
+    brandEmail: "calanguirem@gmail.com",
+    brandEmailParts: ["calanguirem", "gmail", "com"],
     instagramUrl: INSTAGRAM_PROFILE,
     etsyUrl: "https://www.etsy.com/shop/amigura",
-    siteOrigin: "https://www.amigura.com",
+    siteOrigin: "https://www.amigurumirem.com",
     instagramLinks: instagramLinks,
 
     whatsappParts: ["90", "555", "123", "4567"],

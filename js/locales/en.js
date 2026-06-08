@@ -66,7 +66,7 @@
     "barbie": {
       "name": "Barbie Amigurumi",
       "desc": "Classic Barbie silhouette with signature pink tones, detailed hair and a delicate dress finish.",
-      "price": "549 TRY",
+      "price": "₺1,150",
       "careWash": "Cold wash (30°C), mild detergent.",
       "careSize": "Approx. 20 cm sitting.",
       "careSafety": "Safe embroidered eyes; organic cotton yarn."
@@ -74,7 +74,7 @@
     "elsa": {
       "name": "Elsa Amigurumi",
       "desc": "Arendelle princess with ice-blue gown, braided hair and snowflake accents.",
-      "price": "579 TRY",
+      "price": "₺1,190",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 19 cm sitting.",
       "careSafety": "Hand-embroidered details; soft-touch yarn."
@@ -82,7 +82,7 @@
     "olaf": {
       "name": "Olaf Amigurumi",
       "desc": "Beloved snowman with carrot nose, twig arms and a warm cheerful smile.",
-      "price": "499 TRY",
+      "price": "₺890",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 16 cm sitting.",
       "careSafety": "Child-safe stitching and embroidered eyes."
@@ -90,7 +90,7 @@
     "moana": {
       "name": "Moana Amigurumi",
       "desc": "Brave wayfinder with tropical colours, spirited expression and hand-finished accessories.",
-      "price": "569 TRY",
+      "price": "₺950",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 18 cm sitting.",
       "careSafety": "Organic cotton yarn; hand-finished quality check."
@@ -98,7 +98,7 @@
     "maui": {
       "name": "Maui Amigurumi",
       "desc": "Legendary demigod with bold silhouette, tattoo-style details and signature topknot.",
-      "price": "589 TRY",
+      "price": "₺1,150",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 20 cm sitting.",
       "careSafety": "Limited run; careful hand embroidery."
@@ -106,7 +106,7 @@
     "harryPotter": {
       "name": "Harry Potter Amigurumi",
       "desc": "The beloved wizard with round glasses, a Gryffindor scarf, and a star-embroidered hat.",
-      "price": "549 TRY",
+      "price": "₺990",
       "careWash": "Cold wash (30°C), mild detergent.",
       "careSize": "Approx. 18 cm in a seated pose.",
       "careSafety": "Secure embroidered eyes; suitable for ages 3+ with supervision."
@@ -114,7 +114,7 @@
     "hermione": {
       "name": "Hermione Granger Amigurumi",
       "desc": "Brown curly hair, Hogwarts uniform, and wand detail — the clever hero of the trio.",
-      "price": "529 TRY",
+      "price": "₺990",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 17 cm in a seated pose.",
       "careSafety": "Organic cotton yarn with hand-embroidered details."
@@ -122,7 +122,7 @@
     "malefiz": {
       "name": "Maleficent Amigurumi",
       "desc": "A striking villain in black cape, horned headpiece, and rich purple accents.",
-      "price": "579 TRY",
+      "price": "₺1,290",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 19 cm tall (including headpiece).",
       "careSafety": "Limited edition; quality-checked handcraft."
@@ -130,7 +130,7 @@
     "ronald": {
       "name": "Ron Weasley Amigurumi",
       "desc": "Ginger hair, Gryffindor jumper, and a warm loyal smile — Harry's steadfast friend.",
-      "price": "499 TRY",
+      "price": "₺890",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 17 cm in a seated pose.",
       "careSafety": "Secure stitching and embroidered eyes."
@@ -138,7 +138,7 @@
     "wednesday": {
       "name": "Wednesday Amigurumi",
       "desc": "Iconic Addams daughter with black dress, braided hair and signature solemn expression.",
-      "price": "559 TRY",
+      "price": "₺990",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 18 cm sitting.",
       "careSafety": "Collector piece; handcrafted details."
@@ -146,7 +146,7 @@
     "thing": {
       "name": "Thing Amigurumi",
       "desc": "Charming hand figure from the Wednesday universe with expressive finger details.",
-      "price": "449 TRY",
+      "price": "₺690",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 12 cm.",
       "careSafety": "Decorative and play-friendly; secure stitching."
@@ -154,7 +154,7 @@
     "pugsleyAddams": {
       "name": "Pugsley Addams Amigurumi",
       "desc": "Cheerful Addams family member with striped jumper and playful expression.",
-      "price": "529 TRY",
+      "price": "₺890",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 17 cm sitting.",
       "careSafety": "Organic cotton yarn; embroidered eyes."
@@ -162,7 +162,7 @@
     "enidSinclair": {
       "name": "Enid Sinclair Amigurumi",
       "desc": "Colourful Wednesday character with pastel tones, bright expression and detailed hair.",
-      "price": "549 TRY",
+      "price": "₺950",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 18 cm sitting.",
       "careSafety": "Soft-touch yarn; hand-finished accessories."
@@ -170,7 +170,7 @@
     "kuromi": {
       "name": "Kuromi Amigurumi",
       "desc": "Sanrio favourite with black-pink palette, iconic hood and mischievous charm.",
-      "price": "539 TRY",
+      "price": "₺890",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 16 cm sitting.",
       "careSafety": "Safe embroidered eyes; organic yarn."
@@ -178,7 +178,7 @@
     "myMelody": {
       "name": "My Melody Amigurumi",
       "desc": "Sanrio classic with pink hood, soft ear details and sweet pastel tones.",
-      "price": "539 TRY",
+      "price": "₺890",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 16 cm sitting.",
       "careSafety": "Hand-embroidered details; soft cotton yarn."
@@ -186,7 +186,7 @@
     "sonicBlue": {
       "name": "Blue Sonic Amigurumi",
       "desc": "Legendary hedgehog in vivid blue with dynamic pose and iconic shoe details.",
-      "price": "519 TRY",
+      "price": "₺850",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 17 cm sitting.",
       "careSafety": "Secure stitching; collector-friendly toy."
@@ -194,7 +194,7 @@
     "sonicRed": {
       "name": "Red Sonic Amigurumi",
       "desc": "Special-series hedgehog in bold red with energetic expression and detailed accessories.",
-      "price": "529 TRY",
+      "price": "₺850",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 17 cm sitting.",
       "careSafety": "Limited edition; quality-controlled handcraft."
@@ -202,7 +202,7 @@
     "sonicBlack": {
       "name": "Black Sonic Amigurumi",
       "desc": "Modern variant in deep tones with sleek silhouette and speed-line accents.",
-      "price": "519 TRY",
+      "price": "₺850",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 17 cm sitting.",
       "careSafety": "Organic cotton yarn; safe embroidered eyes."
@@ -210,7 +210,7 @@
     "tails": {
       "name": "Tails Amigurumi",
       "desc": "Sonic's loyal friend Miles with orange fur, twin tails and curious expression.",
-      "price": "549 TRY",
+      "price": "₺950",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 16 cm sitting.",
       "careSafety": "Hand-finished tail detail; soft-touch yarn."
@@ -218,7 +218,7 @@
     "lolSurpriseDoll": {
       "name": "LOL Surprise Doll Amigurumi",
       "desc": "LOL-inspired doll figure with bold colours, fashion accessories and collector appeal.",
-      "price": "559 TRY",
+      "price": "₺990",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 18 cm sitting.",
       "careSafety": "Safe embroidered eyes; gift-ready finish."
@@ -226,7 +226,7 @@
     "crossbodyPaperBag": {
       "name": "Crossbody Paper Rope Bag",
       "desc": "Hand-crocheted paper yarn crossbody with everyday-ready elegant silhouette.",
-      "price": "479 TRY",
+      "price": "₺1,290",
       "careWash": "Spot clean with a damp cloth; do not machine wash.",
       "careSize": "Approx. 22 x 18 cm body.",
       "careSafety": "Durable paper yarn; metal hardware detail."
@@ -234,7 +234,7 @@
     "lavenderClutch": {
       "name": "Lavender Paper Rope Clutch",
       "desc": "Hand-crocheted lavender clutch in paper yarn with a minimal refined design.",
-      "price": "459 TRY",
+      "price": "₺1,150",
       "careWash": "Spot clean with a damp cloth; do not machine wash.",
       "careSize": "Approx. 20 x 14 cm.",
       "careSafety": "Lightweight and durable; ideal for special occasions."
@@ -242,7 +242,7 @@
     "nostalgicPhoneBlue": {
       "name": "Nostalgic Blue Cord Phone",
       "desc": "Retro corded phone shape in blue pastel tones — decorative crochet piece.",
-      "price": "429 TRY",
+      "price": "₺590",
       "careWash": "Clean with a dry cloth.",
       "careSize": "Approx. 18 cm tall.",
       "careSafety": "Decorative item; not a functional phone."
@@ -250,7 +250,7 @@
     "nostalgicPhonePink": {
       "name": "Nostalgic Pink Cord Phone",
       "desc": "Corded phone figure in pink tones — vintage decor and collector piece.",
-      "price": "429 TRY",
+      "price": "₺590",
       "careWash": "Clean with a dry cloth.",
       "careSize": "Approx. 18 cm tall.",
       "careSafety": "Decorative item; charming nursery accent."
@@ -258,7 +258,7 @@
     "nostalgicPhoneOrange": {
       "name": "Nostalgic Orange Cord Phone",
       "desc": "Orange retro phone design with cord detail and nostalgic crochet texture.",
-      "price": "429 TRY",
+      "price": "₺590",
       "careWash": "Clean with a dry cloth.",
       "careSize": "Approx. 18 cm tall.",
       "careSafety": "Decorative item; display-shelf ready."
@@ -266,7 +266,7 @@
     "fruitSet": {
       "name": "Fruit Set Amigurumi",
       "desc": "Apples, pears and more — colourful fruit figures for play and decor.",
-      "price": "399 TRY",
+      "price": "₺750",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 8-12 cm per piece.",
       "careSafety": "Suitable for play kitchens and learning play."
@@ -274,7 +274,7 @@
     "vegetableSet": {
       "name": "Vegetable Set Amigurumi",
       "desc": "Vegetable figures in fresh colours — set for kitchen play and decorative display.",
-      "price": "389 TRY",
+      "price": "₺690",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 8-14 cm per piece.",
       "careSafety": "Soft yarn; safe handcraft finish."
@@ -282,7 +282,7 @@
     "trexDinosaur": {
       "name": "T-Rex Dinosaur Amigurumi",
       "desc": "Children's favourite dinosaur in green tones with bold stance and cute expression.",
-      "price": "549 TRY",
+      "price": "₺950",
       "careWash": "Cold wash, lay flat to dry.",
       "careSize": "Approx. 20 cm sitting.",
       "careSafety": "Limited edition; safe embroidered eyes."
@@ -472,7 +472,192 @@
     "blue": "Sky Blue",
     "rose": "Dusty Rose",
     "charcoal": "Charcoal",
-    "white": "White"
+    "white": "White",
+    "fig": {
+        "barbie": {
+            "pink": "Iconic pink",
+            "blush": "Blush",
+            "blonde": "Platinum blonde",
+            "black": "Black accent",
+            "white": "White"
+        },
+        "elsa": {
+            "iceBlue": "Ice blue",
+            "snow": "Snow white",
+            "silver": "Silver",
+            "blonde": "Blonde hair",
+            "cape": "Purple cape"
+        },
+        "olaf": {
+            "snow": "Snow white",
+            "coal": "Coal black",
+            "carrot": "Carrot orange",
+            "stick": "Stick brown"
+        },
+        "moana": {
+            "redTop": "Red top",
+            "skirt": "Grass green",
+            "hair": "Brown hair",
+            "skin": "Skin tone",
+            "teal": "Teal"
+        },
+        "maui": {
+            "skin": "Skin tone",
+            "hair": "Black hair",
+            "red": "Red wrap",
+            "leaf": "Leaf green",
+            "tattoo": "Tattoo brown"
+        },
+        "harryPotter": {
+            "hair": "Black hair",
+            "skin": "Skin tone",
+            "scarfRed": "Gryffindor red",
+            "scarfGold": "Gryffindor gold",
+            "robe": "Black robe",
+            "shirt": "Cream shirt"
+        },
+        "hermione": {
+            "hair": "Brown hair",
+            "skin": "Skin tone",
+            "tieRed": "Tie red",
+            "tieGold": "Tie gold",
+            "robe": "Black robe"
+        },
+        "malefiz": {
+            "black": "Black",
+            "purple": "Purple",
+            "green": "Emerald green",
+            "skin": "Pale skin",
+            "gold": "Gold accent"
+        },
+        "ronald": {
+            "hair": "Ginger hair",
+            "skin": "Skin tone",
+            "scarfRed": "Gryffindor red",
+            "scarfGold": "Gryffindor gold",
+            "robe": "Black robe"
+        },
+        "wednesday": {
+            "dress": "Black dress",
+            "collar": "White collar",
+            "hair": "Black hair",
+            "skin": "Pale skin"
+        },
+        "thing": {
+            "skin": "Skin tone",
+            "nails": "Black nails",
+            "highlight": "Shadow tone"
+        },
+        "pugsleyAddams": {
+            "red": "Red stripe",
+            "black": "Black stripe",
+            "skin": "Pale skin",
+            "hair": "Dark hair"
+        },
+        "enidSinclair": {
+            "yellow": "Yellow",
+            "lavender": "Lavender",
+            "pink": "Pink",
+            "brown": "Brown",
+            "black": "Black"
+        },
+        "kuromi": {
+            "black": "Black",
+            "pink": "Pink",
+            "white": "White",
+            "purple": "Purple"
+        },
+        "myMelody": {
+            "white": "White",
+            "hood": "Pink hood",
+            "nose": "Yellow nose",
+            "pink": "Pink"
+        },
+        "sonicBlue": {
+            "blue": "Sonic blue",
+            "skin": "Skin tone",
+            "shoes": "Red shoes",
+            "gloves": "White gloves",
+            "eyes": "Black eyes"
+        },
+        "sonicRed": {
+            "red": "Red",
+            "skin": "Skin tone",
+            "gloves": "White gloves",
+            "eyes": "Black eyes"
+        },
+        "sonicBlack": {
+            "black": "Black",
+            "skin": "Skin tone",
+            "shoes": "Red shoes",
+            "gloves": "White gloves"
+        },
+        "tails": {
+            "orange": "Orange fur",
+            "chest": "White chest",
+            "shoes": "Brown shoes",
+            "eyes": "Blue eyes",
+            "detail": "Black detail"
+        },
+        "lolSurpriseDoll": {
+            "hotPink": "Hot pink",
+            "purple": "Purple",
+            "turquoise": "Turquoise",
+            "gold": "Gold",
+            "white": "White"
+        },
+        "crossbodyPaperBag": {
+            "kraft": "Kraft brown",
+            "cream": "Cream",
+            "strap": "Brown strap",
+            "black": "Black accent"
+        },
+        "lavenderClutch": {
+            "lavender": "Lavender",
+            "lilac": "Lilac",
+            "silver": "Silver",
+            "cream": "Cream"
+        },
+        "nostalgicPhoneBlue": {
+            "body": "Retro blue",
+            "dial": "Cream dial",
+            "accent": "Red accent",
+            "black": "Black"
+        },
+        "nostalgicPhonePink": {
+            "body": "Retro pink",
+            "dial": "Cream dial",
+            "accent": "Red accent",
+            "white": "White"
+        },
+        "nostalgicPhoneOrange": {
+            "body": "Retro orange",
+            "dial": "Cream dial",
+            "brown": "Brown",
+            "black": "Black"
+        },
+        "fruitSet": {
+            "apple": "Apple red",
+            "banana": "Banana yellow",
+            "grape": "Grape purple",
+            "leaf": "Leaf green",
+            "orange": "Orange"
+        },
+        "vegetableSet": {
+            "tomato": "Tomato red",
+            "carrot": "Carrot orange",
+            "broccoli": "Broccoli green",
+            "eggplant": "Eggplant purple",
+            "corn": "Corn yellow"
+        },
+        "trexDinosaur": {
+            "green": "Jungle green",
+            "belly": "Light green belly",
+            "teeth": "White teeth",
+            "eyes": "Black eyes",
+            "tongue": "Red tongue"
+        }
+    }
   },
   "wizard": {
     "eyebrow": "Your Dream Figure",
@@ -515,7 +700,9 @@
     "vegetableSet": "Vegetable Set",
     "trexDinosaur": "T-Rex Dinosaur",
     "colorTitle": "Your colour palette",
-    "colorLead": "You can select up to 3 colours.",
+    "colorTitleCharacter": "{figure} — character colours",
+    "colorLeadCharacter": "Authentic tones for {figure}. Select the colours you want to emphasise (up to 4).",
+    "colorLead": "Choose up to 4 tones from the general palette.",
     "colorGroup": "Colour selection",
     "colorSelected": "Selected: {value}",
     "colorNone": "Selected: -",
@@ -570,15 +757,15 @@
     "emailCta": "Contact us by email",
     "privacy": {
       "title": "Privacy Policy",
-      "updated": "Last updated: 1 June 2026",
-      "body": "<p>This Privacy Policy explains how <strong>Amigurumirem</strong> (\"we\", \"us\") collects and uses personal data when you visit <strong>amigura.com</strong>. We are a handmade amigurumi studio based in T�rkiye. This website is a product showcase; checkout for collection items is completed on <strong>Instagram</strong>, a third-party marketplace.</p>\n\n<h2>1. Who We Are</h2>\n<p><strong>Data controller:</strong> Amigurumirem<br>\n<strong>Email:</strong> <a href=\"#\" data-contact-type=\"email\" class=\"protected-contact\">Contact us by email</a><br>\n<strong>Contact:</strong> <a href=\"index.html#contact\">Contact section</a></p>\n\n<h2>2. What This Website Does</h2>\n<p>We display our handmade crochet (amigurumi) collection. We do not process card payments on this site. When you buy a ready-made piece, you are redirected to Instagram, which handles payment, invoicing, shipping, and standard consumer rights under its terms. Custom order requests may be sent to us by email or WhatsApp.</p>\n\n<h2>3. Data We May Collect</h2>\n<ul>\n<li><strong>Contact details:</strong> Name, email, phone if you message us.</li>\n<li><strong>Custom order details:</strong> Figure type, colours, size, notes you provide.</li>\n<li><strong>Technical data:</strong> IP address, browser type, device, pages viewed, timestamps.</li>\n<li><strong>Cookies:</strong> Essential cookies; analytics cookies only with your consent.</li>\n<li><strong>Newsletter:</strong> Email address if you subscribe.</li>\n</ul>\n<p>Payment and delivery data for Instagram purchases are processed by Instagram under their privacy policy. We do not receive your full card details.</p>\n\n<h2>4. Purposes and Legal Bases</h2>\n<p>We use data to operate the site securely, respond to enquiries, fulfil custom order discussions, send newsletters (with consent), comply with law, and improve our services. Depending on your location, legal bases may include contract, legitimate interests, legal obligation, and consent (e.g. analytics, marketing).</p>\n<p>Visitors in the EEA/UK may have rights under GDPR; Turkish residents have rights under KVKK (Law No. 6698). We apply appropriate safeguards for international visitors.</p>\n\n<h2>5. Sharing Your Data</h2>\n<p>We may share data with hosting providers, email services, analytics providers (if consented), professional advisers, and authorities when required by law. Instagram acts as an independent controller for marketplace transactions.</p>\n\n<h2>6. International Transfers</h2>\n<p>Our service providers may process data in T�rkiye or other countries. Where required, we rely on appropriate safeguards such as standard contractual clauses or your explicit consent.</p>\n\n<h2>7. Retention</h2>\n<p>We keep data only as long as needed for the purposes above and legal retention periods, then delete or anonymise it.</p>\n\n<h2>8. Your Rights</h2>\n<p>Depending on applicable law, you may have the right to access, rectify, erase, restrict, object, data portability, and withdraw consent. You may lodge a complaint with a supervisory authority in your country.</p>\n<p>To exercise rights, email <a href=\"#\" data-contact-type=\"email\" class=\"protected-contact\">Contact us by email</a>. We respond within <strong>30 days</strong> where possible.</p>\n\n<h2>9. Cookies</h2>\n<p>Essential cookies are required for the site to work. Analytics cookies are optional and controlled via our cookie banner. You can also manage cookies in your browser settings.</p>\n\n<h2>10. Children</h2>\n<p>Our products may appeal to families, but this site is not directed at children under 16 to register or subscribe without parental consent.</p>\n\n<h2>11. Security</h2>\n<p>We use reasonable technical and organisational measures to protect data. No online transmission is completely secure.</p>\n\n<h2>12. Changes</h2>\n<p>We may update this policy. The current version is always on this page with the \"Last updated\" date.</p>\n\n<p class=\"legal-content__notice\">This policy is for general information and does not constitute legal advice. For marketplace orders, also review Instagram's terms and privacy notice.</p>",
-      "contactLead": "Privacy enquiries:"
+      "updated": "Last updated: 8 June 2026",
+      "body": "<p>This Privacy Policy explains how <strong>Amigurumirem</strong> (\"we\", \"us\") collects and uses personal data when you visit <strong>amigurumirem.com</strong>. We are a handmade amigurumi studio based in T\\u00FCrkiye. This website is a product showcase; checkout for collection items is completed on <strong>Instagram</strong>.</p>\\n\\n<h2>1. Data Controller</h2>\\n<ul>\\n<li><strong>Brand:</strong> Amigurumirem</li>\\n<li><strong>Email:</strong> <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a></li>\\n<li><strong>Website:</strong> <a href=\"https://www.amigurumirem.com/\">amigurumirem.com</a></li>\\n<li><strong>Contact:</strong> <a href=\"index.html#contact\">Contact section</a> \\u00B7 <a href=\"https://www.instagram.com/amigurumi__rem\" target=\"_blank\" rel=\"noopener noreferrer\">@amigurumi__rem</a></li>\\n</ul>\\n\\n<h2>2. What This Website Does</h2>\\n<p><strong>amigurumirem.com</strong> displays our handmade crochet collection. We do not process card payments on this site. Ready-made purchases are completed on Instagram. Custom order requests may be sent by email, WhatsApp, or Instagram message.</p>\\n\\n<h2>3. Personal Data We Process</h2>\\n<ul>\\n<li><strong>Identity and contact:</strong> Name, email, phone (when you contact us).</li>\\n<li><strong>Orders and custom requests:</strong> Figure choice, character colour palette, size, notes, reference number.</li>\\n<li><strong>Security logs:</strong> IP address, browser/device data, access timestamps.</li>\\n<li><strong>Cookies:</strong> Essential cookies; analytics cookies only with your consent.</li>\\n<li><strong>Marketing:</strong> Newsletter email (only if you subscribe).</li>\\n</ul>\\n\\n<h2>4. Purposes and Legal Bases</h2>\\n<p>We process data to operate the website securely, respond to enquiries, fulfil orders, send newsletters (with consent), comply with law, and improve our service under applicable Turkish data protection rules including KVKK.</p>\\n\\n<h2>5. Recipients and Transfers</h2>\\n<p>Data may be shared with hosting, email, analytics (with consent), shipping partners, legal advisers, and authorities when required. International transfers follow KVKK Article 9 safeguards.</p>\\n\\n<h2>6. Retention</h2>\\n<p>Data is kept only as long as necessary for the stated purpose and legal retention periods. Custom order correspondence is typically retained for <strong>3 years</strong> after the last interaction.</p>\\n\\n<h2>7. Your Rights</h2>\\n<p>Under KVKK you may request information, correction, deletion, objection to automated processing, and compensation where applicable. Contact <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a>. We respond within <strong>30 days</strong>.</p>\\n\\n<h2>8. Cookies and Children</h2>\\n<p>Essential cookies are required for site function. Analytics cookies are optional. We do not knowingly collect data from children under 18.</p>\\n\\n<h2>9. Security and Updates</h2>\\n<p>We apply appropriate technical and organisational measures. This policy may be updated; the current version is always published on this page.</p>\\n\\n<p class=\"legal-content__notice\">This text is for information only. Seek legal advice for your specific situation.</p>",
+      "contactLead": "For privacy requests:"
     },
     "returns": {
-      "title": "Returns and Cancellation Policy",
-      "updated": "Last updated: 1 June 2026",
-      "body": "<p>This Returns and Cancellation Policy explains how returns, refunds, and cancellations work for <strong>Amigurumirem</strong> handmade amigurumi products. Please read this page together with <strong>Instagram</strong> terms, as most collection purchases are completed there.</p>\n\n<h2>1. Overview</h2>\n<p><strong>amigura.com</strong> is a product showcase. We do not take payments on this website. Ready-made collection items are sold, paid for, and shipped through <strong>Instagram</strong>, our official Instagram channel. Custom orders arranged directly with our studio may have separate terms confirmed in writing.</p>\n\n<h2>2. Ready-Made Collection Items - Right of Withdrawal</h2>\n<p>For standard ready-made items sold via Instagram, consumers generally have a <strong>14-day right of withdrawal</strong> from delivery under Turkish consumer law (excluding personalised goods).</p>\n<ul>\n<li>Start the return from your Instagram order account.</li>\n<li>Items should be unused, undamaged, and preferably in original packaging.</li>\n<li>Return shipping rules and costs follow Instagram's current policy.</li>\n<li>Refunds are processed by Instagram to your original payment method; timing depends on your bank or card issuer.</li>\n</ul>\n<p>International buyers should check Instagram's cross-border and seller policies applicable to their order.</p>\n\n<h2>3. Personalised and Custom-Made Items - No Withdrawal</h2>\n<p>Under Turkish distance sales rules (and similar EU/UK principles), the right of withdrawal does <strong>not</strong> apply to goods made to the consumer's specifications or clearly personalised.</p>\n<p>This includes:</p>\n<ul>\n<li>Custom orders placed via our wizard (figure, colours, size, embroidery, name, etc.),</li>\n<li>Orders already in production at the atelier,</li>\n<li>Bespoke gift packaging or notes requested as part of production.</li>\n</ul>\n<p>Once a custom order is confirmed and production has started, cancellation is usually not possible. Contact us before production begins if your plans change.</p>\n\n<h2>4. Damaged or Incorrect Delivery</h2>\n<p>If your item arrives damaged or incomplete, report it promptly through Instagram and keep photos of the parcel and product. Instagram's dispute and refund procedures apply. You may also email us at <a href=\"#\" data-contact-type=\"email\" class=\"protected-contact\">Contact us by email</a> and we will assist where we can.</p>\n\n<h2>5. Cancellation Before Shipment</h2>\n<p>Orders on Instagram that have not yet been shipped may be cancellable under platform rules. Refunds are handled by Instagram.</p>\n\n<h2>6. Exchanges</h2>\n<p>We do not offer direct exchanges. For eligible items, you may return via Instagram and place a new order.</p>\n\n<h2>7. Direct Custom Orders</h2>\n<p>For bespoke orders agreed directly with Amigurumirem (email/WhatsApp), payment, deposit, cancellation, and refund terms are confirmed in writing before production. These may differ from Instagram marketplace rules.</p>\n\n<h2>8. Contact</h2>\n<p>Questions: <a href=\"#\" data-contact-type=\"email\" class=\"protected-contact\">Contact us by email</a></p>\n\n<p class=\"legal-content__notice\">Always refer to the Instagram product listing and platform terms for the binding conditions of your specific purchase.</p>",
-      "contactLead": "Returns enquiries:"
+      "title": "Returns & Cancellation",
+      "updated": "Last updated: 8 June 2026",
+      "body": "<p>This Returns and Cancellation Policy explains how returns, refunds, and cancellations work for <strong>Amigurumirem</strong> handmade amigurumi products. Please read it together with <strong>amigurumirem.com</strong> information and <strong>Instagram</strong> terms.</p>\\n\\n<h2>1. Overview</h2>\\n<p><strong>amigurumirem.com</strong> is a showcase site with no checkout. Ready-made items are sold, paid for, and shipped through <strong>Instagram</strong>. Custom studio orders may have separate written terms.</p>\\n\\n<h2>2. Contact</h2>\\n<ul>\\n<li><strong>Email:</strong> <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a></li>\\n<li><strong>Instagram:</strong> <a href=\"https://www.instagram.com/amigurumi__rem\" target=\"_blank\" rel=\"noopener noreferrer\">@amigurumi__rem</a></li>\\n</ul>\\n\\n<h2>3. Ready-Made Items \\u2014 14-Day Withdrawal</h2>\\n<p>For standard ready-made collection items, consumers generally have a <strong>14-day right of withdrawal</strong> from delivery under Turkish consumer law (excluding personalised goods).</p>\\n<ul>\\n<li>Start the return via Instagram or by contacting us.</li>\\n<li>Items should be unused, undamaged, and in original packaging where possible.</li>\\n<li>Refunds follow Instagram procedures; timing depends on your bank.</li>\\n</ul>\\n\\n<h2>4. Custom and Personalised Orders</h2>\\n<p>Made-to-order pieces \\u2014 including wizard requests with figure, character colours, size, or name embroidery \\u2014 are excluded from the standard withdrawal right once production is agreed.</p>\\n\\n<h2>5. Damaged or Missing Deliveries</h2>\\n<p>Report damage or missing items within <strong>48 hours</strong> with photos to <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a> or via Instagram.</p>\\n\\n<h2>6. Cancellations Before Shipping</h2>\\n<p>Unshipped Instagram orders may be cancelled under platform rules.</p>\\n\\n<h2>7. Exchanges and Pricing</h2>\\n<p>We do not offer direct exchanges. Prices shown on the showcase are indicative; the Instagram listing price applies at purchase.</p>\\n\\n<h2>8. Questions</h2>\\n<p>Email <a href=\"mailto:calanguirem@gmail.com\">calanguirem@gmail.com</a> for returns and cancellation support.</p>\\n\\n<p class=\"legal-content__notice\">Also review the relevant Instagram post and platform terms before purchasing.</p>",
+      "contactLead": "For return questions:"
     }
   },
   "sticky_order": "Custom Order",

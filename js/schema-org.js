@@ -8,8 +8,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Amigurumirem",
-    url: "https://www.amigura.com",
-    logo: "https://www.amigura.com/assets/logo.png",
+    url: "https://www.amigurumirem.com",
+    logo: "https://www.amigurumirem.com/assets/logo.png",
     description: "El yap\u0131m\u0131, organik ipliklerle \u00f6r\u00fclen l\u00fcks amigurumi koleksiyonu.",
     sameAs: ["https://www.instagram.com/amigurumi__rem", "https://www.etsy.com/shop/amigura"],
   };

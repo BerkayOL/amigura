@@ -265,6 +265,7 @@
 
   function getBrandEmailAddress() {
     const cfg = getConfig();
+    if (cfg && cfg.brandEmail) return cfg.brandEmail;
     const parts = cfg && cfg.brandEmailParts ? cfg.brandEmailParts : null;
     if (parts && parts.length >= 3) return parts[0] + "@" + parts[1] + "." + parts[2];
     return "";

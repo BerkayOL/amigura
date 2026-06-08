@@ -10,6 +10,7 @@
 
   function getOrderEmail() {
     var cfg = getConfig();
+    if (cfg && cfg.brandEmail) return cfg.brandEmail;
     var parts = cfg && cfg.brandEmailParts ? cfg.brandEmailParts : null;
     if (parts && parts.length >= 3) return parts[0] + "@" + parts[1] + "." + parts[2];
     return "";
@@ -22,19 +23,23 @@
     return "";
   }
 
-  // Note: CSP-hardening removed inline styles. Swatch colors are defined via CSS classes.
-  const PALETTE = [
-    { hex: "#E8B89A", nameKey: "palette.peach", className: "wizard__swatch--peach" },
-    { hex: "#9BB89A", nameKey: "palette.sage", className: "wizard__swatch--sage" },
-    { hex: "#C9A227", nameKey: "palette.gold", className: "wizard__swatch--gold" },
-    { hex: "#F5E6D3", nameKey: "palette.cream", className: "wizard__swatch--cream" },
-    { hex: "#8B9DC3", nameKey: "palette.blue", className: "wizard__swatch--blue" },
-    { hex: "#D4A5A5", nameKey: "palette.rose", className: "wizard__swatch--rose" },
-    { hex: "#3D4450", nameKey: "palette.charcoal", className: "wizard__swatch--charcoal" },
-    { hex: "#FFFFFF", nameKey: "palette.white", className: "wizard__swatch--white" },
-  ];
+  const MAX_COLORS = 4;
 
-  const MAX_COLORS = 3;
+  function getActivePalette() {
+    if (global.Irem && global.Irem.WizardPalettes && typeof global.Irem.WizardPalettes.getForFigure === "function") {
+      return global.Irem.WizardPalettes.getForFigure(state.figureKey);
+    }
+    return [];
+  }
+
+  function hasCharacterPalette() {
+    return !!(
+      global.Irem &&
+      global.Irem.WizardPalettes &&
+      typeof global.Irem.WizardPalettes.hasCharacterPalette === "function" &&
+      global.Irem.WizardPalettes.hasCharacterPalette(state.figureKey)
+    );
+  }
   const TOTAL_STEPS = 4;
 
   /** @type {{ step: number, figureKey: string | null, colors: string[], sizeCm: number, notes: string, orderRef: string }} */
@@ -113,13 +118,36 @@
   }
 
   function getColorNames() {
+    var palette = getActivePalette();
     return state.colors.map(function (hex) {
-      const found = PALETTE.find(function (p) {
+      const found = palette.find(function (p) {
         return p.hex.toLowerCase() === hex.toLowerCase();
       });
       const name = found ? t(found.nameKey) : hex;
       return name + " (" + hex + ")";
     });
+  }
+
+  function updateColorStepCopy() {
+    const title = document.getElementById("wizard-color-title");
+    const lead = document.getElementById("wizard-color-lead");
+    if (!title || !lead) return;
+    if (hasCharacterPalette()) {
+      const figure = getFigureLabel(state.figureKey);
+      title.textContent = t("wizard.colorTitleCharacter", { figure: figure });
+      lead.textContent = t("wizard.colorLeadCharacter", { figure: figure });
+      return;
+    }
+    title.textContent = t("wizard.colorTitle");
+    lead.textContent = t("wizard.colorLead");
+  }
+
+  function applyFigurePalette() {
+    state.colors = [];
+    renderPalette();
+    updatePaletteLabel();
+    updateColorStepCopy();
+    showStepError(2, false);
   }
 
   function buildOrderMessage() {
@@ -203,27 +231,37 @@
     const container = document.getElementById("wizard-palette");
     if (!container) return;
 
-    container.innerHTML = PALETTE.map(function (swatch) {
-      const hex = swatch.hex;
-      const selected = state.colors.includes(hex);
-      const name = t(swatch.nameKey);
-      return (
-        '<button type="button" class="wizard__swatch ' +
-        swatch.className +
-        (selected ? " is-selected" : "") +
-        '" data-color="' +
-        hex +
-        '" aria-pressed="' +
-        selected +
-        '" aria-label="' +
-        escapeHtml(name) +
-        " \u2014 " +
-        hex +
-        '" title="' +
-        escapeHtml(name) +
-        '"></button>'
-      );
-    }).join("");
+    var palette = getActivePalette();
+    container.innerHTML = palette
+      .map(function (swatch) {
+        const hex = swatch.hex;
+        const selected = state.colors.includes(hex);
+        const name = t(swatch.nameKey);
+        return (
+          '<div class="wizard__swatch-wrap">' +
+          '<button type="button" class="wizard__swatch' +
+          (selected ? " is-selected" : "") +
+          '" data-color="' +
+          hex +
+          '" aria-pressed="' +
+          selected +
+          '" aria-label="' +
+          escapeHtml(name) +
+          " \u2014 " +
+          hex +
+          '" title="' +
+          escapeHtml(name) +
+          '">' +
+          '<svg class="wizard__swatch-chip" viewBox="0 0 32 32" aria-hidden="true">' +
+          '<circle cx="16" cy="16" r="15" fill="' +
+          hex +
+          '"/></svg></button>' +
+          '<span class="wizard__swatch-name">' +
+          escapeHtml(name) +
+          "</span></div>"
+        );
+      })
+      .join("");
   }
 
   function updateSizeVisual() {
@@ -271,6 +309,12 @@
       next.textContent = state.step === TOTAL_STEPS ? t("wizard.finish") : t("wizard.next");
     }
 
+    if (state.step === 2) {
+      updateColorStepCopy();
+      renderPalette();
+      updatePaletteLabel();
+    }
+
     if (state.step === 4) {
       if (!state.orderRef) state.orderRef = generateOrderRef();
       renderSummary();
@@ -305,6 +349,7 @@
         card.classList.toggle("is-selected", active);
         card.setAttribute("aria-pressed", String(active));
       });
+      applyFigurePalette();
       showStepError(1, false);
       return;
     }
@@ -365,6 +410,7 @@
 
     renderFigureGrid();
     renderPalette();
+    updateColorStepCopy();
     updateSizeVisual();
     goToStep(1);
 
@@ -385,6 +431,7 @@
       if (global.Irem && global.Irem.I18n) global.Irem.I18n.apply(wizardEl);
       renderPalette();
       updatePaletteLabel();
+      updateColorStepCopy();
       goToStep(state.step);
     });
   }

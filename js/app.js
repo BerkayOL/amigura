@@ -358,10 +358,6 @@
     });
   }
 
-  function initHomeSections() {
-    initProcessTimeline();
-  }
-
   function ensureStickyConversionBar() {
     if (document.body.dataset.page !== "home") return;
     if (document.querySelector(".sticky-convert")) return;

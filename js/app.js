@@ -411,6 +411,11 @@
       const main = document.getElementById("main");
       if (main) main.removeAttribute("inert");
       body.classList.remove("is-modal-open", "is-nav-open");
+      document.documentElement.classList.remove("is-modal-open", "is-nav-open");
+      body.style.overflow = "";
+      body.style.removeProperty("overflow");
+      document.documentElement.style.overflow = "";
+      document.documentElement.style.removeProperty("overflow");
       const header = document.getElementById("siteHeader");
       if (header) header.classList.remove("is-nav-open");
       const backdrop = document.getElementById("navBackdrop");

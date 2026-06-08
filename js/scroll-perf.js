@@ -5,8 +5,22 @@
   "use strict";
 
   var root = document.documentElement;
+  var body = document.body;
   var scrollEndTimer = null;
   var scrollEndMs = 140;
+
+  function ensureScrollUnlocked() {
+    if (!body) return;
+    if (body.classList.contains("is-nav-open") || body.classList.contains("is-modal-open")) {
+      return;
+    }
+    root.classList.remove("is-nav-open", "is-modal-open");
+    body.classList.remove("is-nav-open", "is-modal-open");
+    root.style.overflow = "";
+    body.style.overflow = "";
+    body.style.removeProperty("overflow");
+    root.style.removeProperty("overflow");
+  }
 
   function markScrolling() {
     if (!root.classList.contains("is-scrolling")) {
@@ -21,7 +35,10 @@
 
   function initHeroVisibility() {
     var hero = document.getElementById("hero");
-    if (!hero) return;
+    if (!hero) {
+      root.classList.add("is-hero-visible");
+      return;
+    }
 
     if (!("IntersectionObserver" in window)) {
       root.classList.add("is-hero-visible");
@@ -38,13 +55,18 @@
     io.observe(hero);
   }
 
+  function init() {
+    ensureScrollUnlocked();
+    initHeroVisibility();
+  }
+
   window.addEventListener("scroll", markScrolling, { passive: true });
-  window.addEventListener("touchmove", markScrolling, { passive: true });
-  window.addEventListener("wheel", markScrolling, { passive: true });
+  window.addEventListener("pageshow", ensureScrollUnlocked);
+  window.addEventListener("load", ensureScrollUnlocked);
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initHeroVisibility);
+    document.addEventListener("DOMContentLoaded", init);
   } else {
-    initHeroVisibility();
+    init();
   }
 })();

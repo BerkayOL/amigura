@@ -10,7 +10,10 @@
 
     doc.documentElement.classList.remove("is-nav-open", "is-modal-open");
     doc.body.classList.remove("is-nav-open", "is-modal-open");
+    doc.documentElement.style.overflow = "";
     doc.body.style.overflow = "";
+    doc.documentElement.style.removeProperty("overflow");
+    doc.body.style.removeProperty("overflow");
 
     var main = doc.getElementById("main");
     if (main) {

@@ -21,6 +21,11 @@
    */
   function resetNav() {
     body.classList.remove("is-nav-open", "is-modal-open");
+    document.documentElement.classList.remove("is-nav-open", "is-modal-open");
+    body.style.overflow = "";
+    body.style.removeProperty("overflow");
+    document.documentElement.style.overflow = "";
+    document.documentElement.style.removeProperty("overflow");
 
     const main = document.getElementById("main");
     if (main) main.removeAttribute("inert");

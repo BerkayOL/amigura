@@ -30,13 +30,16 @@
    * @param {string} [mime]
    * @returns {string}
    */
-  function buildProductPictureHtml(src, alt, fallback, mime) {
+  function buildProductPictureHtml(src, alt, fallback, mime, eager) {
     var fb = fallback || src;
     var type = mime || (/\.webp$/i.test(src) ? "image/webp" : "image/jpeg");
+    var loading = eager ? "eager" : "lazy";
     var imgAttrs =
       'alt="' +
       alt +
-      '" class="product-card__image" width="600" height="600" loading="lazy" decoding="async" data-fallback="' +
+      '" class="product-card__image" width="600" height="600" loading="' +
+      loading +
+      '" decoding="async" data-fallback="' +
       fb +
       '"';
 
@@ -60,7 +63,7 @@
   /**
    * @param {ReturnType<global.Irem.Products.resolve>} product
    */
-  function createHtml(product) {
+  function createHtml(product, eager) {
     const I = i18n();
     const t = I ? I.t.bind(I) : function (k) {
       return k;
@@ -92,7 +95,7 @@
       escapeHtml(t("product.viewAria", { name: product.name })) +
       '"></a>' +
       '<div class="product-card__media">' +
-      buildProductPictureHtml(image, alt, fallback, product.imageMime) +
+      buildProductPictureHtml(image, alt, fallback, product.imageMime, eager) +
       "</div>" +
       '<div class="product-card__body">' +
       '<h3 class="product-card__title">' +
@@ -211,16 +214,41 @@
   function renderInto(container) {
     if (!global.Irem || !global.Irem.Products) return;
     const products = global.Irem.Products.getAll();
-    const html = products.map(createHtml).join("");
-    const wrap = document.createElement("div");
-    wrap.innerHTML = html;
-    const fragment = document.createDocumentFragment();
-    while (wrap.firstElementChild) {
-      fragment.appendChild(wrap.firstElementChild);
+    const BATCH = 6;
+    let index = 0;
+
+    container.replaceChildren();
+
+    function appendBatch() {
+      const slice = products.slice(index, index + BATCH);
+      if (!slice.length) return;
+      const html = slice
+        .map(function (product, i) {
+          return createHtml(product, index + i < 6);
+        })
+        .join("");
+      const wrap = document.createElement("div");
+      wrap.innerHTML = html;
+      while (wrap.firstElementChild) {
+        container.appendChild(wrap.firstElementChild);
+      }
+      bindImageFallbacks(container);
+      if (i18n()) i18n().apply(container);
+      index += BATCH;
+      if (index < products.length) {
+        if (typeof requestIdleCallback === "function") {
+          requestIdleCallback(appendBatch, { timeout: 200 });
+        } else {
+          setTimeout(appendBatch, 0);
+        }
+      } else {
+        document.dispatchEvent(
+          new CustomEvent("amigura:products-complete", { bubbles: true })
+        );
+      }
     }
-    container.replaceChildren(fragment);
-    if (i18n()) i18n().apply(container);
-    bindImageFallbacks(container);
+
+    appendBatch();
   }
 
   /**

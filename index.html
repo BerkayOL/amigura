@@ -11,24 +11,25 @@
   <meta property="og:description" content="İlmek ilmek işlenen sevgi. Özel tasarım, organik el yapımı amigurumi figürler.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
-  <meta property="og:url" content="https://www.amigurumirem.com/">
-  <meta property="og:image" content="https://www.amigurumirem.com/assets/og-cover.jpg">
+  <meta property="og:url" content="https://www.amigurumirem.com.tr/">
+  <meta property="og:image" content="https://www.amigurumirem.com.tr/assets/og-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.amigurumirem.com/assets/og-cover.jpg">
-  <link rel="canonical" href="https://www.amigurumirem.com/">
+  <meta name="twitter:image" content="https://www.amigurumirem.com.tr/assets/og-cover.jpg">
+  <link rel="canonical" href="https://www.amigurumirem.com.tr/">
+  <link rel="alternate" hreflang="tr" href="https://www.amigurumirem.com.tr/">
+  <link rel="alternate" hreflang="en" href="https://www.amigurumirem.com.tr/">
+  <link rel="alternate" hreflang="x-default" href="https://www.amigurumirem.com.tr/">
   <title>Amigurumirem | El Yapımı Amigurumi Koleksiyonu</title>
   <link rel="icon" href="assets/logo.png" type="image/png">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; media-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; media-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
   <link rel="stylesheet" href="css/fonts.generated.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mobile.css">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="stylesheet" href="css/performance.css">
   <script src="js/theme-init.js"></script>
-  <script src="js/page-unlock.js"></script>
-  <script src="js/scroll-perf.js"></script>
   <script src="js/schema-org.js" defer></script>
 </head>
 <body data-page="home">
@@ -198,16 +199,19 @@
       <div class="about__inner">
         <div class="about__grid">
           <figure class="about__media">
-            <img
-              src="assets/about/amigura.png"
-              alt="Amigurumirem atölye — el yapımı amigurumi"
-              data-i18n-alt="about.imgAlt"
-              class="about__image"
-              width="800"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            >
+            <picture>
+              <source srcset="assets/about/amigura.webp" type="image/webp">
+              <img
+                src="assets/about/amigura.png"
+                alt="Amigurumirem atölye — el yapımı amigurumi"
+                data-i18n-alt="about.imgAlt"
+                class="about__image"
+                width="800"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
           </figure>
           <div class="about__content">
             <p class="about__eyebrow" data-i18n="about.eyebrow">Amigurumirem</p>
@@ -277,9 +281,9 @@
   <div id="irem-modal-root" class="modal-root" hidden></div>
   <div id="irem-cookie-root" class="cookie-root" hidden></div>
 
+  <script src="js/page-unlock.js"></script>
+  <script src="js/scroll-perf.js"></script>
   <script src="js/amigura-config.js" defer></script>
-  <script src="js/locales/tr.js" defer></script>
-  <script src="js/locales/en.js" defer></script>
   <script src="js/i18n.js" defer></script>
   <script src="js/irem-utils.js" defer></script>
   <script src="js/irem-nav.js" defer></script>

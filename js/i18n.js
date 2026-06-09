@@ -1,6 +1,6 @@
 /**
  * Amigura - i18n (TR / EN)
- * Locales: js/locales/tr.js, js/locales/en.js
+ * Locales: js/locales/tr.js, js/locales/en.js (lazy-loaded)
  */
 (function (global) {
   "use strict";
@@ -18,6 +18,9 @@
 
   let currentLang = DEFAULT_LANG;
   let applying = false;
+  /** @type {Promise<void> | null} */
+  let readyPromise = null;
+  const loadingLangs = new Set();
 
   function isTurkishTag(tag) {
     return String(tag || "")
@@ -41,6 +44,43 @@
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === "tr" || stored === "en") return stored;
     return detectBrowserLang();
+  }
+
+  /**
+   * @param {"tr" | "en"} lang
+   * @returns {Promise<void>}
+   */
+  function loadLocaleScript(lang) {
+    if (global.Irem && global.Irem.locales && global.Irem.locales[lang]) {
+      return Promise.resolve();
+    }
+    if (loadingLangs.has(lang)) {
+      return new Promise(function (resolve) {
+        const check = function () {
+          if (global.Irem && global.Irem.locales && global.Irem.locales[lang]) {
+            resolve();
+          } else {
+            setTimeout(check, 16);
+          }
+        };
+        check();
+      });
+    }
+    loadingLangs.add(lang);
+    return new Promise(function (resolve) {
+      const script = document.createElement("script");
+      script.src = "js/locales/" + lang + ".js";
+      script.async = false;
+      script.onload = function () {
+        loadingLangs.delete(lang);
+        resolve();
+      };
+      script.onerror = function () {
+        loadingLangs.delete(lang);
+        resolve();
+      };
+      document.head.appendChild(script);
+    });
   }
 
   function messagesFor(lang) {
@@ -219,26 +259,37 @@
   }
 
   function setLang(lang) {
-    if ((lang !== "tr" && lang !== "en") || lang === currentLang || applying) return;
+    if (lang !== "tr" && lang !== "en" || lang === currentLang || applying) return;
     applying = true;
-    currentLang = lang;
-    localStorage.setItem(STORAGE_KEY, lang);
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute("data-lang", lang);
-    apply(document);
-    document.dispatchEvent(
-      new CustomEvent("amigura:langchange", { bubbles: true, detail: { lang: lang } })
-    );
-    applying = false;
+    loadLocaleScript(lang).then(function () {
+      currentLang = lang;
+      localStorage.setItem(STORAGE_KEY, lang);
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute("data-lang", lang);
+      apply(document);
+      document.dispatchEvent(
+        new CustomEvent("amigura:langchange", { bubbles: true, detail: { lang: lang } })
+      );
+      applying = false;
+    });
   }
 
-  function init() {
-    currentLang = resolveInitialLang();
-    document.documentElement.lang = currentLang;
-    document.documentElement.setAttribute("data-lang", currentLang);
+  function whenReady() {
+    if (!readyPromise) {
+      currentLang = resolveInitialLang();
+      readyPromise = loadLocaleScript(currentLang).then(function () {
+        document.documentElement.lang = currentLang;
+        document.documentElement.setAttribute("data-lang", currentLang);
+        const other = currentLang === "tr" ? "en" : "tr";
+        if (typeof requestIdleCallback === "function") {
+          requestIdleCallback(function () {
+            loadLocaleScript(other);
+          });
+        }
+      });
+    }
+    return readyPromise;
   }
-
-  init();
 
   global.Irem = global.Irem || {};
   global.Irem.I18n = {
@@ -246,7 +297,7 @@
     getLang: getLang,
     setLang: setLang,
     apply: apply,
-    init: init,
+    whenReady: whenReady,
     detectBrowserLang: detectBrowserLang,
   };
 })(typeof window !== "undefined" ? window : globalThis);

@@ -148,7 +148,7 @@
         window.Irem.ProductCard.updateTextsInPlace(els.productContainer);
       } else {
         renderProducts();
-        initProductScrollReveal();
+        document.addEventListener("amigura:products-complete", initProductScrollReveal, { once: true });
       }
     }
     const closeBtn = document.querySelector(".modal-panel__close");
@@ -599,7 +599,7 @@
 
     if (els.productContainer && !productsRendered) renderProducts();
     if (els.productContainer) {
-      initProductScrollReveal();
+      document.addEventListener("amigura:products-complete", initProductScrollReveal, { once: true });
       initProcessTimeline();
       ensureStickyConversionBar();
     }

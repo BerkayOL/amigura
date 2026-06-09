@@ -8,7 +8,9 @@
     "lint:js": "eslint \"js/**/*.js\"",
     "lint:css": "stylelint \"css/fonts.css\" \"css/critical-ozel.css\"",
     "lint:html": "html-validate \"*.html\"",
-    "lighthouse:ci": "lhci autorun --config=./lighthouserc.json"
+    "lighthouse:ci": "lhci autorun --config=./lighthouserc.json",
+    "lighthouse:prod": "lhci autorun --config=./lighthouserc.prod.json",
+    "images:optimize": "node ./scripts/optimize-images.mjs"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",
@@ -16,8 +18,8 @@
     "globals": "^15.9.0",
     "html-validate": "^9.7.1",
     "http-server": "^14.1.1",
+    "sharp": "^0.34.5",
     "stylelint": "^16.9.0",
     "stylelint-config-standard": "^36.0.0"
   }
 }
-

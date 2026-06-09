@@ -1,4 +1,14 @@
-node_modules
+node_modules/
 .history/
-firebase-debug.log
+.firebase/
+.firebaserc.local
 *.log
+firebase-debug.log
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.lighthouseci/
+dist/
+build/
+coverage/

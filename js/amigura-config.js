@@ -44,7 +44,7 @@
     brandEmailParts: ["calanguirem", "gmail", "com"],
     instagramUrl: INSTAGRAM_PROFILE,
     etsyUrl: "https://www.etsy.com/shop/amigura",
-    siteOrigin: "https://www.amigurumirem.com",
+    siteOrigin: "https://www.amigurumirem.com.tr",
     instagramLinks: instagramLinks,
 
     brandPhoneDisplay: "+90 534 017 52 72",

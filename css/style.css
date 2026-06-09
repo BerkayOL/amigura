@@ -1155,7 +1155,7 @@ button:focus-visible {
   font-weight: 600;
   letter-spacing: 0.04em;
   color: #ffffff;
-  background: var(--color-btn-primary);
+  background: #c45f00;
   border: none;
   border-radius: var(--radius-full);
   box-shadow: 0 4px 20px rgba(201, 162, 39, 0.25);
@@ -1174,7 +1174,7 @@ button:focus-visible {
 .hero__cta:hover {
   transform: scale(1.05);
   box-shadow: var(--hero-cta-glow);
-  background: var(--color-btn-primary-hover);
+  background: #a04f00;
 }
 
 .hero__cta:active {
@@ -5813,4 +5813,40 @@ body.has-cookie-banner {
   .yarn-cursor {
     display: none !important;
   }
+}
+
+/* 404 */
+.error-page {
+  text-align: center;
+  padding: clamp(3rem, 10vw, 6rem) 1.25rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error-page__code {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.error-page__title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin: 0;
+}
+
+.error-page__lead {
+  max-width: 28rem;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.error-page__cta {
+  margin-top: 0.5rem;
+  text-decoration: none;
 }

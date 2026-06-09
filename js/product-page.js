@@ -76,6 +76,101 @@
     );
   }
 
+  function getSiteOrigin() {
+    const cfg = window.Amigura && window.Amigura.Config;
+    const origin = (cfg && cfg.siteOrigin) || window.location.origin;
+    return String(origin).replace(/\/$/, "");
+  }
+
+  function ensureMeta(attr, key, value) {
+    let el = document.querySelector("meta[" + attr + '="' + key + '"]');
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", value);
+  }
+
+  /**
+   * @param {ReturnType<window.Irem.Products.getById>} product
+   */
+  function updateProductMeta(product) {
+    const origin = getSiteOrigin();
+    const url = origin + "/urun.html?id=" + encodeURIComponent(String(product.id));
+    const imagePath = product.imageFallback || product.image;
+    const image = /^https?:\/\//i.test(imagePath) ? imagePath : origin + "/" + imagePath.replace(/^\//, "");
+    const title = product.name + " | " + getBrandName();
+
+    document.title = title;
+    ensureMeta("name", "description", product.description);
+    ensureMeta("property", "og:title", title);
+    ensureMeta("property", "og:description", product.description);
+    ensureMeta("property", "og:url", url);
+    ensureMeta("property", "og:image", image);
+    ensureMeta("property", "og:type", "product");
+    ensureMeta("name", "twitter:card", "summary_large_image");
+    ensureMeta("name", "twitter:image", image);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = url;
+
+    const priceDigits = String(product.price || "").replace(/[^\d]/g, "");
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description: product.description,
+      image: image,
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "TRY",
+        availability: "https://schema.org/InStock",
+      },
+    };
+    if (priceDigits) ld.offers.price = priceDigits;
+
+    let script = document.getElementById("pdp-jsonld");
+    if (!script) {
+      script = document.createElement("script");
+      script.id = "pdp-jsonld";
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(ld);
+  }
+
+  function buildHeroImageHtml(product, alt) {
+    const webp = product.image;
+    const jpg = product.imageFallback || product.image;
+    if (webp && jpg && webp !== jpg && /\.webp$/i.test(webp)) {
+      return (
+        "<picture>" +
+        '<source srcset="' +
+        escapeHtml(webp) +
+        '" type="image/webp">' +
+        '<img class="pdp-gallery__hero" id="pdp-hero-img" src="' +
+        escapeHtml(jpg) +
+        '" alt="' +
+        alt +
+        '" loading="eager" decoding="async" fetchpriority="high">' +
+        "</picture>"
+      );
+    }
+    return (
+      '<img class="pdp-gallery__hero" id="pdp-hero-img" src="' +
+      escapeHtml(jpg || webp) +
+      '" alt="' +
+      alt +
+      '" loading="eager" decoding="async" fetchpriority="high">'
+    );
+  }
+
   const ICON_HAND =
     '<svg class="pdp-bullet__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12"/><path d="M11 12V4.5a1.5 1.5 0 0 1 3 0V12"/><path d="M14 12V6.5a1.5 1.5 0 0 1 3 0V14"/><path d="M8 13l-2 2.5a4 4 0 0 0 3.2 6.5H14a5 5 0 0 0 5-5v-3"/></svg>';
   const ICON_LEAF =
@@ -257,7 +352,7 @@
       product.gallery && product.gallery.length
         ? product.gallery
         : [product.imageFallback || product.image];
-    const imgSrc = gallery[0];
+    const heroAlt = escapeHtml(t("product.alt", { name: product.name }));
 
     const thumbs = gallery
       .map(function (src, i) {
@@ -286,11 +381,7 @@
       escapeHtml(t("pdp.galleryLabel")) +
       '">' +
       '<div class="pdp-gallery__stage">' +
-      '<img class="pdp-gallery__hero" id="pdp-hero-img" src="' +
-      escapeHtml(imgSrc) +
-      '" alt="' +
-      escapeHtml(t("product.alt", { name: product.name })) +
-      '" loading="eager" decoding="async">' +
+      buildHeroImageHtml(product, heroAlt) +
       "</div>" +
       '<div class="pdp-gallery__thumbs" role="list">' +
       thumbs +
@@ -414,7 +505,7 @@
 
     const crumb = $("#pdp-crumb-current");
     if (crumb) crumb.textContent = product.name;
-    document.title = product.name + " | " + getBrandName();
+    updateProductMeta(product);
   }
 
   function teardownPdpUi() {

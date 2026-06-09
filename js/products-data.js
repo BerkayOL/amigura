@@ -9,12 +9,13 @@
   /**
    * @param {string} folder
    * @param {number} count
-   * @returns {string[]}
+   * @returns {Array<{ webp: string, jpg: string }>}
    */
   function galleryPaths(folder, count) {
     var paths = [];
     for (var i = 1; i <= count; i++) {
-      paths.push(IMAGE_BASE + folder + "/" + String(i).padStart(2, "0") + ".jpg");
+      var base = IMAGE_BASE + folder + "/" + String(i).padStart(2, "0");
+      paths.push({ webp: base + ".webp", jpg: base + ".jpg" });
     }
     return paths;
   }
@@ -79,7 +80,7 @@
           };
     var base = "products." + item.slug;
     var gallery = galleryPaths(item.folder, item.galleryCount);
-    var primary = gallery[0] || "";
+    var primary = gallery[0] || { webp: "", jpg: "" };
 
     return {
       id: item.id,
@@ -87,10 +88,15 @@
       folder: item.folder,
       category: item.category,
       price: t(base + ".price"),
-      image: primary,
-      imageFallback: primary,
-      imageMime: "image/jpeg",
-      gallery: gallery,
+      image: primary.webp || primary.jpg,
+      imageFallback: primary.jpg || primary.webp,
+      imageMime: "image/webp",
+      gallery: gallery.map(function (g) {
+        return g.jpg;
+      }),
+      galleryWebp: gallery.map(function (g) {
+        return g.webp;
+      }),
       instagramLink: resolveInstagramLink(item),
       name: t(base + ".name"),
       description: t(base + ".desc"),

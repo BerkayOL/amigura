@@ -227,7 +227,7 @@
     return Promise.resolve();
   }
 
-  function bootstrap() {
+  function finishBootstrap() {
     injectPartials();
     if (window.Irem && window.Irem.Nav && window.Irem.Nav.resetNav) {
       window.Irem.Nav.resetNav();
@@ -253,6 +253,14 @@
     if (typeof window.AmiguraPageUnlock === "function") {
       window.requestAnimationFrame(window.AmiguraPageUnlock);
     }
+  }
+
+  function bootstrap() {
+    if (window.Irem && window.Irem.I18n && typeof window.Irem.I18n.whenReady === "function") {
+      window.Irem.I18n.whenReady().then(finishBootstrap);
+      return;
+    }
+    finishBootstrap();
   }
 
   document.addEventListener("DOMContentLoaded", bootstrap);

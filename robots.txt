@@ -1,6 +1,6 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.amigurumirem.com/sitemap.xml
+Sitemap: https://www.amigurumirem.com.tr/sitemap.xml
 
 Disallow: /tesekkur.html

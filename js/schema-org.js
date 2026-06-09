@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  const data = {
+  const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Amigurumirem",
@@ -16,6 +16,16 @@
     sameAs: ["https://www.instagram.com/amigurumi__rem", "https://www.etsy.com/shop/amigura"],
   };
 
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Amigurumirem",
+    alternateName: "Elsa Amigurumi",
+    url: "https://www.amigurumirem.com.tr/",
+  };
+
+  const data = [organization, website];
+
   try {
     const el = document.createElement("script");
     el.type = "application/ld+json";
@@ -25,4 +35,3 @@
     // no-op
   }
 })();
-

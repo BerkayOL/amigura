@@ -158,7 +158,7 @@
         escapeHtml(jpg) +
         '" alt="' +
         alt +
-        '" loading="eager" decoding="async" fetchpriority="high">' +
+        '" width="900" height="1200" loading="eager" decoding="async" fetchpriority="high">' +
         "</picture>"
       );
     }
@@ -167,7 +167,7 @@
       escapeHtml(jpg || webp) +
       '" alt="' +
       alt +
-      '" loading="eager" decoding="async" fetchpriority="high">'
+      '" width="900" height="1200" loading="eager" decoding="async" fetchpriority="high">'
     );
   }
 
@@ -295,10 +295,12 @@
           '">' +
           '<div class="pdp-similar-card__media">' +
           '<img src="' +
-          escapeHtml(p.imageFallback || p.image) +
+          escapeHtml(p.thumbnail || p.image) +
           '" alt="' +
           escapeHtml(t("product.alt", { name: p.name })) +
-          '" loading="lazy" decoding="async">' +
+          '" width="320" height="320" loading="lazy" decoding="async" data-fallback="' +
+          escapeHtml(p.thumbnailFallback || p.imageFallback || p.image) +
+          '">' +
           "</div>" +
           '<div class="pdp-similar-card__body">' +
           '<p class="pdp-similar-card__title">' +
@@ -356,6 +358,10 @@
 
     const thumbs = gallery
       .map(function (src, i) {
+        const thumbSrc =
+          product.galleryThumbs && product.galleryThumbs[i]
+            ? product.galleryThumbs[i]
+            : src;
         return (
           '<button type="button" class="pdp-gallery__thumb' +
           (i === 0 ? " is-active" : "") +
@@ -367,8 +373,10 @@
           (i + 1) +
           '">' +
           '<img src="' +
+          escapeHtml(thumbSrc) +
+          '" alt="" width="96" height="96" loading="lazy" decoding="async" data-fallback="' +
           escapeHtml(src) +
-          '" alt="" loading="lazy" decoding="async">' +
+          '">' +
           "</button>"
         );
       })
@@ -505,7 +513,24 @@
 
     const crumb = $("#pdp-crumb-current");
     if (crumb) crumb.textContent = product.name;
+    bindImageFallbacks(root);
     updateProductMeta(product);
+  }
+
+  function bindImageFallbacks(root) {
+    $$("img[data-fallback]", root).forEach(function (img) {
+      if (!(img instanceof HTMLImageElement)) return;
+      img.addEventListener(
+        "error",
+        function onImgError() {
+          var fallback = img.getAttribute("data-fallback");
+          if (fallback && img.getAttribute("src") !== fallback) {
+            img.src = fallback;
+          }
+        },
+        { once: true }
+      );
+    });
   }
 
   function teardownPdpUi() {

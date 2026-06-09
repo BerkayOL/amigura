@@ -68,12 +68,15 @@
   .site-brand__wordmark {
     display: flex;
     min-width: 0;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .site-brand__name {
     font-size: clamp(0.95rem, 4.2vw, 1.1rem);
-    overflow: hidden;
+    line-height: 1.2;
+    padding-block: 0.03em 0.09em;
+    letter-spacing: 0;
+    overflow: visible;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -406,11 +409,35 @@
   }
 
   body.has-cookie-banner {
-    padding-bottom: calc(5.75rem + var(--safe-bottom));
+    padding-bottom: calc(7rem + var(--safe-bottom));
+  }
+
+  .cookie-banner {
+    gap: 0.625rem;
+    padding: 0.75rem 0.8rem;
+    max-width: 26rem;
+    max-height: min(42dvh, 13rem);
+    overflow: auto;
+    border-radius: var(--radius-md);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cookie-banner__text {
+    flex: 0 1 auto;
+    font-size: 0.72rem;
+    line-height: 1.42;
+  }
+
+  .cookie-banner__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
   }
 
   .cookie-banner__btn {
-    min-height: 2.75rem;
+    min-height: 2.35rem;
+    padding: 0.5rem 0.45rem;
+    font-size: 0.72rem;
   }
 
   .wizard-page {
@@ -572,6 +599,7 @@
 
   .site-brand__name {
     font-size: 1rem;
+    line-height: 1.2;
   }
 }
 

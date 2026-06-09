@@ -79,32 +79,6 @@ html:not(.is-hero-visible) .hero__orb {
     animation: none !important;
   }
 
-  .trust-bar__list--clone {
-    display: none !important;
-  }
-
-  .trust-bar__track {
-    animation: none !important;
-    will-change: auto;
-    width: 100%;
-    transform: none !important;
-  }
-
-  .trust-bar__viewport {
-    overflow: visible;
-  }
-
-  .trust-bar__list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.65rem 1.25rem;
-    padding-right: 0;
-  }
-
-  .trust-bar__item::after {
-    display: none;
-  }
-
   .product-card {
     opacity: 1;
     transform: none;

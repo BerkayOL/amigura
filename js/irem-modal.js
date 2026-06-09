@@ -311,8 +311,10 @@
       '<div class="quickview__media glass-surface" aria-hidden="true">' +
       '<div class="quickview__media-inner">' +
       '<img class="quickview__img" src="' +
-      escapeHtml(product.imageFallback || product.image) +
-      '" alt="" loading="lazy" decoding="async">' +
+      escapeHtml(product.thumbnail || product.image) +
+      '" alt="" width="600" height="600" loading="lazy" decoding="async" data-fallback="' +
+      escapeHtml(product.thumbnailFallback || product.imageFallback || product.image) +
+      '">' +
       "</div></div>" +
       '<div class="quickview__content">' +
       '<header class="quickview__header">' +
@@ -366,6 +368,17 @@
 
     const panel = document.getElementById("irem-modal-panel");
     if (panel) panel.classList.add("modal-panel--quickview");
+    const img = bodyEl.querySelector(".quickview__img");
+    if (img instanceof HTMLImageElement) {
+      img.addEventListener(
+        "error",
+        function onQuickViewImgError() {
+          const fallback = img.getAttribute("data-fallback");
+          if (fallback && img.getAttribute("src") !== fallback) img.src = fallback;
+        },
+        { once: true }
+      );
+    }
     body.classList.add("is-quickview-open");
 
     openModal();

@@ -27,12 +27,10 @@
    * @param {string} src
    * @param {string} alt
    * @param {string} [fallback]
-   * @param {string} [mime]
    * @returns {string}
    */
-  function buildProductPictureHtml(src, alt, fallback, mime, eager) {
+  function buildProductPictureHtml(src, alt, fallback, eager) {
     var fb = fallback || src;
-    var type = mime || (/\.webp$/i.test(src) ? "image/webp" : "image/jpeg");
     var loading = eager ? "eager" : "lazy";
     var imgAttrs =
       'alt="' +
@@ -42,20 +40,6 @@
       '" decoding="async" data-fallback="' +
       fb +
       '"';
-
-    if (type === "image/webp" && fb !== src) {
-      return (
-        "<picture>" +
-        '<source srcset="' +
-        src +
-        '" type="image/webp">' +
-        "<img src=\"" +
-        fb +
-        "\" " +
-        imgAttrs +
-        "></picture>"
-      );
-    }
 
     return "<img src=\"" + src + "\" " + imgAttrs + ">";
   }
@@ -72,8 +56,8 @@
     const name = escapeHtml(product.name);
     const description = escapeHtml(product.description);
     const price = escapeHtml(product.price);
-    const image = escapeHtml(product.image);
-    const fallback = escapeHtml(product.imageFallback);
+    const image = escapeHtml(product.thumbnail || product.image);
+    const fallback = escapeHtml(product.thumbnailFallback || product.imageFallback || product.image);
     const link = escapeHtml(product.instagramLink);
     const alt = escapeHtml(t("product.alt", { name: product.name }));
     const buyLabel = escapeHtml(t("product.buyAria", { name: product.name }));
@@ -95,7 +79,7 @@
       escapeHtml(t("product.viewAria", { name: product.name })) +
       '"></a>' +
       '<div class="product-card__media">' +
-      buildProductPictureHtml(image, alt, fallback, product.imageMime, eager) +
+      buildProductPictureHtml(image, alt, fallback, eager) +
       "</div>" +
       '<div class="product-card__body">' +
       '<h3 class="product-card__title">' +

@@ -20,6 +20,19 @@
     return paths;
   }
 
+  /**
+   * @param {string} folder
+   * @param {number} count
+   * @returns {string[]}
+   */
+  function galleryThumbPaths(folder, count) {
+    var paths = [];
+    for (var i = 1; i <= count; i++) {
+      paths.push(IMAGE_BASE + folder + "/thumb-" + String(i).padStart(2, "0") + ".webp");
+    }
+    return paths;
+  }
+
   /** @type {Array<{ id: number, slug: string, folder: string, galleryCount: number, category: string }>} */
   var catalog = [
     { id: 1, slug: "barbie", folder: "barbie", galleryCount: 3, category: "disney" },
@@ -91,12 +104,15 @@
       image: primary.webp || primary.jpg,
       imageFallback: primary.jpg || primary.webp,
       imageMime: "image/webp",
+      thumbnail: IMAGE_BASE + item.folder + "/card-01.webp",
+      thumbnailFallback: primary.webp || primary.jpg,
       gallery: gallery.map(function (g) {
         return g.jpg;
       }),
       galleryWebp: gallery.map(function (g) {
         return g.webp;
       }),
+      galleryThumbs: galleryThumbPaths(item.folder, item.galleryCount),
       instagramLink: resolveInstagramLink(item),
       name: t(base + ".name"),
       description: t(base + ".desc"),

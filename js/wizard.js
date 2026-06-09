@@ -85,26 +85,25 @@
     return key || "\u2014";
   }
 
-  function getFigureThumb(slug) {
-    if (!global.Irem || !global.Irem.Products) return "assets/images/placeholder.svg";
-    var item = global.Irem.Products.catalog.find(function (p) {
+  function getFigureItem(slug) {
+    if (!global.Irem || !global.Irem.Products) return null;
+    return global.Irem.Products.catalog.find(function (p) {
       return p.slug === slug;
     });
+  }
+
+  function getFigureThumb(slug) {
+    var item = getFigureItem(slug);
     if (!item) return "assets/images/placeholder.svg";
-    var paths = global.Irem.Products.galleryPaths(item.folder, 1)[0];
-    if (!paths) return "assets/images/placeholder.svg";
-    return paths.webp || paths.jpg || "assets/images/placeholder.svg";
+    return "assets/images/products/" + item.folder + "/thumb-01.webp";
   }
 
   function getFigureThumbFallback(slug) {
-    if (!global.Irem || !global.Irem.Products) return "";
-    var item = global.Irem.Products.catalog.find(function (p) {
-      return p.slug === slug;
-    });
+    var item = getFigureItem(slug);
     if (!item) return "";
     var paths = global.Irem.Products.galleryPaths(item.folder, 1)[0];
     if (!paths) return "";
-    return paths.jpg && paths.jpg !== paths.webp ? paths.jpg : "";
+    return paths.webp || paths.jpg || "";
   }
 
   function renderFigureGrid() {
@@ -112,9 +111,11 @@
     if (!grid) return;
     var keys = getFigureKeys();
     grid.innerHTML = keys
-      .map(function (key) {
+      .map(function (key, index) {
         var thumb = getFigureThumb(key);
         var thumbFb = getFigureThumbFallback(key);
+        var loading = index < 12 ? "eager" : "lazy";
+        var alt = getFigureLabel(key) + " amigurumi özel sipariş görseli";
         return (
           '<button type="button" class="wizard__figure-card" data-figure-key="' +
           escapeHtml(key) +
@@ -123,7 +124,11 @@
           escapeHtml(thumb) +
           '"' +
           (thumbFb ? ' data-fallback="' + escapeHtml(thumbFb) + '"' : "") +
-          ' alt="" width="72" height="72" loading="lazy" decoding="async">' +
+          ' alt="' +
+          escapeHtml(alt) +
+          '" width="72" height="72" loading="' +
+          loading +
+          '" decoding="async">' +
           '<span class="wizard__figure-name" data-i18n="wizard.' +
           escapeHtml(key) +
           '"></span></button>'

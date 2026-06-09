@@ -714,10 +714,6 @@
 
   function start() {
     document.addEventListener("amigura:ready", boot, { once: true });
-    document.addEventListener("DOMContentLoaded", function () {
-      if (pdpState.ready || !$("#pdp-root")) return;
-      requestAnimationFrame(boot);
-    });
     document.addEventListener("amigura:langchange", onLangChange);
     window.addEventListener("pageshow", function () {
       if (!$("#pdp-root")) return;

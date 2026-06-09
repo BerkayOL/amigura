@@ -2955,6 +2955,23 @@ html.is-page-ready body[data-page="ozel"] .wizard__panel.is-active {
   border: 1px solid transparent;
 }
 
+.wizard__send-btn--ig {
+  color: #fff;
+  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 50%, #8134af 100%);
+  border: 1px solid transparent;
+}
+
+.wizard__copy-hint {
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.wizard__copy-hint[hidden] {
+  display: none;
+}
+
 .wizard__error {
   margin-top: var(--space-sm);
   font-size: 0.8rem;

@@ -203,11 +203,4 @@
   }
 
   document.addEventListener("amigura:ready", init, { once: true });
-  document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-      if (!initialized) init();
-    },
-    { once: true }
-  );
 })();

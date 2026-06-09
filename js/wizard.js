@@ -91,7 +91,20 @@
       return p.slug === slug;
     });
     if (!item) return "assets/images/placeholder.svg";
-    return global.Irem.Products.galleryPaths(item.folder, 1)[0];
+    var paths = global.Irem.Products.galleryPaths(item.folder, 1)[0];
+    if (!paths) return "assets/images/placeholder.svg";
+    return paths.webp || paths.jpg || "assets/images/placeholder.svg";
+  }
+
+  function getFigureThumbFallback(slug) {
+    if (!global.Irem || !global.Irem.Products) return "";
+    var item = global.Irem.Products.catalog.find(function (p) {
+      return p.slug === slug;
+    });
+    if (!item) return "";
+    var paths = global.Irem.Products.galleryPaths(item.folder, 1)[0];
+    if (!paths) return "";
+    return paths.jpg && paths.jpg !== paths.webp ? paths.jpg : "";
   }
 
   function renderFigureGrid() {
@@ -101,13 +114,16 @@
     grid.innerHTML = keys
       .map(function (key) {
         var thumb = getFigureThumb(key);
+        var thumbFb = getFigureThumbFallback(key);
         return (
           '<button type="button" class="wizard__figure-card" data-figure-key="' +
           escapeHtml(key) +
           '" aria-pressed="false">' +
           '<img class="wizard__figure-thumb" src="' +
           escapeHtml(thumb) +
-          '" alt="" width="72" height="72" loading="lazy" decoding="async">' +
+          '"' +
+          (thumbFb ? ' data-fallback="' + escapeHtml(thumbFb) + '"' : "") +
+          ' alt="" width="72" height="72" loading="lazy" decoding="async">' +
           '<span class="wizard__figure-name" data-i18n="wizard.' +
           escapeHtml(key) +
           '"></span></button>'
@@ -115,6 +131,19 @@
       })
       .join("");
     if (global.Irem && global.Irem.I18n) global.Irem.I18n.apply(grid);
+    grid.querySelectorAll(".wizard__figure-thumb").forEach(function (img) {
+      if (!(img instanceof HTMLImageElement)) return;
+      img.addEventListener(
+        "error",
+        function onThumbError() {
+          var fb = img.getAttribute("data-fallback");
+          if (!fb || img.src.endsWith(fb)) return;
+          img.removeEventListener("error", onThumbError);
+          img.src = fb;
+        },
+        { once: true }
+      );
+    });
   }
 
   function getColorNames() {
@@ -168,11 +197,22 @@
     ].join("\n");
   }
 
+  function copyOrderMessage() {
+    var message = buildOrderMessage();
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+      return navigator.clipboard.writeText(message).catch(function () {
+        return false;
+      });
+    }
+    return Promise.resolve(false);
+  }
+
   function updateSendLinks() {
     const mailto = document.getElementById("wizard-mailto");
     const whatsapp = document.getElementById("wizard-whatsapp");
+    const instagram = document.getElementById("wizard-instagram");
     const actions = document.getElementById("wizard-send-actions");
-    if (!mailto || !whatsapp || !actions) return;
+    if (!mailto || !whatsapp || !instagram || !actions) return;
 
     const subject = encodeURIComponent(
       t("wizard.mailSubject", {
@@ -186,6 +226,12 @@
       : "#";
     whatsapp.href =
       "https://wa.me/" + getWhatsAppE164() + "?text=" + encodeURIComponent(buildOrderMessage());
+    var igUrl =
+      getConfig() && getConfig().instagramUrl
+        ? getConfig().instagramUrl.replace(/\/$/, "")
+        : "https://www.instagram.com/amigurumi__rem";
+    var igHandle = igUrl.split("/").filter(Boolean).pop() || "amigurumi__rem";
+    instagram.href = "https://ig.me/m/" + encodeURIComponent(igHandle);
     actions.hidden = false;
   }
 
@@ -419,6 +465,29 @@
     wizardEl.addEventListener("click", onWizardClick);
     wizardEl.addEventListener("input", onWizardInput);
 
+    var instagramBtn = document.getElementById("wizard-instagram");
+    if (instagramBtn) {
+      instagramBtn.addEventListener("click", function () {
+        copyOrderMessage();
+        var hint = document.getElementById("wizard-ig-hint");
+        if (!hint) {
+          hint = document.createElement("p");
+          hint.id = "wizard-ig-hint";
+          hint.className = "wizard__copy-hint";
+          hint.setAttribute("role", "status");
+          var actions = document.getElementById("wizard-send-actions");
+          if (actions && actions.parentNode) actions.parentNode.insertBefore(hint, actions.nextSibling);
+        }
+        if (hint) {
+          hint.textContent = t("wizard.igCopied");
+          hint.hidden = false;
+          window.setTimeout(function () {
+            hint.hidden = true;
+          }, 5000);
+        }
+      });
+    }
+
     const notesEl = document.getElementById("wizard-notes");
     if (notesEl) {
       notesEl.addEventListener("input", function () {
@@ -442,12 +511,9 @@
     }
 
     document.addEventListener("amigura:ready", tryBind, { once: true });
-    document.addEventListener("DOMContentLoaded", tryBind, { once: true });
     window.addEventListener("pageshow", function () {
       if (document.body.dataset.page === "ozel") ensurePageUsable();
     });
-
-    if (document.readyState !== "loading") tryBind();
   }
 
   boot();

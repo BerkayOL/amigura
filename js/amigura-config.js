@@ -9,7 +9,7 @@
   /** @type {Record<string, string>} */
   var instagramLinks = {
     barbie: "https://www.instagram.com/p/C7w0pvatzBI/?img_index=1",
-    elsa: "https://www.instagram.com/p/Ck8ZFRatqo3/?img_index=1",
+    elsa: "https://www.instagram.com/p/DRUooKIjIB4/?img_index=1",
     olaf: "https://www.instagram.com/p/Ck8Z4IFN9GV/?img_index=1",
     moana: "https://www.instagram.com/p/DU01Rx1DBtt/?img_index=1",
     maui: "https://www.instagram.com/p/DUvsiVWjLB_/?img_index=1",

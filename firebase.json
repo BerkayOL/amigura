@@ -11,6 +11,8 @@
       "package.json",
       "package-lock.json",
       "lighthouserc.json",
+      "lighthouserc.prod.json",
+      "**/locales/compile.mjs",
       "eslint.config.cjs",
       ".stylelintrc.cjs",
       ".htmlvalidate.json",

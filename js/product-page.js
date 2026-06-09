@@ -367,6 +367,10 @@
           (i === 0 ? " is-active" : "") +
           '" data-pdp-thumb="' +
           escapeHtml(src) +
+          '" data-pdp-webp="' +
+          escapeHtml(product.galleryWebp && product.galleryWebp[i] ? product.galleryWebp[i] : "") +
+          '" data-pdp-alt="' +
+          heroAlt +
           '" aria-label="' +
           escapeHtml(t("product.alt", { name: product.name })) +
           " " +
@@ -626,6 +630,51 @@
 
   /**
    * @param {HTMLElement} root
+   * @param {HTMLButtonElement} thumb
+   */
+  function updateHeroFromThumb(root, thumb) {
+    var heroImg = $("#pdp-hero-img", root);
+    if (!(heroImg instanceof HTMLImageElement)) return;
+
+    var fallback = thumb.getAttribute("data-pdp-thumb") || "";
+    var webp = thumb.getAttribute("data-pdp-webp") || "";
+    var alt = thumb.getAttribute("data-pdp-alt") || heroImg.alt;
+    if (!fallback && !webp) return;
+
+    var picture = heroImg.closest("picture");
+    var source = picture ? $("source[type='image/webp']", picture) : null;
+    var firstThumb = $(".pdp-gallery__thumb", root);
+    var firstFallback =
+      firstThumb instanceof HTMLButtonElement ? firstThumb.getAttribute("data-pdp-thumb") || "" : "";
+    var firstWebp =
+      firstThumb instanceof HTMLButtonElement ? firstThumb.getAttribute("data-pdp-webp") || "" : "";
+
+    heroImg.onerror = function onHeroError() {
+      heroImg.onerror = null;
+      if (source instanceof HTMLSourceElement) {
+        source.srcset = "";
+      }
+      if (fallback) {
+        heroImg.src = fallback;
+        return;
+      }
+      if (firstFallback) {
+        if (source instanceof HTMLSourceElement && /\.webp$/i.test(firstWebp)) {
+          source.srcset = firstWebp;
+        }
+        heroImg.src = firstFallback;
+      }
+    };
+
+    if (source instanceof HTMLSourceElement) {
+      source.srcset = /\.webp$/i.test(webp) ? webp : "";
+    }
+    heroImg.src = fallback || webp;
+    heroImg.alt = alt;
+  }
+
+  /**
+   * @param {HTMLElement} root
    */
   function ensurePdpBound(root) {
     if (pdpState.bound) return;
@@ -644,15 +693,11 @@
       }
 
       var thumb = target.closest("[data-pdp-thumb]");
-      var heroImg = $("#pdp-hero-img", root);
-      if (thumb instanceof HTMLButtonElement && heroImg instanceof HTMLImageElement) {
-        var src = thumb.getAttribute("data-pdp-thumb");
-        if (src) {
-          heroImg.src = src;
-          $$(".pdp-gallery__thumb", root).forEach(function (el) {
-            el.classList.toggle("is-active", el === thumb);
-          });
-        }
+      if (thumb instanceof HTMLButtonElement) {
+        updateHeroFromThumb(root, thumb);
+        $$(".pdp-gallery__thumb", root).forEach(function (el) {
+          el.classList.toggle("is-active", el === thumb);
+        });
         return;
       }
 
